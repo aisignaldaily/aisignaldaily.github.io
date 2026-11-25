@@ -1,6 +1,6 @@
 # AI Signal Daily - Viral Style Guide v2 (Nov 2026)
 
-Read this before building any post. Where it differs from the run instructions, THIS FILE WINS on style; the run instructions win on rules (no rumors, real people only in genuine credited photos/clips and never as AI fakes (see "Real people" below), AI visuals: men allowed (fictional, fully and professionally dressed), never women or female figures, never nudity, vulgar or suggestive content, no gambling/alcohol, sources, labels).
+Read this before building any post. Where it differs from the run instructions, THIS FILE WINS on style; the run instructions win on rules (no rumors, real people in credited photos/clips, or third-party AI fakes only when the fake is the news and clearly labeled; we never create AI likenesses of real people (see "Real people" below), AI visuals: men allowed (fictional, fully and professionally dressed), never women or female figures, never nudity, vulgar or suggestive content, no gambling/alcohol, sources, labels).
 
 ## What Instagram rewards right now
 1. Watch time / completion (Reels) - hook must land in the first 1.5 s.
@@ -43,7 +43,8 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 ## Real people (Raheel's rule, Nov 25, 2026)
 - REAL footage and photos of real people, any gender, are allowed: founders, engineers, researchers, demos, interviews, keynotes. Best source: the company's own official video/press images. Short interview or podcast clips (aim <= 15 s per cut) are OK too.
 - Always: credit on screen ("Footage: <channel/company>") and in the caption; add our own hook text, 1/N counter and commentary on top (never a plain repost); quote people exactly and only what they really said (check against the original video/transcript).
-- Never: AI-generated likenesses, deepfakes, lookalikes or voice clones of real people; private individuals; anything that mocks or misrepresents someone; movie/TV clips.
+- AI fakes of real people made by SOMEONE ELSE (e.g. a viral deepfake/AI video) may be shown when the fake itself is the news story. Always label it on screen and in the caption as "AI-generated fake, not real" (for the whole time it is on screen), credit where it came from, and never present it as real. Never sexual, nude or vulgar fakes, never ones that defame someone or could fool people about elections/politics.
+- We NEVER create AI likenesses, deepfakes, lookalikes or voice clones of real people ourselves. Never private individuals, never movie/TV clips.
 - AI-generated people (Higgsfield): never women or female figures; men only as fictional, fully and professionally dressed people; never nudity or anything suggestive.
 - Getting clips: only direct video files from official/company pages or files Raheel provides; no ripping from Instagram/TikTok/X. If a clip can't be fetched, use a real credited screenshot or a quote Reel (exact quote + Higgsfield scene).
 
