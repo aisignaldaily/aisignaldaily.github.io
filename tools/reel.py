@@ -115,7 +115,7 @@ def main(spec_path):
     for k in range(1,len(parts)):
         off=t-XF; lab=f"[x{k}]"; fc.append(f"{prev}[{k}:v]xfade=transition=fade:duration={XF}:offset={off:.3f}{lab}"); prev=lab; t=off+parts[k][1]
     total=t
-    subprocess.run(["ffmpeg","-v","error","-y",*inputs,"-filter_complex",";".join(fc),"-map",prev,"-c:v","libx264","-preset","veryfast","-crf","20","-r","30","_video.mp4"],check=True)
+    subprocess.run(["ffmpeg","-v","error","-y",*inputs,"-filter_complex",";".join(fc),"-map",prev,"-c:v","libx264","-preset","veryfast","-crf","20","-pix_fmt","yuv420p","-r","30","_video.mp4"],check=True)
     if s.get("audio"):
         a=fetch(s["audio"],"_audio"); vol=s.get("audio_volume",0.9)
         af=f"[1:a]aloop=loop=-1:size=2e9,atrim=duration={total:.3f},volume={vol},afade=t=in:d=0.3,afade=t=out:st={max(0,total-1.2):.3f}:d=1.2,aresample=44100,aformat=channel_layouts=stereo[a]"
