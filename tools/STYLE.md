@@ -40,6 +40,14 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 - Official company demo clips beat everything for launches - always credit.
 - Real-people clips ("the engineer who built X says...") are allowed - see "Real people" below.
 
+## "Builder lessons" series (Raheel approved Nov 25, 2026; first test = Claude Code creator, Nov 25 evening)
+Why: "learn from the person who built it" posts (e.g. the engineer who built Claude Code) get huge reach + comments. People love learning from builders.
+- Source: a real founder/engineer/researcher of a known AI product, and ONLY things they really said (their own post, talk, interview, podcast). Quote exactly; if you only have a blog's copy of the quote, name both ("on X, via paddo.dev"). Paraphrases are not in quote marks.
+- Reel (16-20 s): hook "THE ENGINEER WHO BUILT X SHARED HIS 3 RULES" on a Higgsfield clip, then 3 lesson beats ("1. ...", "2. ...", "3. ...") each on a matching Higgsfield still (gpt_image_2_6 9:16, same scene, slow zoom; ~0.75 cr each), the exact quote as the sub line, one bonus fact beat, end card "Send this to someone learning AI". Real credited clip/photo of the person may replace the hook clip when we can fetch a direct file (see "Real people").
+- Make it useful for normal people: one caption line on how the lesson applies to ChatGPT/any AI tool.
+- Caption question invites a number reply ("Which tip are you trying first: 1, 2 or 3?"). CTA: Comment "AI" (ManyChat live) - DM includes the full source link via the links page.
+- Rotate builders and companies; never the same person twice in 2 weeks.
+
 ## Real people (Raheel's rule, Nov 25, 2026)
 - REAL footage and photos of real people, any gender, are allowed: founders, engineers, researchers, demos, interviews, keynotes. Best source: the company's own official video/press images. Short interview or podcast clips (aim <= 15 s per cut) are OK too.
 - Always: credit on screen ("Footage: <channel/company>") and in the caption; add our own hook text, 1/N counter and commentary on top (never a plain repost); quote people exactly and only what they really said (check against the original video/transcript).
