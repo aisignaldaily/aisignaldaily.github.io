@@ -1,0 +1,6 @@
+<!doctype html><meta charset="utf-8"><title>relay</title><body style="background:#06090F;color:#3DF5C8;font:20px sans-serif">Sending clips…
+<script>
+(async()=>{const items=JSON.parse(decodeURIComponent(location.hash.slice(1)));const out=[];const tr=[];
+for(const [u,n] of items){const b=await fetch(u).then(r=>r.arrayBuffer());out.push([n,b]);tr.push(b);}
+window.opener.postMessage(out,'https://github.com',tr);document.body.textContent='Sent. You can close this tab.';setTimeout(()=>window.close(),1500);})();
+</script>
