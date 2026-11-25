@@ -59,8 +59,8 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 - "Stop doing ___. AI does it in 10 seconds."
 - "The internet is losing it over ___."
 
-## Volume
-Three posts a day now. Quality > volume, but if usage allows later, add a 4th light post (meme/humor) at midday.
+## Volume (schedule v5, Nov 25 2026)
+Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI you can use", quick) · 3:45 PM carousel (news) · 5:45 PM carousel ("AI you can use" deep how-to; Tue = Allyzent AI post, Thu = Latis AI post) · 7:45 PM Reel (biggest story) · 8:30 PM 2 Stories. Never state a number of posts per day publicly. Quality > volume: skip a slot rather than post filler.
 
 
 ## v3 additions (Nov 25, 2026)
@@ -77,4 +77,14 @@ Three posts a day now. Quality > volume, but if usage allows later, add a 4th li
 - Allyzent AI = done-for-you: AI engineers build, connect and customize. Book a demo: https://calendly.com/allyzent/discovery . Strong proof CTA: "Call our AI agent yourself: +1 (713) 597-8651" (answered by Allyzent's AI agent 24/7, per allyzent.com).
 - Always disclose: "Full disclosure: Allyzent AI / Latis AI is our team." Never imply a partnership with ElevenLabs, Vapi or any other company; name them as tools only, no logos as art.
 - Only real facts: published site numbers labeled "customer-reported"; no invented results or income claims. Verify third-party features/prices on their official sites at post time.
-- CTA keyword DEMO (ManyChat flow pending setup + demo links from Raheel). Until it is live, use: "Comment AI and we'll DM you the details."
+- CTA keyword DEMO is LIVE in ManyChat: commenting DEMO starts a DM that asks 4 quick questions + email, then offers the Calendly booking, the AI agent line and info@allyzent.com. Use exactly: `Comment "DEMO" and we'll DM you the options 👇` (instead of the usual "AI" CTA on company posts).
+- Company post caption order: hook, 3-5 DIY steps summary, honest "where DIY gets hard" line, "Or let Allyzent AI / Latis AI do it for you.", DEMO CTA, "Full disclosure: Allyzent AI / Latis AI is our team.", "Source: <tool docs>", "Visuals: Made with AI" if used, 3-6 hashtags.
+
+## "AI you can use" series (12:30 PM Reel + 5:45 PM carousel)
+- Goal: saves + shares from practical value, while staying a news page (never a "make money" page).
+- Pick ONE real, current, mostly free AI tool or feature (ideally from this week's news) and ONE concrete task a normal person or small business has (reply to reviews, plan a week of meals, turn a voice note into an email, auto-answer Instagram DMs, build a simple AI receptionist...).
+- 12:30 Reel = the 15-second version: hook ("Stop doing X by hand"), 3 quick steps on screen, end card "Save this for later".
+- 5:45 carousel = the full how-to: cover hook + "SAVE THIS" tag, 4-5 numbered step slides (exact menu names / prompt text to copy), a "watch out" slide (limits, cost, privacy), end slide "Save + send to someone who needs it". Caption repeats the steps in short form.
+- Verify every step and price on the tool's official site/docs at post time; cite it as Source. If a step can't be verified, cut it.
+- Never income/earnings claims, never "get rich", no Etsy/dropshipping money promises, no affiliate links unless Raheel adds them.
+- Tue and Thu 5:45 PM = company post version (see "Company posts" above). Other days: no company mention unless genuinely relevant.
