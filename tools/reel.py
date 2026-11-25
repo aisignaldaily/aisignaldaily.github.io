@@ -32,7 +32,19 @@ def wrap(d,text,fnt,maxw):
         else: lines.append(cur); cur=[w]
     lines.append(cur); return lines
 
+def norm(text):
+    # allow *multi word* highlights: mark every word inside a *...* span
+    out=[]; on=False
+    for w in text.split():
+        st=w.startswith("*"); en=w.endswith("*") and len(w)>1
+        core=w.strip("*")
+        if st: on=True
+        out.append(("*"+core+"*") if on else core)
+        if en or (st and w.count("*")>=2): on=False
+    return " ".join(out)
+
 def head(d,text,y_bottom,size):
+    text=norm(text)
     fnt=F(ANTON,size); lines=wrap(d,text,fnt,940); lh=int(size*1.08)
     while len(lines)>4 and size>70:
         size-=8; fnt=F(ANTON,size); lines=wrap(d,text,fnt,940); lh=int(size*1.08)

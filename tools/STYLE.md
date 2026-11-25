@@ -61,3 +61,11 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 
 ## Volume
 Three posts a day now. Quality > volume, but if usage allows later, add a 4th light post (meme/humor) at midday.
+
+
+## v3 additions (Nov 25, 2026)
+- Visual continuity: every carousel uses ONE matched image series (same background, palette, lighting, object family) and every Reel uses ONE continuous scene (same subject/set, only camera/action changes). Never a slideshow of unrelated scenes.
+- Sound: Reels always get a custom sound bed with NO music: cinematic sound design or dramatic nature ambience matched to the story (thunder/wind for big news, rain/ocean for calm useful tips, deep drone/hum for futuristic). Keep it under the visuals, slight lift on the hook.
+- Carousels can't carry sound via API. If a story is very visual and dramatic, it may be made as a short slides-with-motion Reel with sound instead.
+- Progress marker ("1/4") on every Reel beat and carousel slide.
+- How to make it: see tools/HIGGSFIELD.md.
