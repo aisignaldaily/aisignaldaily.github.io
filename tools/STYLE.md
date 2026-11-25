@@ -1,6 +1,6 @@
 # AI Signal Daily - Viral Style Guide v2 (Nov 2026)
 
-Read this before building any post. Where it differs from the run instructions, THIS FILE WINS on style; the run instructions win on rules (no rumors, no real-people likenesses, no women/nudity in AI visuals, no gambling/alcohol, sources, labels).
+Read this before building any post. Where it differs from the run instructions, THIS FILE WINS on style; the run instructions win on rules (no rumors, no real-people likenesses, AI visuals: men allowed (fictional, fully and professionally dressed), never women or female figures, never nudity, vulgar or suggestive content, no gambling/alcohol, sources, labels).
 
 ## What Instagram rewards right now
 1. Watch time / completion (Reels) - hook must land in the first 1.5 s.
@@ -21,7 +21,7 @@ Rank story ideas by shareability, not importance. Best performers on top AI page
 Avoid: dry funding news, benchmarks without a "so what", anything that needs more than one sentence to understand.
 
 ## Carousel cover (slide 1) - the "Evolving" formula, adapted
-- Top 55-60%: one strong visual. Options in order: (a) official product screenshot / UI / press image of a PRODUCT (no people), (b) bold graphic or chart, (c) Higgsfield AI image (when connected; robots/devices/abstract tech only, labeled "Made with AI").
+- Top 55-60%: one strong visual. Options in order: (a) official product screenshot / UI / press image of a PRODUCT (no people), (b) bold graphic or chart, (c) Higgsfield AI image (robots, devices, abstract tech, or a fictional man fully dressed in a work setting; never women, never real people; labeled "Made with AI").
 - Bottom 40-45%: GIANT all-caps headline, white Anton, tight leading, 2-4 key words in mint #3DF5C8, max ~14 words, fills the width. Thin dark gradient behind text.
 - Tiny "SWIPE ⬅️" tag bottom-right; small "@aisignaldaily.news" + mint signal mark bottom-left.
 - The headline alone must make someone stop and want to send it.
@@ -36,7 +36,7 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 - 12-20 s. Text on screen from frame 1 (most watch muted). First 1.5 s = the hook as giant text; no logo intro.
 - A visual change every 2-3 s (cut, zoom, new text card, clip). Big captions centered in the safe area.
 - End on a loop-friendly frame (last frame flows into the first) to boost replays.
-- Higgsfield clips (when connected): 3-5 s b-roll beats behind text - robots, devices, futuristic workspaces, abstract data visuals. Never people/women, never suggestive. Label "Made with AI" in caption and on screen corner.
+- Higgsfield clips (when connected): 3-5 s b-roll beats behind text - robots, devices, futuristic workspaces, abstract data visuals. May include a fictional man (fully, professionally dressed, e.g. at a desk, in a lab, using a device). Never women or female figures, never real people or lookalikes, never nudity, vulgar or suggestive content. Max ONE Higgsfield clip per day (~35 credits, seedance_2_5, 9:16, 5 s), only when there is no official footage; check balance first and skip if under 100 credits. Label "Made with AI" in caption and on screen corner.
 - Official company demo clips (computer runs) beat everything for launches - always credit.
 
 ## Captions
