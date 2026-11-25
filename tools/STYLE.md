@@ -1,5 +1,36 @@
 # AI Signal Daily - Viral Style Guide v2 (Nov 2026)
 
+## Working with Raheel (his standing instruction, Nov 25, 2026)
+- Be direct. No PR, no flattery. Grill his ideas and ours, say plainly what is weak, and always do what is right for MORE FOLLOWERS and MORE REVENUE (honestly, within the rules).
+- When something we did was weak (repetitive topics, unverified quotes, wasted credits), say so in the run summary/email instead of hiding it.
+
+## Content strategy v4 (Nov 25, 2026) - replaces "whatever big company announced today"
+Daily schedule = 4 feed posts + Stories:
+- 9:15 AM carousel - USEFUL/FREE: free tools, "this free X replaces a $Y thing", tool comparisons ("ChatGPT vs Gemini vs Claude for <task>, tested"), money/time savers. Goal: saves + sends.
+- 12:30 PM Reel - WILD/FUN: "AI did something wild", someone-asked-AI experiments, the internet reacts, light humor/memes. Goal: sends to non-followers.
+- 5:45 PM carousel - AI YOU CAN USE how-to (Tue = Allyzent AI, Thu = Latis AI company post). Goal: saves + DEMO leads.
+- 7:45 PM Reel - Mon/Wed/Sat BUILDER LESSONS (see that section); other days the single biggest story of the day explained for normal people. Goal: follows.
+Diversity rules (hard):
+- Max ONE post per company per day (Google, OpenAI, Anthropic, Meta, Microsoft, Apple, Nvidia, xAI...). Today's Nov 25 feed was 3 Google posts out of 5: never again.
+- At least 2 of the 4 daily posts must NOT be a big-company press release: tools, people/builders, experiments, jobs/money, open source, robots, humor.
+- Check the last 3 days in Buffer before picking; never two posts in a row from the same company or same format.
+Psychology (why people share and follow) - apply to every post:
+- People SHARE what makes them look smart or helpful to a friend (social currency + practical value), and what triggers a strong feeling (awe, surprise, humor, a little outrage at waste). Calm/neutral = no shares. (Jonah Berger's STEPPS research.)
+- People FOLLOW when they expect more of the same value tomorrow: recurring series with numbers ("Builder lessons #3"), a clear promise in the bio, a profile grid that looks consistent, and end cards that promise the next thing ("Follow: tomorrow's builder lesson is <name>").
+- Identity: write for "people who want to stay ahead of AI at work and in business", not for engineers. If grandma can't get it in one sentence, rewrite it.
+Hooks (first 1.5 s / slide 1) - use one of these, with a specific number or name:
+- Curiosity gap: "The engineer who built Claude Code does THIS before writing code"
+- Stakes/money: "This free tool replaces a $300/month subscription"
+- Contrarian: "Hot take: you're using ChatGPT wrong"
+- Time-bound: "Before Black Friday, turn this on"
+- Proof: "I tested 3 AIs on the same task. One failed badly."
+Never clickbait that the post doesn't pay off in slide 2 / second 3 - broken promises kill follows.
+Revenue rules:
+- Max 1 in 5 posts is promotional (company posts, affiliate pushes). Value first, always.
+- Affiliate links only for programs Raheel has actually joined (listed in tools/AFFILIATES.md once set up), always disclosed ("affiliate link") on the toolkit/links page; never claim we used a tool we didn't.
+- Every post's DM path leads to the toolkit (https://aisignaldaily.github.io/toolkit/), which carries the email signup (once beehiiv is set up), the affiliate links and the demo page.
+- Company posts end card: "Comment DEMO" + "Book a demo: aisignaldaily.github.io/demo". Demo page: https://aisignaldaily.github.io/demo/
+
 Read this before building any post. Where it differs from the run instructions, THIS FILE WINS on style; the run instructions win on rules (no rumors, real people in credited photos/clips, or third-party AI fakes only when the fake is the news and clearly labeled; we never create AI likenesses of real people (see "Real people" below), AI visuals: men allowed (fictional, fully and professionally dressed), never women or female figures, never nudity, vulgar or suggestive content, no gambling/alcohol, sources, labels).
 
 ## What Instagram rewards right now

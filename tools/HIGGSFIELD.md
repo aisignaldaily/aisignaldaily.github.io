@@ -3,7 +3,10 @@
 Owner's rule: use what is BEST for growth, honestly. Higgsfield = the scroll-stopping hero visual + realistic sound. Claude-made = everything that carries information (clean slides, charts, steps, real screenshots, animated text). Don't spend credits on slides people read.
 
 Higgsfield tools are `mcp__Higgsfield_Studio__*`. Plan: Plus (~1,200 credits/month). Prices: image gpt_image_2_6 ~0.75 cr; 5 s video seedance_2_5 (9:16) 35 cr; sound mirelo_text_to_audio 20 s = 5 cr.
-Budget per post (target ~1,500-2,500 credits/month total): carousel <= 8 cr, Reel <= 80 cr, mini-reel carousel <= 110 cr. Check `balance` first; if under 150 credits, use Claude-made media only (dark animated beats, no Higgsfield clips) and email Raheel once that credits are low.
+Budget per post (target ~1,500-2,500 credits/month total): carousel <= 8 cr, Reel <= 80 cr, mini-reel carousel <= 110 cr. Check `balance` first.
+- LOW-CREDIT ALERT (Raheel's rule): when balance is at or below 20% of the plan (Plus = 1,200/month, so <= 240 credits), email raheelsohail@gmail.com ONCE, subject "AI Signal Daily - Higgsfield credits low (<N> left)", saying roughly how many days that lasts at the current rate and that he planned to upgrade to Ultra. Before emailing, check `repo/claims/credit-alert-YYYY-MM.txt`; if it exists, don't email again this month; otherwise create it, commit and push.
+- Under 150 credits: use Claude-made media only (dark animated beats, no Higgsfield clips) until credits are topped up.
+- Daily budget while on Plus: about 40 credits/day total (one 5 s clip OR images only). Only ONE seedance clip per day across all runs (the evening Reel gets it; the midday Reel uses Higgsfield stills with slow zoom + sound instead, ~8 credits). Check today's Higgsfield `transactions` before spending.
 
 ## Content rules for every visual (never break)
 - AI-generated people: no women or female figures. Men only as fictional, fully and professionally dressed people. Never AI versions/lookalikes of real people.
