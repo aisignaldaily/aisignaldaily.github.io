@@ -47,6 +47,7 @@ Why: "learn from the person who built it" posts (e.g. the engineer who built Cla
 - Make it useful for normal people: one caption line on how the lesson applies to ChatGPT/any AI tool.
 - Caption question invites a number reply ("Which tip are you trying first: 1, 2 or 3?"). CTA: Comment "AI" (ManyChat live) - DM includes the full source link via the links page.
 - Rotate builders and companies; never the same person twice in 2 weeks.
+- ALSO add every Builder lessons post to the toolkit page: in `repo/toolkit/index.html`, add a new entry at the TOP of `const builders = [ ... ]` (date, who, role, title, 3 lessons with exact quotes, optional bonus, an "apply" line for ChatGPT users, links to the original + sources). The ManyChat "AI" DM points to https://aisignaldaily.github.io/toolkit/ so commenters get the builder's link. The toolkit's "Latest links" section reads index.html automatically.
 
 ## Real people (Raheel's rule, Nov 25, 2026)
 - REAL footage and photos of real people, any gender, are allowed: founders, engineers, researchers, demos, interviews, keynotes. Best source: the company's own official video/press images. Short interview or podcast clips (aim <= 15 s per cut) are OK too.

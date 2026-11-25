@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Signal Daily Toolkit</title>
+<meta name="description" content="The free AI Signal Daily Toolkit: lessons from the people who build AI tools, 50 AI tools that save hours, 25 copy-paste prompts and the links from our latest posts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* Same broadcast-signal look as the links page: near-black ground, mint accent, Anton + Inter, phone-first column. */
+:root{color-scheme:dark;--bg:#06090f;--panel:#0e1624;--line:#1d2a3c;--ink:#f5f7fa;--muted:#8b98a5;--soft:#c9d4dc;--acc:#3df5c8;--acc-ink:#06090f}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px 56px}
+header{position:relative;text-align:center;padding:44px 0 22px;overflow:hidden}
+.rings{position:absolute;inset:0;pointer-events:none}
+.rings span{position:absolute;left:50%;top:84px;border:2px solid var(--acc);border-radius:50%;transform:translate(-50%,-50%);opacity:.18}
+.logo{position:relative;width:84px;height:84px;margin:0 auto 16px;border-radius:50%;background:var(--panel);border:1px solid var(--line);display:grid;place-items:center}
+.kicker{position:relative;display:inline-block;font-size:13px;font-weight:700;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:4px 12px;margin-bottom:12px}
+h1{position:relative;font:400 clamp(32px,8vw,48px)/1.05 Anton,Impact,sans-serif;letter-spacing:.5px;margin:0;text-wrap:balance}
+h1 b{color:var(--acc);font-weight:400}
+.sub{position:relative;color:var(--muted);margin:10px auto 0;max-width:40ch}
+.btns{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;min-height:44px;border-radius:999px;font-weight:800;text-decoration:none;border:1px solid var(--acc)}
+.btn.primary{background:var(--acc);color:var(--acc-ink)}
+.btn.ghost{color:var(--acc)}
+.btn:focus-visible,.row:focus-visible,.copy:focus-visible,nav a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+nav{display:flex;gap:8px;overflow-x:auto;padding:6px 0 4px;margin:8px 0 0;scrollbar-width:none}
+nav a{flex:none;font-size:13px;font-weight:700;color:var(--soft);text-decoration:none;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 14px}
+nav a:hover{border-color:var(--acc);color:var(--ink)}
+h2{font:400 28px/1.1 Anton,Impact,sans-serif;letter-spacing:.4px;margin:40px 0 12px;scroll-margin-top:16px}
+h2 b{color:var(--acc);font-weight:400}
+h2 small{display:block;font:500 14px/1.45 Inter,sans-serif;color:var(--muted);letter-spacing:0;margin-top:6px}
+h3.cat{font:800 15px/1.3 Inter,sans-serif;letter-spacing:.3px;text-transform:uppercase;color:var(--acc);margin:26px 0 4px}
+p.catnote{margin:0 0 10px;color:var(--muted);font-size:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:14px}
+.card.feature{background:linear-gradient(160deg,#10231f,#0e1624 60%);border-color:#1f4a40}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:6px}
+.tag{color:var(--acc);font-weight:700}
+.card h3{margin:0 0 4px;font-size:19px;line-height:1.3}
+.card>p{margin:0 0 12px;color:var(--soft);font-size:15px}
+ol.lessons{margin:4px 0 12px;padding-left:22px;color:var(--soft)}
+ol.lessons li{margin:0 0 10px}
+ol.lessons b{color:var(--ink)}
+ol.lessons q{display:block;margin-top:3px;color:var(--acc);font-style:normal}
+.apply{font-size:14px;color:var(--soft);background:#0a111c;border:1px dashed #1f4a40;border-radius:12px;padding:10px 12px;margin:0 0 4px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:10px 14px;border-radius:12px;background:#0a111c;border:1px solid var(--line);text-decoration:none;margin-top:8px}
+.row span{font-weight:700}
+.row em{display:block;font-style:normal;font-weight:400;font-size:13px;color:var(--muted)}
+.row i{font-style:normal;color:var(--acc);font-weight:800;flex:none}
+.row:hover{border-color:var(--acc)}
+.starter{counter-reset:s;list-style:none;margin:0;padding:0}
+.starter li{position:relative;padding:12px 14px 12px 52px;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:8px;color:var(--soft)}
+.starter li::before{counter-increment:s;content:counter(s);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-weight:800;display:grid;place-items:center;font-size:14px}
+.starter b{color:var(--ink)}
+.tools{display:grid;gap:8px}
+.tool{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;background:var(--panel);border:1px solid var(--line);text-decoration:none}
+.tool:hover{border-color:var(--acc)}
+.tool .n{font:400 20px/1 Anton,Impact,sans-serif;color:var(--muted);text-align:center}
+.tool b{display:block;font-size:16px}
+.tool .d{display:block;font-size:14px;color:var(--soft)}
+.tool .bf{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.tool i{font-style:normal;color:var(--acc);font-weight:800}
+.ours{display:inline-block;margin-left:6px;font-size:11px;font-weight:800;color:var(--acc-ink);background:var(--acc);border-radius:999px;padding:1px 8px;vertical-align:2px}
+.prompts{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.prompts li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;padding:12px 14px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--soft);font-size:15px}
+.copy{font:700 13px Inter,sans-serif;color:var(--acc);background:transparent;border:1px solid var(--acc);border-radius:999px;padding:6px 12px;min-height:36px;cursor:pointer}
+.copy.done{background:var(--acc);color:var(--acc-ink)}
+.table{display:grid;gap:8px}
+.trow{padding:12px 14px;border-radius:14px;background:var(--panel);border:1px solid var(--line)}
+.trow b{display:block}
+.trow span{display:block;color:var(--soft);font-size:14px}
+.trow em{display:block;font-style:normal;color:var(--acc);font-size:13px;font-weight:700;margin-top:2px}
+ul.plain{margin:0;padding-left:20px;color:var(--soft)}
+ul.plain li{margin-bottom:6px}
+/* --- visual upgrade --- */
+.stats{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:22px 0 0}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 6px;text-align:center}
+.stat b{display:block;font:400 26px/1 Anton,Impact,sans-serif;color:var(--acc)}
+.stat span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.25}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:18px 0 0}
+.how div{background:linear-gradient(160deg,#10231f,#0e1624 70%);border:1px solid #1f4a40;border-radius:14px;padding:12px}
+.how b{display:block;font-size:13px;color:var(--acc);margin-bottom:2px}
+.how span{font-size:13px;color:var(--soft);line-height:1.35;display:block}
+.ico{float:left;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#10231f;border:1px solid #1f4a40;font-size:18px;margin:-2px 10px 0 0}
+h2 small{clear:both;padding-top:2px}
+details.cat{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--c,var(--acc));border-radius:16px;margin-bottom:10px;overflow:hidden}
+details.cat>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 16px;min-height:64px}
+details.cat>summary::-webkit-details-marker{display:none}
+details.cat>summary:focus-visible{outline:3px solid #fff;outline-offset:-3px}
+.cicon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:22px;background:color-mix(in srgb,var(--c) 16%,transparent);border:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+.ctitle b{display:block;font-size:16.5px}
+.ctitle span{display:block;font-size:13px;color:var(--muted)}
+.chev{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--c,var(--acc));font-weight:800;transition:transform .2s}
+details[open] .chev{transform:rotate(90deg)}
+.cbody{padding:0 14px 14px}
+.cbody .catnote{margin:0 2px 10px}
+.tool{background:#0a111c;grid-template-columns:40px minmax(0,1fr) auto}
+.tool:hover{border-color:var(--c,var(--acc))}
+.fav{position:relative;width:40px;height:40px;border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden}
+.fav img{width:26px;height:26px}
+.fav .n2{position:absolute;right:-1px;bottom:-1px;font:800 10px/1 Inter,sans-serif;background:var(--c,var(--acc));color:#06090f;border-radius:6px 0 9px 0;padding:2px 4px}
+.fav.letter{background:color-mix(in srgb,var(--c) 22%,#0a111c);color:var(--ink);font:400 20px Anton,Impact,sans-serif}
+.tool .bf{color:var(--c,var(--muted));opacity:.9}
+.lessons{counter-reset:l;list-style:none!important;padding-left:0!important}
+ol.lessons li{position:relative;padding:12px 12px 12px 50px;background:#0a111c;border:1px solid #1f4a40;border-radius:14px}
+ol.lessons li::before{counter-increment:l;content:counter(l);position:absolute;left:12px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-weight:800;display:grid;place-items:center;font-size:14px}
+ol.lessons q{font-size:15px;line-height:1.45;quotes:"\201C" "\201D"}
+.who{display:flex;align-items:center;gap:12px;margin:6px 0 12px}
+.avatar{flex:none;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3df5c8,#1b7f6a);color:#06090f;font:800 16px/44px Inter,sans-serif;text-align:center}
+.who b{display:block}
+.who span{display:block;font-size:13px;color:var(--muted)}
+details.pg{background:var(--panel);border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+details.pg>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;min-height:56px;font-weight:800}
+details.pg>summary::-webkit-details-marker{display:none}
+details.pg>summary em{font-style:normal;font-size:13px;color:var(--muted);font-weight:500}
+details.pg .prompts{padding:0 12px 12px}
+details.pg .prompts li{background:#0a111c}
+.fine{color:var(--muted);font-size:14px}
+.fine b{color:var(--soft)}
+.empty{color:var(--muted);font-size:14px}
+footer{margin-top:40px;text-align:center;font-size:13px;color:var(--muted)}
+@media(prefers-reduced-motion:no-preference){.rings span{animation:pulse 3.2s ease-out infinite}.rings span:nth-child(2){animation-delay:1.06s}.rings span:nth-child(3){animation-delay:2.13s}
+@keyframes pulse{from{width:80px;height:80px;opacity:.35}to{width:420px;height:420px;opacity:0}}}
+@media(prefers-reduced-motion:reduce){.rings span:nth-child(1){width:150px;height:150px}.rings span:nth-child(2){width:230px;height:230px}.rings span:nth-child(3){width:310px;height:310px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="logo" aria-hidden="true">
+      <svg width="56" height="56" viewBox="0 0 64 64"><circle cx="32" cy="32" r="9" fill="#3df5c8"/><path d="M44 20a17 17 0 0 1 0 24M50 14a25 25 0 0 1 0 36M20 20a17 17 0 0 0 0 24M14 14a25 25 0 0 0 0 36" fill="none" stroke="#3df5c8" stroke-width="4" stroke-linecap="round"/></svg>
+    </div>
+    <span class="kicker">Free for followers · updated with every post</span>
+    <h1>THE AI SIGNAL DAILY <b>TOOLKIT</b></h1>
+    <p class="sub">Lessons from the people who build AI, 50 tools that save hours, 25 copy-paste prompts and the links from our latest posts.</p>
+    <div class="btns">
+      <a class="btn primary" href="AI_Signal_Daily_Toolkit.pdf" download>Download the PDF</a>
+      <a class="btn ghost" href="https://www.instagram.com/aisignaldaily.news/">Follow @aisignaldaily.news</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>50</b><span>AI tools that save hours</span></div>
+      <div class="stat"><b>25</b><span>copy-paste prompts</span></div>
+      <div class="stat"><b id="bCount">1</b><span>builder lessons</span></div>
+      <div class="stat"><b>Daily</b><span>new links from our posts</span></div>
+    </div>
+    <div class="how">
+      <div><b>1. Learn</b><span>Read how the builders actually use AI</span></div>
+      <div><b>2. Pick one tool</b><span>Find the job that eats your time</span></div>
+      <div><b>3. Copy a prompt</b><span>Paste it and save an hour today</span></div>
+    </div>
+  </header>
+
+  <nav aria-label="Toolkit sections">
+    <a href="#builders">Learn from builders</a>
+    <a href="#latest">Latest links</a>
+    <a href="#start">Start here</a>
+    <a href="#tools">50 tools</a>
+    <a href="#prompts">25 prompts</a>
+    <a href="#business">Small business</a>
+  </nav>
+
+  <section aria-labelledby="builders">
+    <h2 id="builders"><span class="ico" aria-hidden="true">🧠</span>LEARN FROM THE <b>BUILDERS</b><small>What the people who build AI tools actually do, in their own words, with links to the originals. New lessons are added with every "Builder lessons" post.</small></h2>
+    <div id="builderList"></div>
+  </section>
+
+  <section aria-labelledby="latest">
+    <h2 id="latest"><span class="ico" aria-hidden="true">🔗</span>LINKS FROM OUR <b>LATEST POSTS</b><small>Commented on a post? The source and tools from it are here, newest first.</small></h2>
+    <div id="latestList"><p class="empty">Loading the latest links…</p></div>
+    <a class="row" href="../"><span>See every post's links<em>The full AI Signal Daily links page</em></span><i aria-hidden="true">&rarr;</i></a>
+  </section>
+
+  <section aria-labelledby="start">
+    <h2 id="start"><span class="ico" aria-hidden="true">🚀</span>NEW TO AI? <b>START HERE</b><small>You don't need all 50 tools. Pick the job that eats most of your time, find its section, and try one tool this week. If you're brand new, start with these five:</small></h2>
+    <ol class="starter">
+      <li><b>One chat assistant (ChatGPT, Claude or Gemini).</b> It drafts emails, summarizes documents and answers questions. Pick one and use it every day for a week.</li>
+      <li><b>Perplexity for research.</b> It answers with links to its sources, so you can check them.</li>
+      <li><b>NotebookLM for your own documents.</b> Upload PDFs or notes and ask questions about them.</li>
+      <li><b>Canva</b> for social posts, flyers and presentations, with AI built in.</li>
+      <li><b>Fathom for meetings.</b> It records, transcribes and summarizes your calls so you stop taking notes.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="tools">
+    <h2 id="tools"><span class="ico" aria-hidden="true">🧰</span>50 AI TOOLS THAT <b>SAVE HOURS</b><small>Two tools here are made by the team behind AI Signal Daily: Latis AI and Allyzent AI. They're marked "Our tool" so you always know.</small></h2>
+    <div id="toolList"></div>
+  </section>
+
+  <section aria-labelledby="spot">
+    <h2 id="spot"><span class="ico" aria-hidden="true">⭐</span>SPOTLIGHT: <b>THE TWO TOOLS WE BUILT</b><small>Full disclosure: Latis AI and Allyzent AI are our team.</small></h2>
+    <article class="card feature">
+      <h3>Latis AI: your whole marketing team, in one workspace</h3>
+      <p>Create, publish, engage and improve in one place: AI social media manager, email management, calling agents, a website agent, a blog creator, call transcription, Meta ads management and analytics. Best for local and small businesses, B2B teams with no dedicated marketer, and solo creators.</p>
+      <a class="row" href="https://latisai.com/"><span>latisai.com<em>Book a meeting to see it</em></span><i aria-hidden="true">&rarr;</i></a>
+    </article>
+    <article class="card feature">
+      <h3>Allyzent AI: it answers the phone and finishes the work</h3>
+      <p>Natural-voice calls, texts and chat, booking, reminders and follow-ups, plus back-office work in the software your team already uses. For every B2B vertical: auto, legal, retail, salons, real estate, healthcare and more. Customers report about 25 hours a week of phone and fax work removed (customer-reported, not independently verified).</p>
+      <a class="row" href="https://www.allyzent.com/"><span>allyzent.com<em>Book a demo or call their AI agent</em></span><i aria-hidden="true">&rarr;</i></a>
+    </article>
+  </section>
+
+  <section aria-labelledby="prompts">
+    <h2 id="prompts"><span class="ico" aria-hidden="true">✍️</span>25 COPY-PASTE <b>PROMPTS</b><small>Paste these into any chat assistant (tools 1 to 4). Replace the parts in [brackets] with your own details. The more context you give, the better the answer.</small></h2>
+    <div id="promptList"></div>
+  </section>
+
+  <section aria-labelledby="business">
+    <h2 id="business"><span class="ico" aria-hidden="true">🏪</span>AI FOR SMALL BUSINESSES <b>AND CREATORS</b><small>Start with the task that eats the most time each week, automate that one, then move to the next.</small></h2>
+    <div class="table" id="bizTable"></div>
+    <h3 class="cat">A simple first week</h3>
+    <ul class="plain">
+      <li>Pick one chat assistant and use it for every email this week</li>
+      <li>Make 5 social posts in Canva and schedule them in Buffer</li>
+      <li>Turn on a meeting notetaker for your next client call</li>
+      <li>Write down the one task you'd most like to never do again, and find its tool above</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="know">
+    <h2 id="know"><span class="ico" aria-hidden="true">✅</span>GOOD TO <b>KNOW</b></h2>
+    <p class="fine"><b>Pricing changes often.</b> Most tools offer a free plan or free trial, but limits and prices change frequently. Check each tool's website before you pay.</p>
+    <p class="fine"><b>Our tools.</b> Latis AI (43) and Allyzent AI (44) are made by the team behind AI Signal Daily. Every other tool is included because it's useful, not because anyone paid to be here.</p>
+    <p class="fine"><b>Use AI carefully.</b> Check important facts, don't paste private customer data into tools you don't trust, and label AI-made images and videos when you post them.</p>
+    <p class="fine"><b>Sources.</b> Tool selection checked against 2026 roundups (Digital Trends, DataCamp, Synthesia, Productive, Buffer) and each tool's own website. Builder lessons link to the original posts and talks.</p>
+  </section>
+
+  <footer>Every story checked, with sources linked.<br>&copy; 2026 AI Signal Daily · <a href="../">All links</a></footer>
+</div>
+<script>
+{
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  // LEARN FROM THE BUILDERS. Newest first. Each "Builder lessons" post adds one entry at the TOP.
+  // Quotes must be exact; paraphrases go in "what" without quote marks.
+  const builders = [
+    {date:'Nov 25, 2026', who:'Boris Cherny', role:'Creator of Claude Code (Anthropic)', title:'The engineer who built Claude Code shared his 3 rules',
+     lessons:[
+       {what:'Let it check its own work', quote:'Give Claude a way to verify its work. If Claude has that feedback loop, it will 2-3x the quality of the final result.'},
+       {what:'Plan first, then build', quote:'Pour your energy into the plan so Claude can 1-shot the implementation.'},
+       {what:'Make it write its own rules', quote:'After every correction, end with: "Update your CLAUDE.md so you don\'t make that mistake again."'}
+     ],
+     bonus:'He runs 5 Claude Code sessions at once in his terminal, plus more on the web.',
+     apply:'Using ChatGPT or another AI? Same idea: ask it to check its own answer, agree on a plan before it starts, and save your rules so it remembers them.',
+     links:[
+       {label:'Boris\'s Claude Code tips on X', sub:'The original thread', url:'https://x.com/bcherny/status/2017742741636321619'},
+       {label:'How Boris uses Claude Code', sub:'paddo.dev, with his quotes', url:'https://paddo.dev/blog/how-boris-uses-claude-code/'},
+       {label:'10 Claude Code tips from the creator', sub:'jitendrazaa.com', url:'https://www.jitendrazaa.com/blog/others/tips/10-claude-code-tips-from-the-creator-boris-cherny-february/'}
+     ]}
+  ];
+  document.getElementById('bCount').textContent = builders.length;
+  document.getElementById('builderList').innerHTML = builders.map(b => `
+    <article class="card feature">
+      <div class="meta"><span class="tag">Builder lessons</span><span>${esc(b.date)}</span></div>
+      <h3>${esc(b.title)}</h3>
+      <div class="who"><span class="avatar" aria-hidden="true">${esc(b.who.split(' ').map(w=>w[0]).join('').slice(0,2))}</span><span><b>${esc(b.who)}</b><span>${esc(b.role)}</span></span></div>
+      <ol class="lessons">${b.lessons.map(l => `<li><b>${esc(l.what)}</b>${l.quote ? `<q>${esc(l.quote)}</q>` : ''}</li>`).join('')}</ol>
+      ${b.bonus ? `<p><b>Bonus:</b> ${esc(b.bonus)}</p>` : ''}
+      ${b.apply ? `<p class="apply">${esc(b.apply)}</p>` : ''}
+      ${b.links.map(l => `<a class="row" href="${esc(l.url)}"><span>${esc(l.label)}<em>${esc(l.sub)}</em></span><i aria-hidden="true">&rarr;</i></a>`).join('')}
+    </article>`).join('');
+
+  // LATEST LINKS: read straight from the links page, so it never needs a second update.
+  (async () => {
+    const box = document.getElementById('latestList');
+    try {
+      const html = await (await fetch('../', {cache:'no-store'})).text();
+      const m = html.match(/const signals = \[([\s\S]*?)\n  \];/);
+      const signals = m ? Function('"use strict";return [' + m[1] + '];')() : [];
+      if (!signals.length) throw 0;
+      box.innerHTML = signals.slice(0, 6).map(s => `
+        <article class="card">
+          <div class="meta"><span class="tag">${esc(s.tag)}</span><span>${esc(s.date)}</span></div>
+          <h3>${esc(s.title)}</h3>
+          <p>${esc(s.note)}</p>
+          ${s.links.map(l => `<a class="row" href="${esc(l.url)}"><span>${esc(l.label)}<em>${esc(l.sub)}</em></span><i aria-hidden="true">&rarr;</i></a>`).join('')}
+        </article>`).join('');
+    } catch (e) {
+      box.innerHTML = '<p class="empty">Open the full links page below to see the links from every post.</p>';
+    }
+  })();
+
+  // 50 TOOLS (from the AI Signal Daily Toolkit PDF, Nov 2026)
+  const cats = [
+    ['Chat assistants and research','💬','#3df5c8', 'The everyday helpers: ask, draft, summarize and research. Most people only need one assistant plus one research tool.', [
+      ['ChatGPT','All-round assistant for writing, questions, images and voice chat','Everyday tasks, brainstorming','https://chatgpt.com/'],
+      ['Claude','Assistant known for careful writing and working with long documents','Long reports, editing, analysis','https://claude.ai/'],
+      ['Gemini','Google\'s assistant, built into Gmail, Docs and Search','People who live in Google apps','https://gemini.google.com/'],
+      ['Microsoft Copilot','Microsoft\'s assistant, built into Word, Excel and Outlook','Office and Windows users','https://copilot.microsoft.com/'],
+      ['Perplexity','Search engine that answers in plain language with linked sources','Fast research you can check','https://www.perplexity.ai/'],
+      ['NotebookLM','Ask questions about your own PDFs, notes and links','Studying, research, long documents','https://notebooklm.google/'],
+      ['Consensus','Searches published research papers and summarizes what they found','Health, science and evidence questions','https://consensus.app/']]],
+    ['Writing and productivity','📝','#7aa2ff', 'Tools that cut the time spent writing, planning and managing your day.', [
+      ['Grammarly','Fixes grammar and tone as you type, everywhere you write','Emails and documents that need to sound right','https://www.grammarly.com/'],
+      ['Notion AI','Notes, docs and project pages with AI that drafts and summarizes','Organizing work and team wikis','https://www.notion.com/'],
+      ['QuillBot','Rewrites, shortens and paraphrases text','Rewording and simplifying','https://quillbot.com/'],
+      ['Gamma','Turns an outline or a few lines into a full presentation or web page','Slides in minutes','https://gamma.app/'],
+      ['Motion','Plans your day by fitting tasks around your meetings','Busy calendars and to-do lists','https://www.usemotion.com/'],
+      ['Reclaim.ai','Protects time for focus work and habits on your calendar','Keeping deep-work time free','https://reclaim.ai/'],
+      ['Superhuman','Fast email with AI that drafts replies and sorts your inbox','Heavy email users','https://superhuman.com/']]],
+    ['Images and design','🎨','#ff8fb1', 'From social posts to product photos, without a designer. Tip: ChatGPT and Gemini also create and edit images right in the chat.', [
+      ['Canva','Design app with AI for images, text, resizing and background removal','Social posts, flyers, presentations','https://www.canva.com/'],
+      ['Adobe Firefly','Adobe\'s image generator, built for commercial-safe use','Brand and marketing images','https://firefly.adobe.com/'],
+      ['Midjourney','Creates highly artistic, detailed images from text (paid plans only)','Striking visuals and concept art','https://www.midjourney.com/'],
+      ['Ideogram','Image generator that is especially good at readable text in images','Posters, logos, quote graphics','https://ideogram.ai/'],
+      ['Leonardo.Ai','Image and short-video generator with many styles and a generous free tier','Trying lots of looks quickly','https://leonardo.ai/'],
+      ['Photoroom','Removes backgrounds and creates clean product photos','Online sellers and product listings','https://www.photoroom.com/'],
+      ['Remove.bg','Removes the background from any photo in one click','Quick cutouts and headshots','https://www.remove.bg/']]],
+    ['Video and voice','🎬','#ffb547', 'Make, edit and voice videos without a studio. Label anything AI-made when you post it.', [
+      ['Higgsfield','Creates AI videos and images with many top models in one place','Creative short-form video','https://higgsfield.ai/'],
+      ['Runway','AI video generation and editing with cinematic control','Film-style clips and effects','https://runwayml.com/'],
+      ['Kling','High-quality text-to-video and image-to-video','Realistic AI clips','https://klingai.com/'],
+      ['Google Flow','Google\'s AI filmmaking tool, powered by its Veo video models','Short scenes with sound','https://labs.google/flow'],
+      ['CapCut','Video editor with auto-captions, templates and AI effects','Reels, Shorts and TikToks','https://www.capcut.com/'],
+      ['HeyGen','Talking AI avatars and video translation into other languages','Explainer and training videos','https://www.heygen.com/'],
+      ['ElevenLabs','Lifelike AI voices, voiceovers and dubbing','Narration and podcasts','https://elevenlabs.io/'],
+      ['Descript','Edit audio and video by editing the transcript like a document','Podcasts and talking-head videos','https://www.descript.com/']]],
+    ['Meetings, notes and automation','🗓️','#b794ff', 'Stop taking notes and stop copying data between apps.', [
+      ['Fathom','Records, transcribes and summarizes Zoom, Meet and Teams calls','Sales and client calls','https://fathom.video/'],
+      ['Fireflies.ai','Meeting notes with 100+ app integrations to share them automatically','Teams that live in many apps','https://fireflies.ai/'],
+      ['Otter.ai','Live transcription of meetings, lectures and interviews','Accurate written records','https://otter.ai/'],
+      ['Granola','Improves your own rough notes with the meeting transcript, no bot joins','Quiet, private note-taking','https://www.granola.ai/'],
+      ['Zapier','Connects thousands of apps so tasks happen automatically','"When X happens, do Y" workflows','https://zapier.com/'],
+      ['Make','Visual automation builder for multi-step workflows','Complex automations on a budget','https://www.make.com/'],
+      ['n8n','Open-source automation with AI agents you can self-host','Technical users who want control','https://n8n.io/']]],
+    ['Building and coding','💻','#5ce1e6', 'Build websites, apps and tools, even if you\'ve never coded.', [
+      ['Lovable','Builds a working web app from a plain-English description','Non-coders launching an idea','https://lovable.dev/'],
+      ['Replit','Describe an app and its AI agent builds and hosts it','Quick tools and prototypes','https://replit.com/'],
+      ['Cursor','Code editor with AI that writes and fixes code across your project','Developers','https://cursor.com/'],
+      ['Claude Code','Anthropic\'s coding agent that works through whole tasks in your codebase. See its creator\'s lessons at the top of this page.','Developers handing off bigger jobs','https://claude.ai/'],
+      ['GitHub Copilot','AI pair programmer inside your code editor','Everyday coding help','https://github.com/features/copilot'],
+      ['Google AI Studio','Try Google\'s Gemini models and build with them','Testing AI ideas, developers','https://aistudio.google.com/']]],
+    ['Marketing, social media and business','📈','#ff7a59', 'For small businesses, solo creators and anyone growing an audience or a customer base.', [
+      ['Latis AI','AI marketing workspace that creates email and social content, runs calling agents, transcribes calls and manages Meta ads in one place','Small businesses, B2B teams and solo creators who want to market without a team','https://latisai.com/',true],
+      ['Allyzent AI','Conversational AI that answers phone calls, handles scheduling and finishes back-office work in the software your team already uses','Businesses in any industry that need deeper automation and support','https://www.allyzent.com/',true],
+      ['Buffer','Schedules posts to Instagram, TikTok, LinkedIn and more, with an AI assistant for captions','Posting consistently','https://buffer.com/'],
+      ['ManyChat','Automatic Instagram DMs, such as "comment a word, get a link"','Turning comments into leads','https://manychat.com/'],
+      ['Opus Clip','Turns long videos into short, captioned clips for social media','Repurposing podcasts and webinars','https://www.opus.pro/'],
+      ['HubSpot','CRM with AI for emails, sales follow-ups and customer service','Managing customers and leads','https://www.hubspot.com/'],
+      ['Jasper','AI writing for marketing teams, trained on your brand voice','On-brand ads, blogs and emails','https://www.jasper.ai/'],
+      ['beehiiv','Newsletter platform with AI writing help and built-in growth tools','Starting and growing a newsletter','https://www.beehiiv.com/']]]
+  ];
+  let n = 0;
+  const host = u => { try { return new URL(u).hostname; } catch (e) { return ''; } };
+  document.getElementById('toolList').innerHTML = cats.map(([name, icon, color, note, tools], ci) => {
+    const start = n + 1, end = n + tools.length;
+    return `<details class="cat" style="--c:${color}"${ci === 0 ? ' open' : ''}><summary><span class="cicon" aria-hidden="true">${icon}</span><span class="ctitle"><b>${esc(name)}</b><span>Tools ${start} to ${end} · ${tools.length} tools</span></span><span class="chev" aria-hidden="true">&rsaquo;</span></summary><div class="cbody"><p class="catnote">${esc(note)}</p><div class="tools">` +
+      tools.map(t => { n++; return `<a class="tool" href="${esc(t[3])}"><span class="fav"><img src="https://www.google.com/s2/favicons?domain=${esc(host(t[3]))}&sz=64" alt="" loading="lazy" onerror="this.parentNode.classList.add('letter');this.parentNode.insertAdjacentText('afterbegin','${esc(t[0][0])}');this.remove()"><span class="n2">${n}</span></span><span><b>${esc(t[0])}${t[4] ? '<span class="ours">Our tool</span>' : ''}</b><span class="d">${esc(t[1])}</span><span class="bf">Best for: ${esc(t[2])}</span></span><i aria-hidden="true">&rarr;</i></a>`; }).join('') + `</div></div></details>`;
+  }).join('');
+
+  // 25 PROMPTS
+  const prompts = [
+    ['Email and messages', [
+      'Write a short, friendly email to [person] asking for [request]. Keep it under 120 words and end with one clear question.',
+      'Here\'s an email I received: [paste]. Draft a polite reply that says [your answer]. Match their tone.',
+      'Rewrite this message so it sounds confident but not pushy: [paste].',
+      'Turn these notes into a clear follow-up email after a meeting, with action items and owners: [paste notes].',
+      'Write 3 subject lines for this email that make people want to open it: [paste].']],
+    ['Work and productivity', [
+      'Summarize this document in 5 bullet points, then list any decisions or deadlines: [paste or upload].',
+      'I have these tasks today: [list]. Put them in order of priority and estimate how long each takes.',
+      'Create a one-page plan for [project] with goals, steps, owners and a timeline.',
+      'Explain [topic] to me like I\'m new to it, then give me 3 questions to check I understood.',
+      'Turn this messy brainstorm into a clean outline: [paste].']],
+    ['Marketing and social media', [
+      'Write 5 Instagram captions for a post about [topic]. Each under 50 words, with a question at the end.',
+      'Give me 10 hooks for a short video about [topic]. Each under 12 words.',
+      'Write a 30-second video script about [product or idea], with a strong first line and a call to action.',
+      'Turn this blog post into a 7-slide carousel: one idea per slide, short headlines: [paste].',
+      'Write a short product description for [product] for [audience], focusing on the benefits.']],
+    ['Small business', [
+      'Write a reply to this customer review that thanks them and addresses their concern: [paste review].',
+      'Create a simple FAQ for my business, [describe business], with 8 common customer questions and answers.',
+      'Draft a friendly reminder text for a customer about their appointment on [date and time].',
+      'Give me 5 low-cost ways to get more local customers for [type of business].',
+      'Write a short job post for a [role] at a small [type of business].']],
+    ['Learning and life', [
+      'Create a 7-day plan to learn the basics of [skill], 30 minutes a day.',
+      'Compare [option A] and [option B] for my situation: [describe]. Give pros, cons and a recommendation.',
+      'Plan a weekly meal list for [number] people on a budget of [amount], with a shopping list.',
+      'Help me prepare for a job interview for [role]. Ask me one question at a time and give feedback.',
+      'Check this for mistakes and make it clearer, but keep my voice: [paste].']]
+  ];
+  let p = 0;
+  const picons = ['✉️','⚡','📣','🏪','🎓'];
+  document.getElementById('promptList').innerHTML = prompts.map(([name, list], gi) =>
+    `<details class="pg"${gi === 0 ? ' open' : ''}><summary><span>${picons[gi]} ${esc(name)}</span><em>${list.length} prompts &rsaquo;</em></summary><ol class="prompts">` +
+    list.map(t => { p++; return `<li><span><b>${p}.</b> ${esc(t)}</span><button class="copy" type="button" data-t="${esc(t)}" aria-label="Copy prompt ${p}">Copy</button></li>`; }).join('') + `</ol></details>`).join('');
+  document.getElementById('promptList').addEventListener('click', async e => {
+    const b = e.target.closest('.copy'); if (!b) return;
+    try { await navigator.clipboard.writeText(b.dataset.t); b.textContent = 'Copied'; b.classList.add('done'); setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('done'); }, 1600); }
+    catch (err) { b.textContent = 'Select & copy'; }
+  });
+
+  // SMALL BUSINESS TABLE
+  const biz = [
+    ['Posting on social media','Draft captions, design posts and schedule them a week ahead','Canva (15), Buffer (45), Latis AI (43)'],
+    ['Missed calls and booking','Answer calls, book appointments and send reminders automatically','Allyzent AI (44)'],
+    ['Answering the same questions','Auto-reply to common DMs and send links','ManyChat (46)'],
+    ['Writing emails and offers','Draft newsletters, promos and follow-ups','Any chat assistant (1 to 4), beehiiv (50)'],
+    ['Running ads','Create ad copy and images, and manage Meta ads','Latis AI (43), Adobe Firefly (16)'],
+    ['Meetings and calls','Record, summarize and pull out to-dos','Fathom (30), Fireflies.ai (31)'],
+    ['Moving data between apps','Copy leads, orders and forms automatically','Zapier (34), Make (35)'],
+    ['Video content','Cut long videos into reels and add captions','Opus Clip (47), CapCut (26)']
+  ];
+  document.getElementById('bizTable').innerHTML = biz.map(r => `<div class="trow"><b>${esc(r[0])}</b><span>${esc(r[1])}</span><em>Try: ${esc(r[2])}</em></div>`).join('');
+}
+</script>
+</body>
+</html>
