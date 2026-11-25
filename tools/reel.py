@@ -2,7 +2,7 @@
 """AI Signal Daily Reel builder. Works anywhere with python3+Pillow+ffmpeg+curl (incl. the Higgsfield sandbox).
 Usage: python3 reel.py spec.json
 spec = {
-  "beats": [ {"clip": "<url or path to mp4>", "text": "HEADLINE with *mint* words", "sub": "optional small line", "dur": 3.2}, ... ],
+  "beats": [ {"clip": "<url or path to mp4, or \"dark\" for a free animated brand background>", "text": "HEADLINE with *mint* words", "sub": "optional small line", "dur": 3.2}, ... ],
   "end":   {"text": "SEND THIS TO SOMEONE WHO *...*", "dur": 2.6},
   "audio": "<url or path to sound bed (no music)>",   # optional; else silent
   "audio_volume": 0.9,
@@ -20,7 +20,19 @@ F=ImageFont.truetype
 LOGO=Image.open(f"{HERE}/logo.png").convert("RGBA")
 XF=0.35  # crossfade seconds
 
-def fetch(src, name):
+def dark_bg(name, dur):
+    # free animated brand background: dark navy with a slowly drifting mint glow
+    from PIL import ImageFilter
+    big=Image.new("RGB",(int(W*1.3),int(H*1.3)),BG); gd=ImageDraw.Draw(big)
+    gd.ellipse((big.width*0.1,big.height*0.05,big.width*0.9,big.height*0.55),fill=(18,70,60))
+    big=big.filter(ImageFilter.GaussianBlur(200)); big.save("_darkbg.png")
+    subprocess.run(["ffmpeg","-v","error","-y","-loop","1","-framerate","30","-i","_darkbg.png","-vf",
+      f"crop={W}:{H}:x='(in_w-{W})/2+60*sin(t/2)':y='(in_h-{H})/2+80*cos(t/3)',format=yuv420p","-t",str(dur+1),
+      "-c:v","libx264","-preset","veryfast","-crf","22",name],check=True)
+    return name
+
+def fetch(src, name, dur=6):
+    if src=="dark": return dark_bg(name, dur)
     if os.path.exists(src): return src
     subprocess.run(["curl","-sSfL","-o",name,src],check=True); return name
 
@@ -63,13 +75,14 @@ def brand(img,d,y=230):
     d.text((x0+92,y+12),"AI Signal Daily",font=F(IB,30),fill=WHITE)
     d.text((x0+92,y+46),"@aisignaldaily.news",font=F(IB,22),fill=MUTED)
 
-def beat_layer(path,b,i,n,ai):
+def beat_layer(path,b,i,n,ai,dark=False):
     img=Image.new("RGBA",(W,H),(0,0,0,0)); g=Image.new("RGBA",(W,H)); gd=ImageDraw.Draw(g)
     for yy in range(760,H): gd.line((0,yy,W,yy),fill=(6,9,15,int(min(235,(yy-760)/650*255))))
     img.alpha_composite(g); d=ImageDraw.Draw(img); brand(img,d)
-    head(d,b["text"],1470,b.get("size",112))
+    yb=1150 if dark else 1470
+    head(d,b["text"],yb,b.get("size",112))
     if b.get("sub"):
-        sf=F(IM,34); s=b["sub"]; d.text(((W-d.textlength(s,font=sf))/2,1492),s,font=sf,fill=MUTED)
+        sf=F(IM,34); s=b["sub"]; d.text(((W-d.textlength(s,font=sf))/2,yb+22),s,font=sf,fill=MUTED)
     t=f"{i}/{n}"; tf=F(IB,26); tw=d.textlength(t,font=tf)
     d.rounded_rectangle((W-70-tw-28,240,W-70,282),21,fill=(6,9,15,200)); d.text((W-70-tw-14,245),t,font=tf,fill=WHITE)
     if ai:
@@ -88,7 +101,7 @@ def main(spec_path):
     s=json.load(open(spec_path)); beats=s["beats"]; n=len(beats); ai=s.get("ai_label",True); out=s.get("out","reel.mp4")
     parts=[]
     for i,b in enumerate(beats):
-        clip=fetch(b["clip"],f"_clip{i}.mp4"); lay=f"_L{i}.png"; beat_layer(lay,b,i+1,n,ai)
+        clip=fetch(b.get("clip","dark"),f"_clip{i}.mp4",b.get("dur",3.2)+1); lay=f"_L{i}.png"; beat_layer(lay,b,i+1,n,ai and b.get("clip","dark")!="dark",dark=b.get("clip","dark")=="dark")
         dur=b.get("dur",3.2)+XF; o=f"_b{i}.mp4"
         subprocess.run(["ffmpeg","-v","error","-y","-stream_loop","-1","-i",clip,"-i",lay,"-filter_complex",
           f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps=30,trim=duration={dur},setpts=PTS-STARTPTS[v];[v][1:v]overlay,format=yuv420p",
