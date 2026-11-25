@@ -6,7 +6,8 @@ Higgsfield tools are `mcp__Higgsfield_Studio__*`. Plan: Plus (~1,200 credits/mon
 Budget per post (target ~1,500-2,500 credits/month total): carousel <= 8 cr, Reel <= 80 cr, mini-reel carousel <= 110 cr. Check `balance` first; if under 150 credits, use Claude-made media only (dark animated beats, no Higgsfield clips) and email Raheel once that credits are low.
 
 ## Content rules for every visual (never break)
-- No women or female figures. Men only as fictional, fully and professionally dressed people. Never real people or lookalikes.
+- AI-generated people: no women or female figures. Men only as fictional, fully and professionally dressed people. Never AI versions/lookalikes of real people.
+- Real footage/photos of real people (any gender) are fine when genuine and credited; see STYLE.md "Real people".
 - No nudity, nothing vulgar, suggestive, violent, gambling, alcohol, film/TV characters.
 - Label AI visuals "Made with AI" (on the media + caption) and set Instagram `isAiGenerated: true` when any AI visual is used.
 - Never music. Sound = cinematic sound design / dramatic nature ambience.
