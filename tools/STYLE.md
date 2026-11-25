@@ -69,3 +69,11 @@ Three posts a day now. Quality > volume, but if usage allows later, add a 4th li
 - Carousels can't carry sound via API. If a story is very visual and dramatic, it may be made as a short slides-with-motion Reel with sound instead.
 - Progress marker ("1/4") on every Reel beat and carousel slide.
 - How to make it: see tools/HIGGSFIELD.md.
+
+## Company posts: Allyzent AI + Latis AI (about 2 per week, in the "AI you can use" slot)
+- Format: teach the DIY way first (e.g. build your own AI receptionist with ElevenLabs Agents or Vapi; automate your Instagram replies), be honest about where DIY gets hard (integrations, booking/CRM, edge cases, upkeep), then: "Or let Allyzent AI / Latis AI do it for you. Comment DEMO."
+- Allyzent AI = custom conversational AI (voice/chat), back-office automation and AI-engineer support, for ALL B2B verticals (salons, auto, legal, real estate, retail...). Lead with non-healthcare examples.
+- Latis AI = marketing AI: create/publish/engage/improve, inbox and replies, Meta ads.
+- Always disclose: "Full disclosure: Allyzent AI / Latis AI is our team." Never imply a partnership with ElevenLabs, Vapi or any other company; name them as tools only, no logos as art.
+- Only real facts: published site numbers labeled "customer-reported"; no invented results or income claims. Verify third-party features/prices on their official sites at post time.
+- CTA keyword DEMO (ManyChat flow pending setup + demo links from Raheel). Until it is live, use: "Comment AI and we'll DM you the details."
