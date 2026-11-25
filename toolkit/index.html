@@ -118,6 +118,15 @@ details.pg>summary::-webkit-details-marker{display:none}
 details.pg>summary em{font-style:normal;font-size:13px;color:var(--muted);font-weight:500}
 details.pg .prompts{padding:0 12px 12px}
 details.pg .prompts li{background:#0a111c}
+.newest{display:none;margin:22px 0 0;padding:18px;border-radius:20px;background:linear-gradient(160deg,#1a1430,#0e1624 65%);border:1px solid #3a2f6a}
+.newest.on{display:block}
+.newest .lbl{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#c9b8ff}
+.newest .lbl::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff5a7a;box-shadow:0 0 0 4px rgba(255,90,122,.2)}
+.newest h2{margin:8px 0 6px;font-size:26px}
+.newest p{margin:0 0 14px;color:var(--soft);font-size:15px}
+.newest .go{display:flex;justify-content:center;align-items:center;gap:8px;width:100%;padding:14px 18px;min-height:52px;border-radius:999px;background:#c9b8ff;color:#140f26;font-weight:800;text-decoration:none;text-align:center}
+.newest .go:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.newest .more{display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--muted)}
 .signup{margin:22px 0 0;padding:18px;border-radius:20px;background:linear-gradient(160deg,#10231f,#0e1624 65%);border:1px solid #1f4a40;text-align:center}
 .signup h2{margin:0 0 6px;font-size:26px}
 .signup p{margin:0 0 12px;color:var(--soft);font-size:15px}
@@ -159,6 +168,14 @@ footer{margin-top:40px;text-align:center;font-size:13px;color:var(--muted)}
       <div><b>3. Copy a prompt</b><span>Paste it and save an hour today</span></div>
     </div>
   </header>
+
+  <section class="newest" id="newest" aria-labelledby="newestTitle">
+    <span class="lbl">From our newest post</span>
+    <h2 id="newestTitle"></h2>
+    <p id="newestNote"></p>
+    <a class="go" id="newestGo" href="../">Open it &rarr;</a>
+    <a class="more" href="#latest">More links from this post and earlier ones &darr;</a>
+  </section>
 
   <section class="signup" aria-labelledby="join">
     <h2 id="join">GET IT IN YOUR <b>INBOX</b></h2>
@@ -286,6 +303,15 @@ footer{margin-top:40px;text-align:center;font-size:13px;color:var(--muted)}
       const m = html.match(/const signals = \[([\s\S]*?)\n  \];/);
       const signals = m ? Function('"use strict";return [' + m[1] + '];')() : [];
       if (!signals.length) throw 0;
+      // Hero: the newest post's MAIN link (links[0] = the thing people want: original video/talk/source).
+      const top = signals[0], main = top.links && top.links[0];
+      if (main) {
+        document.getElementById('newestTitle').textContent = top.title;
+        document.getElementById('newestNote').textContent = top.note;
+        const go = document.getElementById('newestGo');
+        go.href = main.url; go.innerHTML = esc(main.label) + ' &rarr;';
+        document.getElementById('newest').classList.add('on');
+      }
       box.innerHTML = signals.slice(0, 6).map(s => `
         <article class="card">
           <div class="meta"><span class="tag">${esc(s.tag)}</span><span>${esc(s.date)}</span></div>
