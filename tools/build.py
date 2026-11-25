@@ -1,4 +1,4 @@
-"""AI Signal Daily - video carousel builder (Gemini 4 Hydrogen story)."""
+"""AI Signal Daily brand helpers: headline(), avatar(), post_layer(), closing_slide(), render(). Import from a scratch working directory."""
 import subprocess, os, textwrap
 from PIL import Image, ImageDraw, ImageFont
 
@@ -159,43 +159,3 @@ def render(out, layer, clip, ss, dur, box, speed=1.0, keep_audio=False, fit="cov
     if r.returncode == 0: os.replace(out + ".part.mp4", out)
     else: raise SystemExit(f"failed {out}")
 
-SLIDES = []
-VID_H = 800
-cover_layer("layers/s1.png", VID_H,
-            "PEOPLE ARE BUILDING *ENTIRE* *3D* *WORLDS* WITH GOOGLE'S NEW AI. HERE ARE 6",
-            "@kimmonismus · Video: Google")
-SLIDES.append(("out/AI_Signal_Daily_01_cover.mp4", "layers/s1.png", "g4h_1_skyline.mp4", 0, 8, (0, 0, W, VID_H - 3), 1.0, False, "cover"))
-
-V169 = (984, 554)
-posts = [
-    ("02_seaplane", "g4h_2_seaplane.mp4", 0, 10, 3.0, False, (984, 670), "contain",
-     "Fly a seaplane from morning to night.\nThe ocean, the island, the sky and the light changing through the day were all built with Gemini 4 Hydrogen.",
-     "Built by @LuminaBench · Video: Google", "SPED UP 3X"),
-    ("03_voxel_koi", "g4h_3_voxel_koi.mp4", 0, 10, 1.0, True, V169, "cover",
-     "A 3D voxel koi pond with a red pagoda, cherry blossoms and lantern-lit bridges.\nMade with Hydrogen right inside the Gemini app.",
-     "Built by @IamEmily2050 · Video: Google", "GEMINI APP"),
-    ("04_jelly_koi", "g4h_4_jelly_koi.mp4", 0, 10, 2.0, False, V169, "cover",
-     "Same idea, softer spin: a squishy, jelly-like koi pond.",
-     "Built by @notjazii · Video: Google", "SPED UP 2X"),
-    ("05_moth", "g4h_5_moth.mp4", 3, 10, 1.0, True, V169, "cover",
-     "An interactive ruby-red moth with its own sound.\nGemini 4 Carbon directed a swarm of Hydrogen \"workers\" to build it, and Hydrogen even recorded the demo.",
-     "Built by @thtbee_ · Video: Google", "SOUND ON"),
-    ("06_ranch", "g4h_6_ranch.mp4", 0, 10, 1.0, False, (560, 747), "contain",
-     "Same prompt, two models.\nTop: Hydrogen, built in under a minute.\nBottom: Gemini 3.8 Flash.",
-     "Built by @Bhavani_00007 · Video: Google", "SIDE BY SIDE"),
-]
-for name, clip, ss, dur, speed, aud, (vw, vh), fit, text, credit, tag in posts:
-    lp = f"layers/{name}.png"
-    box = post_layer(lp, text, vw, vh, credit, tag)
-    SLIDES.append((f"out/AI_Signal_Daily_{name}.mp4", lp, clip, ss, dur, box, speed, aud, fit))
-
-closing_slide("out/AI_Signal_Daily_07_why_it_matters.jpg")
-
-if __name__ == "__main__":
-    import sys
-    if sys.argv[1:] == ["layers"]:
-        pass
-    else:
-        from concurrent.futures import ThreadPoolExecutor
-        with ThreadPoolExecutor(3) as ex:
-            list(ex.map(lambda s: render(s[0], s[1], s[2], s[3], s[4], s[5], s[6], s[7], s[8]), SLIDES))
