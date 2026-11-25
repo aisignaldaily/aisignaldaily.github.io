@@ -100,7 +100,21 @@ def end(s,n,T):
     y=para(d,"+ our free AI toolkit, straight to your DMs",y+190,32,WHITE)
     t="Follow @aisignaldaily.news"; d.text(((W-d.textlength(t,font=tf))/2,y+40),t,font=tf,fill=WHITE)
     return img
-R={"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end}
+def icon_cart(d,cx,cy,sc=1.0,col=ACC,w=10):
+    # simple line-art shopping cart
+    P=lambda x,y:(cx+x*sc,cy+y*sc)
+    d.line([P(-170,-110),P(-120,-110),P(-70,70),P(130,70)],fill=col,width=w,joint="curve")
+    d.line([P(-100,-50),P(170,-50),P(140,30),P(-80,30)],fill=col,width=w,joint="curve")
+    for x in (-50,110): d.ellipse([P(x-22,95),P(x+22,139)],outline=col,width=w)
+def cover(s,n,T):
+    img,d=layer()
+    if s.get("icon")=="cart":
+        glow=Image.new("RGBA",(W,H),(0,0,0,0)); gd=ImageDraw.Draw(glow); icon_cart(gd,W/2,330,1.25,(61,245,200,255),26)
+        img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(18))); d=ImageDraw.Draw(img); icon_cart(d,W/2,330,1.25,ACC,12)
+    y=head(d,s["headline"],560,s.get("size",132))
+    if s.get("sub"): y=para(d,s["sub"],y+30,36,WHITE,980)
+    return img
+R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end}
 def main(p):
     s=json.load(open(p)); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
     for sl in s["slides"]:

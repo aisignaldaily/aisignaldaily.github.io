@@ -3,7 +3,7 @@
 Owner's rule: use what is BEST for growth, honestly. Higgsfield = the scroll-stopping hero visual + realistic sound. Claude-made = everything that carries information (clean slides, charts, steps, real screenshots, animated text). Don't spend credits on slides people read.
 
 Higgsfield tools are `mcp__Higgsfield_Studio__*`. Plan: Plus (~1,200 credits/month). Prices: image gpt_image_2_6 ~0.75 cr; 5 s video seedance_2_5 (9:16) 35 cr; sound mirelo_text_to_audio 20 s = 5 cr.
-Budget per post (target ~1,500-2,500 credits/month total): carousel <= 5 cr, Reel <= 80 cr, mini-reel carousel <= 110 cr. Check `balance` first; if under 150 credits, use Claude-made media only (dark animated beats, no Higgsfield clips) and email Raheel once that credits are low.
+Budget per post (target ~1,500-2,500 credits/month total): carousel <= 8 cr, Reel <= 80 cr, mini-reel carousel <= 110 cr. Check `balance` first; if under 150 credits, use Claude-made media only (dark animated beats, no Higgsfield clips) and email Raheel once that credits are low.
 
 ## Content rules for every visual (never break)
 - No women or female figures. Men only as fictional, fully and professionally dressed people. Never real people or lookalikes.
@@ -13,7 +13,10 @@ Budget per post (target ~1,500-2,500 credits/month total): carousel <= 5 cr, Ree
 
 ## A) Carousel (default for morning + afternoon): 1 Higgsfield cover + Claude-made slides
 1. Cover (slide 1) with Higgsfield, 2 calls: (a) `generate_image` gpt_image_2_6, aspect 4:5, `use_unlim:false`, prompt starts "premium 3D render, dark navy-black background (#06090F), glossy minimal objects, mint-green (#3DF5C8) glowing rim light, soft haze, hero object in the upper half, empty dark lower half for text, no people, no text, no logos. Scene: ..."; (b) same model with the first result as `medias:[{role:"image", value:<job_id>}]` adding the text: huge condensed all-caps headline (Anton/Bebas style) in the lower half with 1-2 key words in mint, short Inter-style sub line, "SWIPE →", top-left "AI Signal Daily"/"@aisignaldaily.news", top-right pill "1/N" + tiny "Made with AI". "Spell every word exactly as given. No other text."
-2. Slides 2..N with `repo/tools/carousel.py` (free, in your own workspace): types point / steps / chart / quote / end (see the file header). Use a chart whenever there is a number, steps for how-tos, quote only for a short exact quote from the source. Last slide = end ("SEND THIS TO ... *...*").
+2. Slides 2..N, choose per slide (owner compared both side by side on Nov 25: Higgsfield clearly looks better for picture/point slides; plain Claude text slides look empty):
+   - **Point / "what it does" slides -> Higgsfield** (same series style + text baked in, like the cover; ~1.5 credits each). This is the default for slides 2-4.
+   - **Chart, steps/how-to, exact quote, end slide -> Claude-made** with `repo/tools/carousel.py` (free, numbers always exact, never typos).
+   Typical 6-slide post: cover + 2-3 Higgsfield point slides + 1-2 Claude chart/steps slides + Claude end slide = ~5-8 credits.
 3. Optional real screenshot slide: in Higgsfield `sandbox_exec` use Playwright (headless Chromium) to screenshot the official announcement/product page, then show it inside a slide. Never screenshot people.
 4. Hosting: slide 1 = its Higgsfield cloudfront URL. Slides 2..N: copy to `repo/media/YYYY-MM-DD-<slot>/02.jpg...`, push, wait ~90 s, use https://aisignaldaily.github.io/media/... URLs. Buffer accepts both.
 5. Proofread: Read every local slide; for slide 1 curl it inside sandbox_exec and pass it via image_paths. Regenerate on any typo (max 2 tries), else use a Claude-made cover.
