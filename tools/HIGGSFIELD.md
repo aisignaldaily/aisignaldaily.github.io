@@ -33,3 +33,10 @@ Waiting on a Buffer test of video slides in carousels. Until then, don't use.
 ## Fallbacks
 - Higgsfield missing/erroring twice: Claude-made only (carousel.py for all slides incl. cover; reel.py with all "dark" beats, rendered locally and hosted on GitHub Pages; silent audio).
 - Never post anything you have not looked at.
+
+
+## D) Midday Reel (12:30 PM): lighter
+Same as B but cheaper: ONE Higgsfield clip (hook) + "dark" animated beats + sound; under ~45 credits. Best for quick tools, "AI did something wild", light humor.
+
+## E) Daily Stories (5:30 PM): free, Claude-made
+`repo/tools/story.py` makes 1080x1920 cards: "newpost" (teaser of today's best post: kicker NEW POST, its headline, "Tap our profile to see it") and "question" (a "this or that" question with 2 options, "Reply in DM with your answer"). Buffer cannot add real Instagram poll stickers, so answers come as DMs (good for engagement). Post each card as Buffer Instagram type "story" (shouldShareToFeed false). 2 cards per day.
