@@ -254,6 +254,10 @@ Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI yo
 An hourly watcher (7 AM-9 PM CT) may post ONE breaking-news Reel per day outside the schedule when something truly big is confirmed. It writes `claims/YYYY-MM-DD-breaking.txt`, and if a regular slot is due within 90 minutes it also writes that slot's claim file with the text `breaking replaced this slot`, so the slot run and the watchdog skip it. Regular runs: if today's breaking claim exists, never repeat that story.
 
 ## Weekly report rules (updated every Monday by the report run; newest first)
+Standing instructions for the Monday report run (Raheel, Nov 26, 2026: "I trust you can do your own research"):
+- Also compare the voice test (voice yes/no) and the hashtag test (0 vs 1-3 hashtags, decide after 2 weeks from Nov 27).
+- OUTSIDE RESEARCH, ~15 min: what AI content went viral this week on Instagram/TikTok/YouTube Shorts/X (formats, hooks, topics), new official Instagram ranking/feature news (Mosseri, Instagram Creators blog), new studies on what drives sends/saves/follows. Web search/fetch only; never scrape Instagram or bypass blocks. Keep only sourced findings; add the 2-3 best ideas for our audience as dated bullets with sources to "Research notes", mark any new format as a "test" here, and include them in the email ("Outside research: best new ideas + what we're testing").
+
 (none yet)
 
 ## "Built with AI" showcase series (Raheel's evolving.ai reference, Nov 25, 2026: "People are building insane things with Claude Fable 5.2 - 17 examples", 14.3K likes, 5,364 sends)
