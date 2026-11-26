@@ -90,6 +90,7 @@ In every new `const signals` entry in index.html, put the thing people actually 
 - AI fakes of real people made by SOMEONE ELSE (e.g. a viral deepfake/AI video) may be shown when the fake itself is the news story. Always label it on screen and in the caption as "AI-generated fake, not real" (for the whole time it is on screen), credit where it came from, and never present it as real. Never sexual, nude or vulgar fakes, never ones that defame someone or could fool people about elections/politics.
 - We NEVER create AI likenesses, deepfakes, lookalikes or voice clones of real people ourselves. Never private individuals, never movie/TV clips.
 - AI-generated people (Higgsfield): never women or female figures; men only as fictional, fully and professionally dressed people; never nudity or anything suggestive.
+- "Their own words" slide/beat (Raheel approved Nov 25, 2026, builds authority): when a post is about what a real person said, show their ACTUAL post or statement as a clean quote card in our design: full name, @handle, platform, date, and the exact words copied from the original (no paraphrase in quote marks, no edits). No profile photo or other images of them unless it is an official/credited file per the rules above. Prefer this over AI scenes for Builder lessons and people-led news.
 - Getting clips: only direct video files from official/company pages or files Raheel provides; no ripping from Instagram/TikTok/X. If a clip can't be fetched, use a real credited screenshot or a quote Reel (exact quote + Higgsfield scene).
 
 ## Captions
