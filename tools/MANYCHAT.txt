@@ -5,3 +5,8 @@ BLUEPRINT: live
 
 # AI (live since Nov 25, 2026): DM with today's tools + the toolkit link. DEMO (live): 4 quick questions + email, then Calendly booking, AI agent line, info@allyzent.com.
 # BUILD is NOT a keyword. Use only AI, BLUEPRINT, DEMO.
+# Checked Nov 26, 2026 (read-only, via Raheel's Chrome):
+# - AI flow (keywords AI / toolkit / tools): LIVE, asks people to FOLLOW before the toolkit link (follow-gate enforced). Sends the toolkit URL in the DM.
+# - BLUEPRINT flow: LIVE, no follow check (by design), buttons "Get the blueprint" + "Book a demo", follow-up DM if no click.
+# - DEMO qualifier (Allyzent + Latis): LIVE, 0 runs so far.
+# - Plan: Essential TRIAL, ends ~Dec 8, 2026, then $17/mo for 250 contacts (+$25/mo for up to 250 more). 3 contacts used.
