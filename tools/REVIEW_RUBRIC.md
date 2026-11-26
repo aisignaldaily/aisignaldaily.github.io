@@ -9,7 +9,7 @@ You are reviewing a draft Instagram post you did not make. Be blunt. Score again
 - People share what gives them social currency, practical value or strong emotion (awe, surprise, humor) — Jonah Berger, "Contagious" (STEPPS).
 - People follow when they expect more of the same value tomorrow: a clear promise, a recurring series, a consistent look.
 
-## Benchmarks (real results from posts Raheel collected, @ai.byarsh, Nov 2026)
+## Benchmarks (real results from posts Raheel collected, @ai.byarsh and evolving.ai, Nov 2026)
 | Post | Likes | Sends | Why it worked / didn't |
 |---|---|---|---|
 | 42 things to install in Claude ("my setup, 60 days of logs", AI-team org chart) | 13.7K | 19.8K | personal proof + real data, team metaphor, job titles, "start with one" |
@@ -18,8 +18,10 @@ You are reviewing a draft Instagram post you did not make. Be blunt. Score again
 | 12 AI projects you can build in one weekend | 1,175 | 1,394 | personal outcome, one idea per slide, benefit checklists |
 | The 30 best Claude plugins (sorted by job) | 1,301 | 1,275 | big number, "pick one row" rule, progress bar |
 | Build your own AI assistant in 5 steps | 706 | 793 | blueprint, copy-paste prompt per step |
+| Someone asked Gemini for the one life hack 99% don't know (evolving.ai, screenshot of viral X post) | 9,828 | 6,693 | curiosity gap + personal benefit + 'secret knowledge' to forward; but movie-still cover, reposted screenshots, unchecked overstated science |
+| People are building insane things with Claude Fable 5.2, 17 examples (evolving.ai, video slides) | 14.3K | 5,364 | hot new model + every slide moves (awe) + big list; clips reposted from X |
 | One post. Everywhere. (creator repurposing workflow) | 256 | 269 | niche audience (creators only), weaker pain |
-Takeaway: broad personal outcome + proof + concrete per-slide value + send trigger = high sends. Niche or self-centered = low.
+Takeaway: broad personal outcome + proof + concrete per-slide value + send trigger = high sends. Niche or self-centered = low. Our edge over reposting accounts: same hooks, but our own demos/designs, real sources and fact-checks (trust compounds into follows).
 
 ## Score each 1-10 (and say which line drove the score)
 1. HOOK (slide 1 + caption line 1): Would a stranger stop in 1.5 s? Specific number, outcome or surprise? Readable in one glance on a phone? No jargon? Pays off on slide 2?
