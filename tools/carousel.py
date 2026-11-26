@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """AI Signal Daily carousel slide builder (Claude-made slides, no credits).
-Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card), chat (you/AI example exchange + checklist); see each function docstring.
+Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card), chat (you/AI example exchange + checklist), list (one category of a curated mega-list with progress dots); see each function docstring.
 Usage: python3 carousel.py spec.json  -> writes 02.jpg, 03.jpg ... into spec["outdir"] (default ".")
 spec = {"total": 6, "start": 2, "outdir": "out",
   "slides": [
@@ -187,7 +187,31 @@ def chat(s,n,T):
         y=yy+24
     if s.get("label"): para(d,s["label"],y+20,26,MUTED)
     return img
-R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code,"chat":chat}
+def listing(s,n,T):
+    """Curated list slide (one category of a big list): {"type":"list","kicker":"ROW 02 · 6 TOOLS","headline":"RESEARCH & *UNDERSTANDING*",
+    "items":[{"name":"NotebookLM","sub":"google · free","desc":"Chat with your PDFs and notes","badge":"Free"}, ...],
+    "progress":[12,30]}  First item is highlighted as the pick of the row. badge = short verified fact (e.g. "49k+ stars", "Free", "$10/mo")."""
+    img,d=layer(); y=170
+    if s.get("kicker"): d.text((70,y),s["kicker"],font=F(IB,28),fill=ACC); y+=50
+    y=head(d,s["headline"],y,s.get("size",92),center=False,x0=70)+24
+    for i,it in enumerate(s["items"][:7]):
+        hl=(i==0); h=112
+        d.rounded_rectangle((70,y,W-70,y+h),22,fill=(20,64,56) if hl else CARD, outline=ACC if hl else None, width=3 if hl else 0)
+        nm=it["name"]; d.text((100,y+16),nm,font=F(IB,36),fill=WHITE)
+        if it.get("sub"): d.text((100+d.textlength(nm+"  ",font=F(IB,36)),y+24),it["sub"],font=F(IM,24),fill=MUTED)
+        d.text((100,y+64),it.get("desc","")[:58],font=F(IM,27),fill=(200,210,220))
+        if it.get("badge"):
+            b=it["badge"]; bf=F(IB,28); bw=d.textlength(b,font=bf)
+            d.rounded_rectangle((W-100-bw-28,y+16,W-100,y+60),22,fill=ACC if hl else (40,52,66)); d.text((W-100-bw-14,y+22),b,font=bf,fill=BG if hl else WHITE)
+        y+=h+14
+    if s.get("progress"):
+        a,b=s["progress"]; t=f"{a} / {b} collected"; d.text((70,y+16),t,font=F(IB,28),fill=WHITE)
+        x=70+d.textlength(t+"   ",font=F(IB,28)); r=9
+        for k in range(b):
+            if x>W-80: break
+            d.ellipse((x,y+24,x+2*r,y+24+2*r),fill=ACC if k<a else (50,62,76)); x+=2*r+6
+    return img
+R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code,"chat":chat,"list":listing}
 def main(p):
     s=json.load(open(p)); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
     for sl in s["slides"]:

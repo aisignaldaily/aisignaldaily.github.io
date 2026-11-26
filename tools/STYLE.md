@@ -77,6 +77,14 @@ Weaker than his other two (likes ~3x lower): a workflow for creators is a narrow
 - Skip: walls of platform logos (use names), unrealistic "13 platforms, zero copy-paste" promises.
 - Idea worth one post (honest + transparent, ~once a month): "How this page runs: an AI pipeline + a human who approves every post" (our real setup: research, verify, design, preview email, publish). Transparency builds trust; never overstate it.
 
+## "The List" mega-list series (Raheel, Nov 25, 2026) — Saturdays in the 9:15 AM carousel
+Reference: @ai.byarsh "The 30 best Claude plugins" (Nov 14, 2026; 1,301 likes, 640 comments, 1,275 sends — sends ~= likes). Why it works: a big round number ("The 30 best ..."), a contrarian rule that adds real value ("Don't install all 30. Pick one row."), items sorted BY JOB into rows (one row per slide), the best item of each row highlighted, a "12 / 30 collected" progress bar that rewards swiping, keyword CTA "and I'll DM you all 30".
+Our version:
+- Broad topics first: "The 25 best free AI tools for <job/life area>" (students, small business, content, research, design, writing, productivity, Chrome extensions, phone apps, Custom GPTs/Gems), sometimes builder lists (Claude/ChatGPT add-ons, open-source repos).
+- 7-8 slides: cover (number + topic + "SAVE THIS"), "the rule" slide (how to pick: "Pick ONE row that matches your week, try one tool"), 4-5 row slides with carousel.py type "list" (5-6 items each, first = pick of the row, badge = one VERIFIED fact: "Free", "Free tier", "$X/mo", "49k+ stars"), progress dots, end slide "Comment AI and we'll DM you all <N> links".
+- Verify EVERY item at post time: it exists, the one-line description is accurate, price/free tier from the official site, GitHub stars via gh api (round down). Popular lists online are full of invented star counts and dead tools: if you can't verify it, it's not on our list. No icons/avatars copied from others (names only), no anime/character images.
+- Never repeat a list topic within 4 weeks; the links page entry lists every item's official link, grouped by row.
+
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
 - **AI said/did something wild** ("Grok called humans 'bags of meat'") - personality + surprise.
