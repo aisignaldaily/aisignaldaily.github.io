@@ -86,7 +86,7 @@ Our version:
 - Never repeat a list topic within 4 weeks; the links page entry lists every item's official link, grouped by row.
 
 ## VIRAL PLAYBOOK (distilled from Raheel's reference posts, Nov 25, 2026) — read before every post
-Reference results (@ai.byarsh carousels): free software swaps 4,008 likes / 3,142 sends · 12 weekend AI projects 1,175 / 1,394 sends · 30 best plugins 1,301 / 1,275 sends · own AI assistant 706 / 793 sends · "one post everywhere" 256 / 269 sends.
+Reference results (@ai.byarsh carousels): Claude WhatsApp number 2,918 likes / 3,537 sends · free software swaps 4,008 likes / 3,142 sends · 12 weekend AI projects 1,175 / 1,394 sends · 30 best plugins 1,301 / 1,275 sends · own AI assistant 706 / 793 sends · "one post everywhere" 256 / 269 sends.
 What the winners share (do all of these):
 1. A concrete PERSONAL outcome in the hook: save money, save hours, "your own X", "build in one weekend". Broad pain beats niche workflow (the creator-only post did 15x worse).
 2. A number on the cover: "$305 a month", "12 projects", "30 best", "5 steps".
@@ -103,6 +103,15 @@ What we never copy: invented numbers or star counts, copied logos/icons, other p
 - Label mockups honestly: small "Concept mockup · Made with AI" on each image slide.
 - Budget: up to ~15 Higgsfield credits for this format (gpt_image_2_6 ~0.75 cr per slide); keep the same scene/light/props across slides.
 - The links page entry lists each idea with the real tools + a starter prompt.
+
+## "Wait, AI can do THAT?" (surprising-but-real) — preferred hook angle for how-tos and Build it posts
+Reference: @ai.byarsh "Give Claude a WhatsApp number. Yes, seriously." (Nov 8, 2026; 2,918 likes, 1,113 comments, 3,537 SENDS — highest sends-to-likes of all references). Why: the reader didn't know it was possible (surprise), it's immediately useful (an AI that answers/books on its own line), and it's concrete (step 1 pick a number, step 2 tool setup, step 3 the actual code, the result as a real-looking chat, a bonus, a "for builders" slide, a takeaway with a real free-tier number).
+Our rules for this angle:
+- Hook formula: "Give <AI> its own <phone number / inbox / calendar / website>. Yes, really." / "Your AI can now <surprising thing>." Only things that are genuinely possible today and verified on official docs.
+- Slides: 01 hook · 02-04 steps (each with ONE concrete asset: option comparison, command/prompt, code via carousel.py "code") · 05 "the result" (carousel.py "chat", real example) · 06 bonus · 07 "for builders" detail · 08 takeaway with the real free tier/limit + "Save this. Try it this week."
+- Show the OFFICIAL route first (e.g. Meta's WhatsApp Business Cloud API, Twilio), third-party helpers as alternatives. That reference post reads like an undisclosed promo for one vendor; we never take or imply vendor deals without "Sponsored"/"affiliate" disclosure, and we don't badge one vendor "recommended" unless we really tested it.
+- Platform rules in the "watch out" slide: e.g. WhatsApp Business messaging needs customer opt-in, and Meta announced limits on general-purpose AI chatbots on the WhatsApp Business API (business-specific bots like bookings/support are the allowed use) — check the current policy at post time and say it plainly.
+- This is Allyzent AI / Latis AI territory (AI phone/WhatsApp/DM agents): while company posts are paused, keep it DIY-only; when they're back on, this format is the template for those posts.
 
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
