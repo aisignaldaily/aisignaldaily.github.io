@@ -85,7 +85,7 @@ def chart(s,n,T):
     for b in bars:
         d.text((70,y+18),b["label"],font=F(IB,34),fill=WHITE)
         L=max(8,int(bw*b["value"]/mx)); d.rounded_rectangle((330,y,330+L,y+76),16,fill=ACC if b.get("hl",b["value"]==mx) else (60,78,96))
-        v=f'{b["value"]:g}{s.get("unit","")}'; d.text((330+L+16,y+16),v,font=F(IB,34),fill=WHITE) if 330+L+16+d.textlength(v,font=F(IB,34))<W-30 else d.text((330+L-16-d.textlength(v,font=F(IB,34)),y+16),v,font=F(IB,34),fill=BG)
+        v=b.get("display") or f'{b["value"]:g}{s.get("unit","")}'; d.text((330+L+16,y+16),v,font=F(IB,34),fill=WHITE) if 330+L+16+d.textlength(v,font=F(IB,34))<W-30 else d.text((330+L-16-d.textlength(v,font=F(IB,34)),y+16),v,font=F(IB,34),fill=BG)
         y+=120
     if s.get("note"): para(d,s["note"],y+30,30,MUTED)
     return img
@@ -100,6 +100,7 @@ def end(s,n,T):
     d.rounded_rectangle((130,y+50,W-130,y+160),55,fill=ACC); t='Comment "AI" for today\'s tools'; tf=F(IB,40); d.text(((W-d.textlength(t,font=tf))/2,y+80),t,font=tf,fill=BG)
     y=para(d,"+ our free AI toolkit, straight to your DMs",y+190,32,WHITE)
     t="Follow @aisignaldaily.news"; d.text(((W-d.textlength(t,font=tf))/2,y+40),t,font=tf,fill=WHITE)
+    if s.get("follow"): para(d,s["follow"],y+110,30,MUTED)
     return img
 def icon_cart(d,cx,cy,sc=1.0,col=ACC,w=10):
     # simple line-art shopping cart
