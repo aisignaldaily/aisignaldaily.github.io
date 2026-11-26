@@ -341,3 +341,16 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 - Most views come in the first 3 days, so a strong post keeps working: Stories should re-share our best post of the last 3 days, not only today's.
 - Trial reels (Instagram feature): a Reel is shown to NON-followers first and only goes to followers if it does well in 72 h. Great for testing hooks on a new account, but Buffer can't switch it on; Raheel can toggle "Trial" by hand when posting from the app. Optional.
 - Benchmark reality: evolving.ai posts ~38 times a week (~5/day) with ~4.8M followers and ~3.5% engagement; only ~21% of accounts under 10K followers grew in 2026. Volume + consistency + sends is what separates the ones that grow.
+
+## WEEKLY SIGNATURE CALENDAR (Raheel approved Nov 26, 2026; starts Mon Nov 30) - overrides the slot's usual topic on these days
+| Day | Slot | Format (STYLE section) |
+|---|---|---|
+| Mon | 12:30 midday Reel | **We asked AI + fact-check** (voiced) |
+| Tue | 5:45 practical carousel | **Build it / prompt chain** (one job transformed in N chained prompts; run it ourselves first when possible) |
+| Wed | 12:30 midday Reel | **Built with AI** demo: build it ourselves, screen-record with Playwright, voiced (0 Higgsfield image credits) |
+| Thu | 5:45 practical carousel | **Build it** blueprint |
+| Fri | 12:30 midday | **60-s explainer video** (made by the separate "Friday explainer" scheduled run, which claims the midday slot; the normal midday run then stops) |
+| Sat | 9:15 morning carousel | **The List** |
+| Sun | 7:45 evening Reel | **Builder lessons** |
+| Mon/Wed/Fri/Sun | 9:15 morning carousel | **Free swaps** |
+All other slots stay news + quick useful tips. If a signature post can't be made well today (no verifiable topic, tool down), make the slot's normal post instead and say why in the preview email. One-off company posts in COMPANY_POSTS.txt win over this calendar on their dates.
