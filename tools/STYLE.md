@@ -60,6 +60,14 @@ Our version (honest, so it builds trust instead of getting called out in comment
 - CTA: our ManyChat keyword is "AI" (not GITHUB): end slide "Comment AI and we'll DM you all the links" and the links page entry for that post lists every tool link (main one first).
 - Caption: hook with the monthly total, the swaps as a short list ("Notion → AppFlowy"), the watch-out line, "Source: official pricing pages + GitHub, checked <date>", save/send lines, AI CTA, question ("Which one are you switching first?"), max 5 hashtags.
 
+## "Build it" blueprint series (Raheel, Nov 25, 2026) — Tuesdays and Thursdays in the 5:45 PM slot (while company posts are paused)
+Reference: @ai.byarsh "Build your own AI assistant OS in 5 steps" (9 slides; 706 likes, 514 comments, 793 SENDS — more sends than likes = people forward it to the friend who'd build it). Why it works: one aspirational outcome ("your own AI assistant on your laptop"), numbered build steps with ONE concrete thing each (a copy-paste prompt, a folder tree, a 3-tier table, real tool/repo cards with stars), a "payoff" slide, comment-keyword CTA. It feels like a blueprint you'd pay for.
+Our version:
+- One outcome per post that a normal person or small business wants: a personal AI assistant with memory (ChatGPT Projects / Claude Projects / Gemini Gems), a daily AI morning briefing, an AI inbox that drafts replies, a second brain (NotebookLM / Obsidian), an AI that turns voice notes into tasks, a content machine (1 video -> 10 posts), a simple AI receptionist (DIY version only; Allyzent AI mention only when company posts are back on).
+- Two difficulty labels on the cover: "No-code (15 min)" or "For builders (1-2 h)". Alternate; normal people first.
+- 7-9 slides: cover (outcome + steps count + "SAVE THIS"), "what you get" slide (3-5 bullet cards), 3-5 step slides (each with ONE concrete asset: exact prompt to copy, folder tree or flow via carousel.py type "code", a tool card with official screenshot), a "watch out" slide (cost, privacy, what it can't do), end slide "Comment AI and we'll DM you the full blueprint" (the links page entry has every link + the full prompts).
+- Verify every tool, menu name, price and repo (gh api for stars/last commit) at post time; test-worthy prompts only; no unverifiable claims like "95% of the power". No movie/comic characters or brand names as the hook (say "your own AI assistant", not a film character's name).
+
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
 - **AI said/did something wild** ("Grok called humans 'bags of meat'") - personality + surprise.

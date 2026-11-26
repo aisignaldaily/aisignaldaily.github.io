@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """AI Signal Daily carousel slide builder (Claude-made slides, no credits).
-Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total); see each function docstring.
+Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card); see each function docstring.
 Usage: python3 carousel.py spec.json  -> writes 02.jpg, 03.jpg ... into spec["outdir"] (default ".")
 spec = {"total": 6, "start": 2, "outdir": "out",
   "slides": [
@@ -152,7 +152,22 @@ def bill(s,n,T):
     y=yy+150
     if s.get("note"): para(d,s["note"],y+10,26,MUTED)
     return img
-R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill}
+MONO=f"{HERE}/fonts/DejaVuSansMono.ttf"
+def code(s,n,T):
+    """Code/diagram card: {"type":"code","headline":"BUILD THE *MEMORY*","body":"optional 1-2 sentences",
+    "lines":["vault/","├── raw/      everything captured","└── CLAUDE.md  the map"],"note":"optional tip"}
+    Use for folder trees, prompts to copy, simple flows (A → B → C). Lines starting with '>' are drawn in mint."""
+    img,d=layer(); y=head(d,s["headline"],170,s.get("size",100))
+    if s.get("body"): y=para(d,s["body"],y+44,34,(214,222,230),940)
+    lines=s["lines"]; fs=s.get("font",34); f=F(MONO,fs); lh=int(fs*1.5)
+    top=y+40; d.rounded_rectangle((70,top,W-70,top+70+lh*len(lines)+30),26,fill=(14,18,26))
+    for i,c in enumerate([(255,95,87),(254,188,46),(40,200,64)]): d.ellipse((100+i*34,top+22,120+i*34,top+42),fill=c)
+    yy=top+70
+    for ln in lines:
+        col=ACC if ln.startswith(">") else (225,232,240); d.text((110,yy),ln.lstrip(">").rstrip(),font=f,fill=col); yy+=lh
+    if s.get("note"): para(d,s["note"],yy+60,30,MUTED,940)
+    return img
+R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code}
 def main(p):
     s=json.load(open(p)); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
     for sl in s["slides"]:
