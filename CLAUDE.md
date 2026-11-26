@@ -46,6 +46,7 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 | `tools/radar.py` | trend radar (run in the Higgsfield sandbox) |
 | `tools/HIGGSFIELD.md` | how to make media with Higgsfield + credit rules |
 | `tools/MANYCHAT.txt`, `tools/COMPANY_POSTS.txt` | ManyChat keyword status, company-post switch + one-offs |
+| `tools/AFFILIATES.md` | affiliate programs: status, terms, approved links (rules in STYLE.md "AFFILIATE RULES") |
 | `index.html` | links page (`const signals`, newest first, max 30) |
 | `toolkit/` | free AI toolkit (email signup via beehiiv) |
 | `blueprints/sales-marketing/` | free blueprint page (video embedded, Allyzent AI / Latis AI booking) |

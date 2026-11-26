@@ -28,7 +28,7 @@ Hooks (first 1.5 s / slide 1) - use one of these, with a specific number or name
 Never clickbait that the post doesn't pay off in slide 2 / second 3 - broken promises kill follows.
 Revenue rules:
 - Max 1 in 5 posts is promotional (company posts, affiliate pushes). Value first, always.
-- Affiliate links only for programs Raheel has actually joined (listed in tools/AFFILIATES.md once set up), always disclosed ("affiliate link") on the toolkit/links page; never claim we used a tool we didn't.
+- Affiliate links only for programs Raheel has actually joined (approved in tools/AFFILIATES.md), always disclosed; full rules in "AFFILIATE RULES". Never claim we used a tool we didn't.
 - Every post's DM path leads to the toolkit (https://aisignaldaily.github.io/toolkit/), which carries the email signup (once beehiiv is set up), the affiliate links and the demo page.
 - Company posts end card: "Comment DEMO" + "Book a demo: aisignaldaily.github.io/demo". Demo page: https://aisignaldaily.github.io/demo/
 
@@ -47,6 +47,15 @@ The free toolkit is our follow magnet: people get it by FOLLOWING + commenting "
 - Blueprint pages (blueprints/<slug>/) are NOT gated: they are the demo-lead magnet and may be linked directly (captions, links page, BLUEPRINT DM).
 - ManyChat "AI" flow asks people to follow before sending the link (checked Nov 26, 2026).
 - Instagram bio (set Nov 26, 2026): "Free AI tools & swaps that save you time + money / Daily AI news, fact-checked. No rumors. / Follow + comment AI on any post 👉 free toolkit". First bio link should be aisignaldaily.github.io (links page), allyzent.com second (links can only be reordered in the Instagram app).
+
+## AFFILIATE RULES (Raheel approved exploring affiliates Nov 26, 2026; status in tools/AFFILIATES.md)
+- Only programs listed as "approved" in tools/AFFILIATES.md. Never sign up, apply or create accounts for affiliates ourselves; Raheel does that.
+- Commission never decides what we feature. Free swaps stay genuinely free (affiliate links only for the paid option, shown after the free one). The free/cheapest honest option is always shown first.
+- Where links go: the links-page entry for the post, the (follow-gated) toolkit, and ManyChat DMs. Never as the main point of a post. Every affiliate link is labeled "(affiliate link)" right next to it, and the page/DM says "Some links are affiliate links; we may earn a commission at no cost to you."
+- Captions of posts whose links include an affiliate link add: "Some links are affiliate links." Price Drop / Built with AI posts about a tool we're an affiliate of say "We use it ourselves (affiliate link in our links page)" instead of "not sponsored".
+- Fact-checks and prices stay exactly as strict when we are an affiliate; never soften a verdict, never "free" unless $0.
+- Paid/sponsored posts (brand pays us) are a different thing: they need Instagram's "Paid partnership" label, Raheel's approval, and count toward the max 1-in-5 promotional rule. None for now.
+- Program-specific rules (e.g. Higgsfield: no clickbait, say "independent affiliate", no coupon/deal sites; Buffer: no branded-keyword ads) are in tools/AFFILIATES.md.
 
 ## What Instagram rewards right now
 1. Watch time / completion (Reels) - hook must land in the first 1.5 s.
