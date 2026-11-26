@@ -143,6 +143,7 @@ Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI yo
 - How to make it: see tools/HIGGSFIELD.md.
 
 ## Company posts: Allyzent AI + Latis AI (about 2 per week, in the "AI you can use" slot)
+- PAUSED (Raheel, Nov 25, 2026) until the account has ~400-500 followers. Check `tools/COMPANY_POSTS.txt`: if its first line is "paused", Tue/Thu 5:45 PM are normal "AI you can use" how-tos with no company mention, and no company promotion anywhere else either.
 - Format: teach the DIY way first (e.g. build your own AI receptionist with ElevenLabs Agents or Vapi; automate your Instagram replies), be honest about where DIY gets hard (integrations, booking/CRM, edge cases, upkeep), then: "Or let Allyzent AI / Latis AI do it for you. Comment DEMO."
 - Allyzent AI = custom conversational AI (voice/chat), back-office automation and AI-engineer support, for ALL B2B verticals (salons, auto, legal, real estate, retail...). Lead with non-healthcare examples.
 - Latis AI = self-serve AI workspace for local businesses: marketing (create/publish/engage/improve, Meta ads), inbox and replies, inbound AND outbound calls. Bring your own prompts and API keys (step-by-step guided connection to Twilio etc.), so the business sees its own usage and pays provider costs directly, no big markup. No free trial, no public pricing: "contact us / book a meeting". Never quote savings % unless Raheel gives a real measured number. Outbound calling posts must say "with your customers' consent" and never look like a cold-call/spam tool.
