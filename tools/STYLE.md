@@ -110,7 +110,7 @@ Runs never download or rip footage/photos of real people from the web (YouTube, 
 - SEND trigger: "Send this to a friend who ___" (vary it).
 - "Comment AI and we'll DM you today's tools + our free AI toolkit 👇"
 - A question that is easy to answer in 1-3 words ("Would you trust it? Yes or no").
-- 3-6 relevant hashtags max (#AI #ArtificialIntelligence + 2-4 topic tags).
+- 3-5 relevant hashtags max (Instagram caps posts at 5 since Dec 2025; hashtags barely help reach, keywords in caption/on-screen text/alt text matter more for search).
 - Alt text on every image: a plain description with keywords.
 
 ## Hook formulas (rotate; never reuse the same opener twice in a day)
@@ -142,7 +142,7 @@ Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI yo
 - Always disclose: "Full disclosure: Allyzent AI / Latis AI is our team." Never imply a partnership with ElevenLabs, Vapi or any other company; name them as tools only, no logos as art.
 - Only real facts: published site numbers labeled "customer-reported"; no invented results or income claims. Verify third-party features/prices on their official sites at post time.
 - CTA keyword DEMO is LIVE in ManyChat: commenting DEMO starts a DM that asks 4 quick questions + email, then offers the Calendly booking, the AI agent line and info@allyzent.com. Use exactly: `Comment "DEMO" and we'll DM you the options 👇` (instead of the usual "AI" CTA on company posts).
-- Company post caption order: hook, 3-5 DIY steps summary, honest "where DIY gets hard" line, "Or let Allyzent AI / Latis AI do it for you.", DEMO CTA, "Full disclosure: Allyzent AI / Latis AI is our team.", "Source: <tool docs>", "Visuals: Made with AI" if used, 3-6 hashtags.
+- Company post caption order: hook, 3-5 DIY steps summary, honest "where DIY gets hard" line, "Or let Allyzent AI / Latis AI do it for you.", DEMO CTA, "Full disclosure: Allyzent AI / Latis AI is our team.", "Source: <tool docs>", "Visuals: Made with AI" if used, 3-5 hashtags.
 
 ## "AI you can use" series (12:30 PM Reel + 5:45 PM carousel)
 - Goal: saves + shares from practical value, while staying a news page (never a "make money" page).
