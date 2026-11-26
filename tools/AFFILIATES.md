@@ -16,7 +16,7 @@ Rules for every run:
 | Program | Terms (from program pages) | Apply at | Status |
 |---|---|---|---|
 | Higgsfield | Up to 25% of subscriptions incl. renewals, up to 12 months; referrals get up to 50% off for 3 hours; organic only (no paid ads/brand bidding/coupon sites) | https://higgsfield.ai/affiliate | applying Nov 26 (form opened in Raheel's Chrome; also: say we're an independent affiliate) |
-| Buffer | 25% per sale for 12 months; manual review 3-5 business days; existing customers (we are); no branded-keyword ads | https://partners.dub.co/buffer/apply | applying Nov 26 |
+| Buffer | 25% per sale for 12 months; manual review 3-5 business days; existing customers (we are); no branded-keyword ads | https://partners.dub.co/buffer/apply | SUBMITTED Nov 26 (Dub Partners account aisignaldaily.news@gmail.com, profile "AI Signal Daily", Instagram verified; bank payout NOT connected yet: Raheel adds it in Dub > Payouts) |
 | ManyChat | 30-50% recurring for 12 months (PartnerStack); Raheel said YES Nov 26 despite overlap with Latis AI: only recommend it for DIY Instagram DM automation, never against a Latis AI post | https://manychat.com/affiliate | applying Nov 26 |
 | Make | 35% of payments for 12 months; anyone with a Make account; payouts via Wise | https://www.make.com/en/affiliate (inside Make: profile > Affiliate program) | applying Nov 26 |
 | n8n | 30% recurring for 12 months on n8n Cloud only (PartnerStack, PayPal, EUR 100 minimum) | https://n8n.io/affiliates | applying Nov 26 |
