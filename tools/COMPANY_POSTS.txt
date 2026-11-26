@@ -1,3 +1,6 @@
 paused
 # Company posts (Allyzent AI Tue / Latis AI Thu, 5:45 PM slot) are PAUSED until the account has ~400-500 followers (Raheel, Nov 25, 2026).
 # Only Raheel turns them back on: change the first line to "on" when he says so.
+# ONE-OFF EXCEPTIONS (Raheel approved Nov 26, 2026), made even while paused - see STYLE.md "Blueprint company posts":
+one-off 2026-12-01 Allyzent AI blueprint post (Sales side)
+one-off 2026-12-03 Latis AI blueprint post (Marketing side)
