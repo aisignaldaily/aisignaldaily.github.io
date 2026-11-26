@@ -86,7 +86,7 @@ Our version:
 - Never repeat a list topic within 4 weeks; the links page entry lists every item's official link, grouped by row.
 
 ## VIRAL PLAYBOOK (distilled from Raheel's reference posts, Nov 25, 2026) — read before every post
-Reference results (@ai.byarsh carousels): Claude WhatsApp number 2,918 likes / 3,537 sends · free software swaps 4,008 likes / 3,142 sends · 12 weekend AI projects 1,175 / 1,394 sends · 30 best plugins 1,301 / 1,275 sends · own AI assistant 706 / 793 sends · "one post everywhere" 256 / 269 sends.
+Reference results (@ai.byarsh carousels): 42 things to install in Claude (my setup, AI team) 13.7K likes / 19.8K sends · Claude WhatsApp number 2,918 likes / 3,537 sends · free software swaps 4,008 likes / 3,142 sends · 12 weekend AI projects 1,175 / 1,394 sends · 30 best plugins 1,301 / 1,275 sends · own AI assistant 706 / 793 sends · "one post everywhere" 256 / 269 sends.
 What the winners share (do all of these):
 1. A concrete PERSONAL outcome in the hook: save money, save hours, "your own X", "build in one weekend". Broad pain beats niche workflow (the creator-only post did 15x worse).
 2. A number on the cover: "$305 a month", "12 projects", "30 best", "5 steps".
@@ -112,6 +112,16 @@ Our rules for this angle:
 - Show the OFFICIAL route first (e.g. Meta's WhatsApp Business Cloud API, Twilio), third-party helpers as alternatives. That reference post reads like an undisclosed promo for one vendor; we never take or imply vendor deals without "Sponsored"/"affiliate" disclosure, and we don't badge one vendor "recommended" unless we really tested it.
 - Platform rules in the "watch out" slide: e.g. WhatsApp Business messaging needs customer opt-in, and Meta announced limits on general-purpose AI chatbots on the WhatsApp Business API (business-specific bots like bookings/support are the allowed use) — check the current policy at post time and say it plainly.
 - This is Allyzent AI / Latis AI territory (AI phone/WhatsApp/DM agents): while company posts are paused, keep it DIY-only; when they're back on, this format is the template for those posts.
+
+## "AI team" framing (from the biggest reference: @ai.byarsh "42 Things to Install in Claude", Nov 4, 2026: 13.7K likes, 8,478 comments, 19.8K SENDS — 5-10x every other reference)
+Why it exploded: (1) personal proof: "MY setup · 60 days of logs" with real usage counts per tool ("242 calls") — it's lived experience, not a scraped list; (2) a team metaphor: the AI is the CEO, tools are hires in 5 departments (Build, Design, Grow, Make, Run), and every tool gets a job title ("Gmail · Inbox Manager", "Perplexity · Fact Finder") — abstract tools become people you understand; (3) one consistent mascot style (pixel robots) on every slide; (4) a reassuring close: "42 hires. Start with one."
+Use it:
+- In The List and Free swaps: give EVERY tool a 2-3 word job title next to its name ("NotebookLM · Research Assistant"). Group rows as departments when it fits.
+- Mascots: our own robot mascot series (Higgsfield, robots only, same style every time; never copy theirs) for covers/department headers.
+- Only REAL numbers. We have our own real logs (Buffer posts, Higgsfield credits/generations, scheduled-task runs, GitHub commits) — use them; never invent "calls".
+
+## Planned queue (runs: if an item fits your slot today, do it, then delete it from this list in the same commit)
+1. Saturday "The List" (first one, Nov 28, 2026): "The AI team that runs this page" — this account's real stack as an org chart: Claude (CEO: research, writing, checking, scheduling decisions), Higgsfield (Design: covers, scenes, sound), Buffer (Publishing), Gmail (Approvals: every post previewed to the human owner first), GitHub Pages (Links page + toolkit), ManyChat (DM replies), beehiiv (Newsletter). Each with a job title, what it actually does here, and REAL usage numbers pulled at post time (Buffer sent count, Higgsfield transactions, scheduled-task runs). Honest line: "A human approves every post." No company promotion, no affiliate claims unless Raheel added them to AFFILIATES.md. Close: "7 hires. Start with one." CTA "Comment AI for the full setup".
 
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
