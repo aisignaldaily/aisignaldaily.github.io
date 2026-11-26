@@ -84,6 +84,14 @@ Why: "learn from the person who built it" posts (e.g. the engineer who built Cla
 ## Links-page entries: the FIRST link is the main one (Nov 25, 2026)
 In every new `const signals` entry in index.html, put the thing people actually want FIRST (the original video/talk/post, or the tool itself), with a clear label like "Watch Boris's talk" or "Try Google Photos". The toolkit's "From our newest post" box shows that first link as a big button.
 
+## "Real, not AI" defaults (Raheel, Nov 25, 2026: the feed felt all-AI; he wants it to feel real, fully automated, no manual steps from him)
+Runs never download or rip footage/photos of real people from the web (YouTube, X, Instagram, TikTok, news sites), even with credit. Instead, every run does ALL of these automatically:
+1. Real people's own words: use the "their own words" quote card (see Real people) whenever a post is about a person. Builder lessons open with it.
+2. Real product, not AI art: for tool/how-to/launch posts, screenshot the OFFICIAL product or announcement page with Playwright (Higgsfield sandbox_exec; never screenshot people or photos of people) and show it framed inside a slide. At least one real screenshot slide per carousel when the tool has a public page. AI images only for the cover mood or when nothing real exists.
+3. Link to the real video: when a person has an official video (company site/newsroom, conference talk page, their own channel), put it in the links-page entry ("Watch <name> ...") and have the 8:30 PM Story link-sticker point to it, with caption line "🎥 Watch <name> for real: link in our story tonight".
+4. Company launch posts: prefer official screenshots/product images over AI; credit "Image: <company>".
+5. No AI "realistic person/influencer" hosts (Raheel decided Nov 25: any trust issue costs credibility).
+
 ## Real people (Raheel's rule, Nov 25, 2026)
 - REAL footage and photos of real people, any gender, are allowed: founders, engineers, researchers, demos, interviews, keynotes. Best source: the company's own official video/press images. Short interview or podcast clips (aim <= 15 s per cut) are OK too.
 - Always: credit on screen ("Footage: <channel/company>") and in the caption; add our own hook text, 1/N counter and commentary on top (never a plain repost); quote people exactly and only what they really said (check against the original video/transcript).
