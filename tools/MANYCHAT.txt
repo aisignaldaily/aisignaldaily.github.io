@@ -1,0 +1,2 @@
+BLUEPRINT: not live yet
+# Raheel or Claude changes the first line to "BLUEPRINT: live" once the ManyChat keyword BLUEPRINT sends the blueprint DM.
