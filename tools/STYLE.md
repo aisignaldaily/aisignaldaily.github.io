@@ -281,3 +281,9 @@ Our system already does his 4 steps (trend radar = "find what goes viral", Reel 
 2. SWIPE TEASERS: end every middle slide with a one-line open loop that pulls the next swipe ("Most people stop here. The best one is next...", "But this only works if you do step 3...") plus a small "Swipe ->" pill. Keep them true: the next slide must pay off the tease. Not on the last slide.
 3. REEL SCRIPT SHAPE (under 30 s): hook text in the first 2 s, tension or surprise by 5 s, fast payoff, one replay moment (a number or visual worth pausing on), soft CTA (save/send) at the end, no logo intro.
 We skip from that post: "income system" and comment-keyword bait for income claims (no income claims, ever).
+
+## Swipe mechanics (from @yoursocialteam "These carousel trends are going viral", Nov 2026: 5,884 likes, 6,771 sends; comments were keyword bait)
+Topic is not ours, but two design tricks raise swipe-through (time on post) and fit us. Use at most one per post, only where it helps the content:
+- Seamless line / traveling mascot: our pixel robot (or a mint line) moves across slide edges so each slide visibly continues into the next (render one wide canvas, cut into 1080-px slides). Good for steps, timelines, "The List".
+- Reveal: blur or pixelate an image on early slides and sharpen it step by step, answer on the last slide. Best use for us: "Real or AI?" quiz posts (a real photo/screenshot vs an AI image we made and label "Made with AI" on the reveal; never real people's likeness made with AI) and "guess the price / guess which tool" posts. The reveal must be honest and pay off.
+Skip: fake drama hooks ("fake client on blast", "final warning") - they read as clickbait and hurt trust.
