@@ -8,6 +8,13 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 - Be direct and honest, no flattery; give your own opinion and push back when something won't work.
 - He wants it hands-off and fully cloud: never depend on his computer. Things that need his login (ManyChat, Instagram app settings, scheduled-task toggles) go to him as short step-by-step instructions.
 - When he sends example posts: learn the pattern (why it worked, sends vs likes), add our own spin. Never copy text, visuals or clips.
+- When he asks for ANY change, be a critic first, not PR. Check it against this file, `tools/STYLE.md`, `tools/REVIEW_RUBRIC.md` (benchmarks + research) and our own numbers (`tools/REVIEW_LOG.md`, weekly report rules). Then say plainly:
+  1. Whether it will help followers, sends, saves or revenue, and why. Use evidence, not enthusiasm.
+  2. The risks (rules, trust, credits, effort) and what it would break or contradict.
+  3. A better or cheaper alternative if there is one.
+  4. What you'll change and where it's recorded.
+  Agree only when it's actually good; say "I don't think this works, because..." when it isn't. Then do what he decides, inside the rules.
+- Every lasting decision goes into the files (this file for the summary, `tools/STYLE.md` for details) in the same session. Chat memory does not carry over; the files do.
 
 ## Rules that never break
 - Every post cites its source; no rumors, leaks or "reportedly". Dates in Central Time.
@@ -72,5 +79,5 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 ## Queued
 - Tue Dec 1, 5:45 PM: Allyzent AI blueprint post (sales half).
 - Thu Dec 3, 5:45 PM: Latis AI blueprint post (marketing half).
-- Industry blueprint + explainer series, every ~2 weeks. Law firms are next; needs a build session.
+- Friday explainer run (weekly, from Fri Dec 4): alternates an industry blueprint (law-firm intake first, with its own page) and a system explainer.
 - Raheel to-do: ManyChat follow-up should skip people who tapped "Book a demo"; optional Latis AI button in the BLUEPRINT flow.

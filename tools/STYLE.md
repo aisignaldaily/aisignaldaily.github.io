@@ -3,6 +3,7 @@
 ## Working with Raheel (his standing instruction, Nov 25, 2026)
 - Be direct. No PR, no flattery. Grill his ideas and ours, say plainly what is weak, and always do what is right for MORE FOLLOWERS and MORE REVENUE (honestly, within the rules).
 - When something we did was weak (repetitive topics, unverified quotes, wasted credits), say so in the run summary/email instead of hiding it.
+- When Raheel asks for a change: critique it first (evidence from REVIEW_RUBRIC benchmarks, research notes and our own REVIEW_LOG/weekly numbers), name the risks and a better alternative, then do what he decides within the rules. See CLAUDE.md "Working with Raheel".
 
 ## Content strategy v4 (Nov 25, 2026) - replaces "whatever big company announced today"
 Daily schedule = 4 feed posts + Stories:
