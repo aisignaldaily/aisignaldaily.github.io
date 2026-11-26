@@ -18,6 +18,7 @@ You are reviewing a draft Instagram post you did not make. Be blunt. Score again
 | 12 AI projects you can build in one weekend | 1,175 | 1,394 | personal outcome, one idea per slide, benefit checklists |
 | The 30 best Claude plugins (sorted by job) | 1,301 | 1,275 | big number, "pick one row" rule, progress bar |
 | Build your own AI assistant in 5 steps | 706 | 793 | blueprint, copy-paste prompt per step |
+| Claude Fable 5.2 turns a house blueprint into a 3D tour, 7 prompts (evolving.ai) | 10.3K | 15.7K | a real demo clip on the cover + one concrete job outcome + a 7-step prompt CHAIN (each slide builds on the last) + who to send it to is obvious (realtors, builders); weak spot: '$10,000' money hook |
 | Someone asked Gemini for the one life hack 99% don't know (evolving.ai, screenshot of viral X post) | 9,828 | 6,693 | curiosity gap + personal benefit + 'secret knowledge' to forward; but movie-still cover, reposted screenshots, unchecked overstated science |
 | People are building insane things with Claude Fable 5.2, 17 examples (evolving.ai, video slides) | 14.3K | 5,364 | hot new model + every slide moves (awe) + big list; clips reposted from X |
 | One post. Everywhere. (creator repurposing workflow) | 256 | 269 | niche audience (creators only), weaker pain |
