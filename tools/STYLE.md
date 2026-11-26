@@ -68,6 +68,15 @@ Our version:
 - 7-9 slides: cover (outcome + steps count + "SAVE THIS"), "what you get" slide (3-5 bullet cards), 3-5 step slides (each with ONE concrete asset: exact prompt to copy, folder tree or flow via carousel.py type "code", a tool card with official screenshot), a "watch out" slide (cost, privacy, what it can't do), end slide "Comment AI and we'll DM you the full blueprint" (the links page entry has every link + the full prompts).
 - Verify every tool, menu name, price and repo (gh api for stars/last commit) at post time; test-worthy prompts only; no unverifiable claims like "95% of the power". No movie/comic characters or brand names as the hook (say "your own AI assistant", not a film character's name).
 
+## Reference post: @ai.byarsh "One post. Everywhere." (Nov 17, 2026; 256 likes, 431 comments, 269 sends)
+Weaker than his other two (likes ~3x lower): a workflow for creators is a narrower audience than "save money" or "your own AI assistant". Its comment count is mostly the "Comment SYSTEM" keyword. Reusable pieces for "Build it" and how-to posts:
+- "The real cost" slide in TIME, not money: carousel.py "bill" with "unit":"min" and "total_label":"For ONE idea" (only typical/estimated times, labeled as such).
+- A chat-example slide: carousel.py "chat" (you -> AI -> checklist of what it produced). Only show outputs we really generated with the named tool, labeled "Example output".
+- A "TRY THIS" copy-paste prompt card (carousel.py "code" or "quote") on every how-to/blueprint: prompts drive saves.
+- Each step slide = step label pill + 4-6 word headline + one concrete visual. Keep "Comment AI" as our only keyword.
+- Skip: walls of platform logos (use names), unrealistic "13 platforms, zero copy-paste" promises.
+- Idea worth one post (honest + transparent, ~once a month): "How this page runs: an AI pipeline + a human who approves every post" (our real setup: research, verify, design, preview email, publish). Transparency builds trust; never overstate it.
+
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
 - **AI said/did something wild** ("Grok called humans 'bags of meat'") - personality + surprise.

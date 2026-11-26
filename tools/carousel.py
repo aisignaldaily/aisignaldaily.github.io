@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """AI Signal Daily carousel slide builder (Claude-made slides, no credits).
-Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card); see each function docstring.
+Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card), chat (you/AI example exchange + checklist); see each function docstring.
 Usage: python3 carousel.py spec.json  -> writes 02.jpg, 03.jpg ... into spec["outdir"] (default ".")
 spec = {"total": 6, "start": 2, "outdir": "out",
   "slides": [
@@ -140,15 +140,15 @@ def swap(s,n,T):
     if s.get("note"): para(d,s["note"],y+90,28,MUTED,940,False,70)
     return img
 def bill(s,n,T):
-    """Bill slide: {"type":"bill","headline":"*$305* A MONTH","items":[{"name":"Notion","plan":"Plus","price":10}, ...],"note":"Prices: official pricing pages, <date>"}"""
+    """Bill slide (money or time: add "unit":"min" and "total_label":"For ONE idea"): {"type":"bill","headline":"*$305* A MONTH","items":[{"name":"Notion","plan":"Plus","price":10}, ...],"note":"Prices: official pricing pages, <date>"}"""
     img,d=layer(); y=head(d,s["headline"],170,s.get("size",110))+30
     items=s["items"]; tot=sum(i["price"] for i in items)
     d.rounded_rectangle((70,y,W-70,y+70*len(items)+150),28,fill=CARD); yy=y+30
     for i in items:
         d.text((110,yy),i["name"],font=F(IB,34),fill=WHITE); d.text((110+d.textlength(i["name"]+"  ",font=F(IB,34)),yy+4),i.get("plan",""),font=F(IM,28),fill=MUTED)
-        p=f'${i["price"]:g}/mo'; d.text((W-110-d.textlength(p,font=F(IB,34)),yy),p,font=F(IB,34),fill=(255,140,140)); yy+=70
+        u=s.get("unit","$"); p=(f'{i["price"]:g} min' if u=="min" else f'${i["price"]:g}/mo'); d.text((W-110-d.textlength(p,font=F(IB,34)),yy),p,font=F(IB,34),fill=(255,140,140)); yy+=70
     d.line((110,yy+5,W-110,yy+5),fill=(40,52,66),width=2)
-    t=f'${tot:,.2f}'.rstrip('0').rstrip('.')+"/mo"; d.text((110,yy+30),"Every month",font=F(IB,34),fill=WHITE); d.text((W-110-d.textlength(t,font=F(ANTON,64)),yy+12),t,font=F(ANTON,64),fill=ACC)
+    t=(f'~{tot:g} min' if s.get("unit")=="min" else f'${tot:,.2f}'.rstrip('0').rstrip('.')+"/mo"); d.text((110,yy+30),s.get("total_label","Every month"),font=F(IB,34),fill=WHITE); d.text((W-110-d.textlength(t,font=F(ANTON,64)),yy+12),t,font=F(ANTON,64),fill=ACC)
     y=yy+150
     if s.get("note"): para(d,s["note"],y+10,26,MUTED)
     return img
@@ -167,7 +167,27 @@ def code(s,n,T):
         col=ACC if ln.startswith(">") else (225,232,240); d.text((110,yy),ln.lstrip(">").rstrip(),font=f,fill=col); yy+=lh
     if s.get("note"): para(d,s["note"],yy+60,30,MUTED,940)
     return img
-R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code}
+def chat(s,n,T):
+    """Chat example: {"type":"chat","headline":"DROP ONE IDEA. *AI DOES THE REST*","you":"what the user types",
+    "ai":"short AI reply","checks":[["Hook ideas","5"],["Carousel outline","8 slides"]],"label":"Real example, made with ChatGPT"}
+    Only show outputs we actually generated (label it). Right bubble = you (mint), left = AI."""
+    img,d=layer(); y=head(d,s["headline"],170,s.get("size",96))+40
+    f=F(IM,32)
+    def bubble(text,right,y):
+        lines=[" ".join(l) for l in wrap(d,text,f,620)]; h=len(lines)*44+40; w=max(d.textlength(l,font=f) for l in lines)+56
+        x0=W-90-w if right else 90; d.rounded_rectangle((x0,y,x0+w,y+h),26,fill=ACC if right else CARD)
+        for i,l in enumerate(lines): d.text((x0+28,y+20+i*44),l,font=f,fill=BG if right else WHITE)
+        return y+h+24
+    y=bubble(s["you"],True,y); y=bubble(s["ai"],False,y)
+    if s.get("checks"):
+        d.rounded_rectangle((90,y,W-90,y+len(s["checks"])*72+24),24,fill=(14,20,30)); yy=y+18
+        for a,b in s["checks"]:
+            d.ellipse((116,yy+10,150,yy+44),fill=ACC); d.text((122,yy+8),"✓",font=F(IB,28),fill=BG)
+            d.text((170,yy+8),a,font=F(IB,32),fill=WHITE); d.text((W-120-d.textlength(b,font=F(IB,32)),yy+8),b,font=F(IB,32),fill=ACC); yy+=72
+        y=yy+24
+    if s.get("label"): para(d,s["label"],y+20,26,MUTED)
+    return img
+R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code,"chat":chat}
 def main(p):
     s=json.load(open(p)); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
     for sl in s["slides"]:
