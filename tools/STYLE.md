@@ -224,7 +224,7 @@ Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI yo
 
 ## v3 additions (Nov 25, 2026)
 - Visual continuity: every carousel uses ONE matched image series (same background, palette, lighting, object family) and every Reel uses ONE continuous scene (same subject/set, only camera/action changes). Never a slideshow of unrelated scenes.
-- Sound: Reels always get a custom sound bed with NO music: cinematic sound design or dramatic nature ambience matched to the story (thunder/wind for big news, rain/ocean for calm useful tips, deep drone/hum for futuristic). Keep it under the visuals, slight lift on the hook.
+- Sound (updated Nov 26, 2026, Raheel approved): voice first, never music. Explainer / how-to / blueprint Reels = narrator voice + a QUIET sound bed underneath (never ambience alone). News Reels = see "Voice rules v2" below (still in the voice test). The sound bed is cinematic sound design or soft ambience matched to the story (deep drone/hum for futuristic, soft room tone or light rain for calm tips, low rumble for big news), ducked ~12 dB under the voice, slight lift on the hook. No licensed or copyrighted music ever (Buffer can't attach Instagram's song library); Raheel may add a trending Instagram song by hand to a post that is doing well.
 - Carousels can't carry sound via API. If a story is very visual and dramatic, it may be made as a short slides-with-motion Reel with sound instead.
 - Progress marker ("1/4") on every Reel beat and carousel slide.
 - How to make it: see tools/HIGGSFIELD.md.
@@ -295,7 +295,7 @@ Skip: fake drama hooks ("fake client on blast", "final warning") - they read as 
 
 ## Voiceover test (Raheel approved Nov 25, 2026; hypothesis: a narrator voice raises Reel watch time)
 - Voice: Higgsfield `generate_audio`, model "seed_audio", voice_type "preset", voice_id "e2a2d2e6-9ed2-59cd-82af-feaa27f8a678" ("Grady": deep, calm, ~155 words/min; backup "Arthur" 30fc8796-ceb6-4a66-b3a7-4a145ef7f346). ~0.6 credits per line. Always the same voice so the page is recognizable. Never clone or imitate a real person's voice.
-- When: Reels posted on Mon, Wed, Fri get a voiceover; Reels on other days stay text + sound bed only (control group). Breaking-news Reels: voice only if it doesn't delay posting.
+- When: see "Voice rules v2" below (explainers/how-tos always voiced; news Reels Mon/Wed/Fri voiced vs other days as the control group).
 - How: script = the on-screen text, max ~2.4 words per second of Reel (15 s Reel ≈ 35 words). Generate the whole narration in one call, time beats to it, mix voice at full level with the sound bed ducked ~12 dB under it. On-screen text stays (most people watch muted). Caption: "Voice: AI-generated" next to the "Made with AI" line.
 - Tracking: add "voice: yes/no" to the post's REVIEW_LOG line. The Monday weekly report compares voice vs no-voice Reels (average reach, plays/reach, saves, sends) once there are 3+ of each, and writes the verdict into "Weekly report rules": make voice default, keep testing, or drop it.
 
@@ -318,3 +318,14 @@ Inspiration only: restructureai's blueprint library (https://restructure-europe.
 - Cadence: one new industry blueprint every ~2 weeks, posted as the explainer Reel (12:30 or 7:45 slot) + a carousel version later in the week. CTA: free blueprint first ("Comment BLUEPRINT"/"AI" per the ManyChat rule), "Want it built? Comment DEMO" second, disclosure line always. These count as company posts only for the offer slide; the rest is genuinely useful DIY content, so they may run while company posts are paused (Raheel's Nov 26 request).
 - Explainer rule (Raheel, Nov 26): every industry explainer must SHOW THE WHOLE SYSTEM, not just the helpers: a "full system" scene with 30+ real automations lighting up (counter "AUTOMATIONS RUNNING n / N" + "TOOLS CONNECTED"), then a "To do it yourself: N tools · N automations · connections to keep working  OR  we build it for you (Allyzent AI · Latis AI)" scene, then "PICK ONE: Comment BLUEPRINT (do it yourself) / Comment DEMO (have it built)". Every automation listed must be something the blueprint's tools can really do. Goal: local B2B owners see the scale and book; the free blueprint stays genuinely usable. Template: tools/explainer/sales_marketing.html (v2, 13 scenes, ~67 s).
 - ManyChat keyword BLUEPRINT is LIVE (Nov 26, 2026): sends the blueprint page + "Book a demo" (Allyzent AI Calendly). Use `Comment "BLUEPRINT" and we'll DM you the free blueprint 👇` on blueprint/industry posts. "BLUEPRINT live" also appears in tools/MANYCHAT.txt.
+
+
+## Voice rules v2 (Raheel approved Nov 26, 2026)
+- ONE main narrator on every voiced Reel: "Grady" (seed_audio preset e2a2d2e6-9ed2-59cd-82af-feaa27f8a678). Same voice every time = brand recognition. Never switch narrators between posts.
+- ALWAYS voiced: explainers, how-to Reels, "AI you can use" Reels, Build it / blueprint / industry videos, "We asked AI" Reels.
+- News Reels: keep the A/B test for one more week (Mon/Wed/Fri voiced, other days text + sound bed) so the Monday report can compare. After the verdict, the weekly report updates this line.
+- Under the voice: a quiet sound bed (mirelo_text_to_audio, ~5 cr, or the sandbox can loop a soft generated drone), ducked ~12 dB. Never a dry voice alone, never ambience alone on an explainer.
+- SECOND VOICE only for short dialogue scenes (e.g. a "customer" asks "Do you do small kitchens?" and the narrator explains how the AI replies): voice "Arthur" (preset 30fc8796-ceb6-4a66-b3a7-4a145ef7f346), max 2 short lines per Reel, shown on screen as a chat bubble so it's clear who is talking. Never more than 2 voices in one Reel.
+- Script: max ~2.4 words per second of Reel; trim silences (silenceremove) and use atempo 1.06 so it doesn't drag; time each scene to its line (+0.6 s). On-screen captions always stay (most people watch muted).
+- Labels: caption says "Voice: AI-generated". Never clone or imitate a real person's voice.
+- Budget: ~0.6 credits per line; a 60 s explainer ≈ 8-10 credits total.
