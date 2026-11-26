@@ -45,7 +45,8 @@ The free toolkit is our follow magnet: people get it by FOLLOWING + commenting "
 - Never put the toolkit URL (aisignaldaily.github.io/toolkit/) in a caption, on a slide, in a Story link sticker, in the bio, or as a link in `const signals` on the links page. Say "Follow + comment AI and we'll DM you the free toolkit" instead.
 - The links page (aisignaldaily.github.io) may show what the toolkit contains and the email signup, but no "open the toolkit" link.
 - Blueprint pages (blueprints/<slug>/) are NOT gated: they are the demo-lead magnet and may be linked directly (captions, links page, BLUEPRINT DM).
-- Raheel checks in ManyChat that the "AI" flow requires "is following" before sending the link.
+- ManyChat "AI" flow asks people to follow before sending the link (checked Nov 26, 2026).
+- Instagram bio (set Nov 26, 2026): "Free AI tools & swaps that save you time + money / Daily AI news, fact-checked. No rumors. / Follow + comment AI on any post 👉 free toolkit". First bio link should be aisignaldaily.github.io (links page), allyzent.com second (links can only be reordered in the Instagram app).
 
 ## What Instagram rewards right now
 1. Watch time / completion (Reels) - hook must land in the first 1.5 s.
