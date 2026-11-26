@@ -11,7 +11,7 @@ Rules for every run:
 | Program | Referral link | Terms | Approved on |
 |---|---|---|---|
 | Higgsfield | https://higgsfield.ai?fpr=mohammad-raheel-29168d | up to 25% of subscriptions incl. renewals, up to 12 months; organic only; say "independent affiliate"; no coupon/deal sites | Nov 26, 2026 (instant) |
-| OpusClip / Agent Opus | OpusClip: https://opus.pro/?via=mohammadax · Agent Opus: https://agent.opus.pro/?via=mohammadax (use exactly as recorded) | 25% of paid customers for 12 months; organic only (no paid ads, no impersonating the brand); say "independent affiliate"; dashboard affiliates.opus.pro (login = aisignaldaily.news@gmail.com email code); payout method still to set in Settings | Nov 26, 2026 (instant) |
+| OpusClip / Agent Opus | OpusClip: https://opus.pro/?via=mohammadax · Agent Opus: https://agent.opus.pro/?via=mohammadax (use exactly as recorded) | 25% of paid customers for 12 months; organic only (no paid ads, no impersonating the brand); say "independent affiliate"; dashboard affiliates.opus.pro (login = aisignaldaily.news@gmail.com email code); payout method set (PayPal, Nov 26) | Nov 26, 2026 (instant) |
 
 ## Applied / to apply (Raheel signs up himself: needs his name + payout details)
 | Program | Terms (from program pages) | Apply at | Status |
