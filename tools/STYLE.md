@@ -254,3 +254,12 @@ An hourly watcher (7 AM-9 PM CT) may post ONE breaking-news Reel per day outside
 
 ## Weekly report rules (updated every Monday by the report run; newest first)
 (none yet)
+
+## "Built with AI" showcase series (Raheel's evolving.ai reference, Nov 25, 2026: "People are building insane things with Claude Fable 5.2 - 17 examples", 14.3K likes, 5,364 sends)
+Why it works: a hot new model + "insane things" curiosity + every slide is a moving demo (awe, Berger's STEPPS) + "here are 17" list. Their clips are other people's demos taken from X; we do NOT do that (no ripping from X/Instagram, and Instagram demotes non-original reposts). Our spin, which is more original: WE build the demos ourselves and screen-record them.
+- How: the run writes each demo itself (single HTML file, canvas/JS, no external assets or libraries; small games, toy apps, visual effects, a useful mini tool like a bill splitter or budget planner), opens it with Playwright in the Higgsfield sandbox (or locally) with recordVideo, 6-8 s per clip. Slide = 1080x1350 dark mint layout: kicker "BUILT WITH AI · n/N", 2-line headline (what it is + "One prompt. One HTML file."), the clip in the middle, the exact prompt underneath, footer "Built & recorded by us with Claude · Made with AI". Cost: 0 Higgsfield credits.
+- Mix: ~1/3 "wow" (games, 3D-looking scenes), ~2/3 things a normal person or small business would actually use (bill splitter, invoice maker, booking page, habit tracker). Useful ones drive saves; wow ones drive sends.
+- Honesty: say which model/tool really built it (e.g. "Claude" in this run), never claim another model built it, never claim "in 5 minutes" unless timed. Last slide: "Want the prompts? Comment BUILD" + toolkit link.
+- Format: Instagram carousel with video slides (Buffer create_post type "post", assets = mix of {video} and {image}, max 10 items here). First run: if Buffer rejects mixed video assets, post the same content as one Reel (clips back to back, 2-3 s each, hook text from frame 1).
+- Credit: if a demo idea came from someone's public post, say "Idea inspired by <handle>" and link it; never copy their code or visuals.
+- Cadence: when a big new model launches (breaking watch or radar), make a "We tested <model>: N things it built" post within 1-3 days; otherwise one "Built with AI" post every ~2 weeks in a Build it slot. Pre-flight review applies.
