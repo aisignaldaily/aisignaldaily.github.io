@@ -274,3 +274,10 @@ Our spin, which is stronger: "We asked AI ... then checked if it's true."
 - Slide 6: "TRY THIS PROMPT" (copy-paste) + "Send this to the friend who ..." + follow line.
 - Topics: habits, money, sleep, focus, learning, small-business decisions. Never medical, mental-health treatment, legal or money advice presented as fact; health topics always end with "talk to a professional" and need the fact-check slide.
 - The fact-check is what makes us credible and different. Cadence: about once a week, in a midday or evening slot. Pre-flight review applies.
+
+## Hook lab + swipe teasers (from Raheel's @iknowig "I gave Claude one week to run my Instagram" prompts, Nov 25, 2026)
+Our system already does his 4 steps (trend radar = "find what goes viral", Reel script rules, reviewer alt hooks, full automation). Add these 3 habits to every post:
+1. HOOK LAB before building: write 5 cover hooks for the chosen topic, each using a different trigger (surprise, desire/benefit, curiosity gap, urgency "this week", ego "most people don't know"), max ~10 words, a number or name in each. Pick the best against the hook formulas above; keep the runner-up for the caption line 1 or a story. The reviewer still gets the final say. Never fear-mongering, rage-bait or fake controversy; a bold opinion must be defensible.
+2. SWIPE TEASERS: end every middle slide with a one-line open loop that pulls the next swipe ("Most people stop here. The best one is next...", "But this only works if you do step 3...") plus a small "Swipe ->" pill. Keep them true: the next slide must pay off the tease. Not on the last slide.
+3. REEL SCRIPT SHAPE (under 30 s): hook text in the first 2 s, tension or surprise by 5 s, fast payoff, one replay moment (a number or visual worth pausing on), soft CTA (save/send) at the end, no logo intro.
+We skip from that post: "income system" and comment-keyword bait for income claims (no income claims, ever).
