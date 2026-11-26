@@ -263,3 +263,14 @@ Why it works: a hot new model + "insane things" curiosity + every slide is a mov
 - Format: Instagram carousel with video slides (Buffer create_post type "post", assets = mix of {video} and {image}, max 10 items here). First run: if Buffer rejects mixed video assets, post the same content as one Reel (clips back to back, 2-3 s each, hook text from frame 1).
 - Credit: if a demo idea came from someone's public post, say "Idea inspired by <handle>" and link it; never copy their code or visuals.
 - Cadence: when a big new model launches (breaking watch or radar), make a "We tested <model>: N things it built" post within 1-3 days; otherwise one "Built with AI" post every ~2 weeks in a Build it slot. Pre-flight review applies.
+
+## "We asked AI" + fact-check series (Raheel's evolving.ai reference, Nov 25, 2026: "Someone asked Gemini for the one life hack 99% of people don't know", 9,828 likes, 6,693 sends - sends are 68% of likes, very high)
+Why it works: curiosity-gap hook ("leaving people speechless"), a personal benefit (fix your habits / your life), and the answer feels like secret knowledge people want to send to a friend. What we skip: their cover is a movie still of an actor (no movie/TV content, no real-person photos as decoration) and slides 2-3 are screenshots of other people's X posts (repost; demoted).
+Our spin, which is stronger: "We asked AI ... then checked if it's true."
+- Slide 1: hook in our design + robot mascot, e.g. "WE ASKED AI FOR THE ONE HABIT TRICK 99% OF PEOPLE DON'T KNOW. THEN WE FACT-CHECKED IT."
+- Slide 2: `chat` slide with the exact prompt we used and the AI's answer in short (we run the prompt ourselves in Claude in the run; say which AI answered; never invent a ChatGPT/Gemini answer we didn't get. If quoting a viral answer from another AI, say "a viral post claims Gemini said..." and link it, no screenshot).
+- Slide 3-4: the answer as 3 simple steps.
+- Slide 5: FACT-CHECK card with verdict TRUE / PARTLY TRUE / OVERSTATED / FALSE and 1-2 real sources (studies, official health sites). Example for this post's topic: memory reconsolidation is real (Nader, Schafe & LeDoux, Nature 2000, in rats; Schiller et al., Nature 2010, in people) but "proved" and "permanently overwrite" are overstated; results in people are mixed.
+- Slide 6: "TRY THIS PROMPT" (copy-paste) + "Send this to the friend who ..." + follow line.
+- Topics: habits, money, sleep, focus, learning, small-business decisions. Never medical, mental-health treatment, legal or money advice presented as fact; health topics always end with "talk to a professional" and need the fact-check slide.
+- The fact-check is what makes us credible and different. Cadence: about once a week, in a midday or evening slot. Pre-flight review applies.
