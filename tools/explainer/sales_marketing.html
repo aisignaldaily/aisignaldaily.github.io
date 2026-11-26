@@ -33,8 +33,8 @@ function header(a,b,col,p){chip(60,220,450,a[0],a[1],col,seg(p,0,.2));chip(570,2
 
 const SCENES=[
 // 0 hook
-(p,t)=>{const a=seg(p,0,.25);alpha(a,()=>{txt('FREE BLUEPRINT',540,360,'34px Mono',MINT,'center')});
-  alpha(seg(p,.05,.3),()=>{txt('8 AI HELPERS',540,560,'150px Anton',INK,'center');txt('RUN YOUR SALES',540,720,'120px Anton',INK,'center');txt('& MARKETING',540,860,'120px Anton',MINT,'center')});
+(p,t)=>{const a=1;alpha(a,()=>{txt('FREE BLUEPRINT',540,360,'34px Mono',MINT,'center')});
+  alpha(1,()=>{txt('8 AI HELPERS',540,560,'150px Anton',INK,'center');txt('RUN YOUR SALES',540,720,'120px Anton',INK,'center');txt('& MARKETING',540,860,'120px Anton',MINT,'center')});
   for(let i=0;i<8;i++){const pp=seg(p,.25+i*.05,.45+i*.05);const x=150+i*112,y=1120-Math.sin(pp*Math.PI)*60;alpha(pp,()=>robot(x,y,11,i<5?MINT:AMBER))}
   alpha(seg(p,.6,.8),()=>{rr(340,1280,400,100,50,null,MINT,3);txt('+ YOU: FINAL YES',540,1345,'40px InterB',MINT,'center')});},
 // 1 hub overview
@@ -128,7 +128,7 @@ window.render=function(t){X.fillStyle=BG;X.fillRect(0,0,W,H);
   const p=clamp((t-acc)/DUR[s]);if(s>=12)X.globalAlpha=1;const fade=Math.min(seg(p,0,.06),1-seg(p,.97,1));
   X.save();X.globalAlpha=s==0?Math.min(1,1-seg(p,.97,1)):fade;SCENES[s](p,t);X.restore();
   if(s>0&&s<12)caption(CAPS[s],p);
-  if(s==0)alpha(seg(p,.1,.2),()=>wrap(CAPS[0],540,1640,920,64,'48px InterB',SOFT,'center'));
+  if(s==0)alpha(1,()=>wrap(CAPS[0],540,1640,920,64,'48px InterB',SOFT,'center'));
   // watermark
   txt('AI SIGNAL DAILY',540,120,'30px Mono',MUTED,'center');
 };
