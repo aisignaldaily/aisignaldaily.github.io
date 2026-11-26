@@ -329,3 +329,15 @@ Inspiration only: restructureai's blueprint library (https://restructure-europe.
 - Script: max ~2.4 words per second of Reel; trim silences (silenceremove) and use atempo 1.06 so it doesn't drag; time each scene to its line (+0.6 s). On-screen captions always stay (most people watch muted).
 - Labels: caption says "Voice: AI-generated". Never clone or imitate a real person's voice.
 - Budget: ~0.6 credits per line; a 60 s explainer ≈ 8-10 credits total.
+
+## Research notes (Nov 26, 2026) - what the data says, and what we do about it
+Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlational), Mosseri via Search Engine Journal, UT Austin/McCombs emotion study (387K WeChat articles), Instagram Creators blog (trial reels), CreatorDB (evolving.ai).
+- SENDS PER REACH is "one of the most important signals" (Mosseri). Every post needs an obvious "send this to ___" person. (already a rule)
+- Carousels get ~9x the saves of single images; Reels ~4x the interactions. Never post single images in the feed. Keep the carousel + Reel mix.
+- Average Reel watch time is ~8.5 s: the payoff must start before 8 s; skip rate = people leaving in the first 3 s, so the hook text is on screen from frame 1. (already a rule)
+- A question in the caption = ~37% more comments; a comment CTA = ~3x more comments. Keep both on every post.
+- HASHTAG TEST: posts with hashtags averaged ~32% FEWER views in Metricool's data (correlation, not proof). New rule from Nov 27: max 3 very specific hashtags; on Tue/Thu/Sat post with ZERO hashtags. Log "hashtags: N" in the REVIEW_LOG line; the Monday weekly report compares views/reach for 0 vs 1-3 hashtags and decides after 2 weeks.
+- Emotions that spread: SURPRISE, ANXIETY (a worry + the fix), LOVE/warmth. Emotions that did NOT help: anger, sadness, plain joy. So: "Wait, AI can do THAT?" and "Your business is losing calls after 6 PM. Here's the fix." hooks; never outrage or doom-bait.
+- Most views come in the first 3 days, so a strong post keeps working: Stories should re-share our best post of the last 3 days, not only today's.
+- Trial reels (Instagram feature): a Reel is shown to NON-followers first and only goes to followers if it does well in 72 h. Great for testing hooks on a new account, but Buffer can't switch it on; Raheel can toggle "Trial" by hand when posting from the app. Optional.
+- Benchmark reality: evolving.ai posts ~38 times a week (~5/day) with ~4.8M followers and ~3.5% engagement; only ~21% of accounts under 10K followers grew in 2026. Volume + consistency + sends is what separates the ones that grow.

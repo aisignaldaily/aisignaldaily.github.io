@@ -1,4 +1,5 @@
 # Independent pre-flight review log
+# Weekly report: also compare posts by "hashtags: N" (0 vs 1-3) and "voice: yes/no" when those fields are present.
 
 One line per post: date | slot | title | hook/send/save/follow/clarity/readability | overall | fixes applied
 
