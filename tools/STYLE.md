@@ -145,7 +145,34 @@ Use it:
 - Only REAL numbers. We have our own real logs (Buffer posts, Higgsfield credits/generations, scheduled-task runs, GitHub commits) — use them; never invent "calls".
 
 ## Planned queue (runs: if an item fits your slot today, do it, then delete it from this list in the same commit)
+0. FRIDAY NOV 27, 7:45 PM evening Reel = first "Price Drop" post (see that section): MAGI-2. Facts checked Nov 26, 2026 (re-verify on the day): Sand.ai (Beijing) released MAGI-2 on Nov 24, 2026; 480B parameters (~28B active); 4-30 s 1080p clips with synchronized audio; debuted #1 on Artificial Analysis image-to-video (AA-Video-I2V v2.1), statistically tied with Dreamina Seedance 2.5; $0.08 per second on Sand.ai's API and on Higgsfield (30 s = $2.40); open weights PROMISED with no date or license; the only downloadable version today is the smaller 114B MAGI-2 Preview (Aug 5, 2026, Apache-2.0). Sources: Artificial Analysis, Sand.ai (platform.sand.ai / blog), Hugging Face sand-ai/MAGI-2-preview.
+   - Hook idea: "AI VIDEO JUST GOT 7X CHEAPER. WE TESTED IT." Beat 1 = a clip WE generate with Higgsfield model `magi_2` (9:16, 5 s, 12.5 credits; this replaces the seedance clip today), cost shown on screen. Then: what 30 s really costs ($2.40), what it means for a small business (product clips, simple ads), FACT-CHECK beat ("Free? No. Open-source? Not yet: only the smaller Preview can be downloaded."), end card with send line ("Send this to the friend who pays for video ads") + follow line.
+   - Disclosure in caption: "We use Higgsfield ourselves (not sponsored)." Never call it "free" or "open-source". No real people's faces. Log "clip: yes (magi_2)" and judge the clip's vertical quality in the preview email: if it looks good, propose magi_2 as the default clip model (12.5 vs 35 credits).
 1. Saturday "The List" (first one, Nov 28, 2026) — REFRAMED after independent review (the "our 25 tools" self-portrait scored LOW: no reader payoff, developer jargon, invites "25 hires and 9 followers lol"): "The AI team to hire first for your small business" — 6-8 hires a non-technical owner would really use (e.g. ChatGPT/Claude · Chief of Staff, an AI receptionist/DM replier · Front Desk, Canva AI · Designer, NotebookLM · Researcher, a meeting notetaker · Secretary, Zapier/Make · Operations, a scheduler like Buffer · Publisher), each labeled by the JOB it does for the owner ("Answers customer DMs at 2am"), free/paid label with verified price, and one line on what it replaces. One slide "We run this page on an AI team too" as proof (real tools + real numbers, a human approves every post). Before/after slide: hours per week by hand vs AI cost per month (estimates labeled). End: "<N> hires. Start with one." CTA "Comment AI and we'll DM you the setup". Same dark mint + pixel robot style. Dates in America/Chicago. (The full "25 tools that run this page" version is better as the monthly "How this page runs" transparency post once the page has an audience.)
+
+## "Price Drop" series (Raheel approved Nov 26, 2026; inspired by evolving.ai "AI video just became basically free", Nov 26: 7.1k likes in 5 h, a #HiggsfieldPartner ad)
+Pattern: "<useful AI thing> just got <N>x cheaper" or "<thing> is now free", with the real before/after price. Money hook + surprise + easy send ("you were paying for this?").
+- Only when a REAL price drop, new free tier or much cheaper model lands (typically 1-2 a week; never forced). Midday or evening news slot, or a breaking post if huge.
+- Prices only from official pricing pages/APIs, checked on the day, with plan and unit (per second, per month). Show the math for one concrete job ("a 30-second ad = $2.40").
+- Never say "free" unless it is $0 today, never "open-source" unless the weights are downloadable today. Promised releases are "promised, no date".
+- Our edge: TRY IT OURSELVES when it's a tool we can access (Higgsfield models, free tiers) and show our own output + the real cost on slide 1 / the first beat. Include a short fact-check beat when viral posts overclaim.
+- If we use the vendor ourselves (e.g. Higgsfield), say "We use it ourselves (not sponsored)". We never take paid partnerships without "Sponsored" and Raheel's approval.
+
+## "Viral AI claim, fact-checked" series (Raheel approved Nov 26, 2026)
+Pattern: "You've seen '<claim>' everywhere. We checked it." -> what's true, what's overstated, what it means for you, verdict TRUE / PARTLY TRUE / OVERSTATED / FALSE with 1-2 primary sources.
+- Never runs out: big AI pages post overclaims daily. This is the format reposting pages can't copy and it builds the trust that turns viewers into followers.
+- Fact-check the CLAIM, never attack a creator: no creator names, handles or screenshots of their posts; say "a viral post claims..." and link the original source of the news, not the post.
+- Midday or evening news slots on non-signature days. Different from Monday's "We asked AI" (that one checks an AI's answer; this one checks a viral claim about AI).
+
+## NEWS-LIGHT DAYS: fallback list (Raheel approved Nov 26, 2026)
+Never post a weak "news" story just to fill a slot. If no story passes "would someone send this to a friend?", go down this list in order:
+1. A Price Drop from the last 7 days.
+2. Viral AI claim, fact-checked.
+3. "Wait, AI can do THAT?" (surprising but real, verified on official docs).
+4. "AI said/did something wild" (verified, sourced).
+5. Explain one term people keep hearing ("What does 'open-weights' actually mean?"), with one everyday example. Good for saves and new followers.
+6. "The leaderboard changed": who's #1 now and what it means for normal people, only from official rankings (Artificial Analysis, LMArena) with the date.
+Say in the preview email which fallback was used and why.
 
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
@@ -352,7 +379,7 @@ Inspiration only: restructureai's blueprint library (https://restructure-europe.
 
 ## Clip test (Raheel approved Nov 26, 2026; starts Fri Nov 27)
 Why: the daily Higgsfield seedance clip (~35 credits) is about half of all daily credit spend (~70/day = ~13 days of credits at 928) for 5 seconds of one Reel, with no evidence it adds watch time or follows. Our best benchmarks open with REAL motion (product demos, demos we built), not AI b-roll.
-- Evening Reel on MON/WED/FRI: may use ONE seedance clip for the hook (same rules as before).
+- Evening Reel on MON/WED/FRI: may use ONE AI clip for the hook (same rules as before). Model: seedance_2_5 (35 credits / 5 s) until the Nov 27 MAGI-2 test; Higgsfield `magi_2` costs 12.5 credits / 5 s (9:16, quoted Nov 26) and ties Seedance 2.5 on the Artificial Analysis leaderboard, so if its vertical output looks good, it becomes the default clip model.
 - Evening Reel on TUE/THU/SAT/SUN: NO seedance clip. Free motion instead, in this order: official product clip offered as a direct file on the company's own site (product/screen only, no people), a Playwright screen recording of the real tool/page (Higgsfield sandbox, 0 credits), a code-animated hook scene (like tools/explainer/), or slow-zoom stills. The hook must still MOVE in the first second.
 - Log "clip: yes/no" in the REVIEW_LOG line of every evening Reel. The Monday report compares the two groups and decides after 2 weeks: keep the clip daily, keep 3x/week, or drop it.
 

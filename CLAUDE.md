@@ -71,6 +71,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - Follow trigger (hard rule): every post names its series/number and promises the next post concretely. Details: STYLE.md "FOLLOW TRIGGER".
 - Carousels get ~9x the saves of single images; Reels get the most interactions. The Reel payoff must start before ~8 s.
 - Our edge: our own demos and checked facts (fact-checks, verified prices) where others repost.
+- New formats (Nov 26): **Price Drop** (real before/after prices, try it ourselves, never "free"/"open-source" unless true) and **Viral AI claim, fact-checked** (check the claim, never attack the creator). On news-light days use the fallback list in STYLE.md "NEWS-LIGHT DAYS" instead of a weak story.
 
 ## Running experiments (the Monday report decides)
 - **Voice:** explainers and how-tos are always voiced ("Grady"). News Reels are voiced Mon/Wed/Fri only, as the test.
@@ -79,6 +80,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - **Clip test (from Nov 27):** the evening Reel uses the Higgsfield video clip (~35 credits) only Mon/Wed/Fri; other days use free motion (official clips, screen recordings, code animation). Log "clip: yes/no". Details: STYLE.md "Clip test".
 
 ## Queued
+- Fri Nov 27, 7:45 PM: first "Price Drop" Reel (MAGI-2, our own test clip with Higgsfield magi_2). Details: STYLE.md "Planned queue".
 - Tue Dec 1, 5:45 PM: Allyzent AI blueprint post (sales half).
 - Thu Dec 3, 5:45 PM: Latis AI blueprint post (marketing half).
 - Friday explainer run (weekly, from Fri Dec 4): alternates an industry blueprint (law-firm intake first, with its own page) and a system explainer.
