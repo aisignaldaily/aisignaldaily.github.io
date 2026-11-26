@@ -11,6 +11,7 @@ Rules for every run:
 | Program | Referral link | Terms | Approved on |
 |---|---|---|---|
 | Higgsfield | https://higgsfield.ai?fpr=mohammad-raheel-29168d | up to 25% of subscriptions incl. renewals, up to 12 months; organic only; say "independent affiliate"; no coupon/deal sites | Nov 26, 2026 (instant) |
+| OpusClip / Agent Opus | OpusClip: https://opus.pro/?via=mohammadax · Agent Opus: https://agent.opus.pro/?via=mohammadax (use exactly as recorded) | 25% of paid customers for 12 months; organic only (no paid ads, no impersonating the brand); say "independent affiliate"; dashboard affiliates.opus.pro (login = aisignaldaily.news@gmail.com email code); payout method still to set in Settings | Nov 26, 2026 (instant) |
 
 ## Applied / to apply (Raheel signs up himself: needs his name + payout details)
 | Program | Terms (from program pages) | Apply at | Status |
@@ -22,7 +23,7 @@ Rules for every run:
 | n8n | 30% recurring for 12 months on n8n Cloud only (PartnerStack, PayPal, EUR 100 minimum) | https://n8n.io/affiliates | ON HOLD (PartnerStack 2-program limit, same as Descript) |
 | HubSpot | 30% recurring up to 12 months, 180-day cookie; FTC disclosure required near links; no referring your own clients | https://www.hubspot.com/partners/affiliates | TO DO by Raheel: signup runs on Impact.com (create account with Google/Apple/email + accept terms) |
 | Fireflies.ai | 10-30% recurring for 12 months (FirstPromoter) | https://fireflies.ai/affiliate | applying Nov 26 |
-| OpusClip | 25% recurring for the first year; $20 minimum payout; ~1 week review | https://www.opus.pro/affiliate | TO DO by Raheel: affiliates.opus.pro signup needs an emailed verification code |
+| OpusClip | 25% recurring for the first year; $20 minimum payout; ~1 week review | https://www.opus.pro/affiliate | APPROVED Nov 26 (see Approved table) |
 | Lovable | up to $100 per first-time subscriber | https://lovable.dev/partners/affiliates | applying Nov 26 |
 | Canva | only via the Canvassador program (apply as Canvassador first; one-time commission, reportedly up to $36) | https://www.canva.com/affiliates | applying Nov 26 (waitlist-style) |
 | Gamma | Rate not published (other sources: ~25% first year); PartnerStack; 5-10 business day review | https://gammaapp.partnerstack.com/?group=affiliates | SUBMITTED Nov 26 (PartnerStack) |
