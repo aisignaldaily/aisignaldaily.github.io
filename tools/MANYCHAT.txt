@@ -1,2 +1,7 @@
+AI: live
+DEMO: live
 BLUEPRINT: live
 # Raheel confirmed Nov 26, 2026: comment BLUEPRINT -> DM with "Send me the blueprint" button -> blueprint link + "Book a demo" (calendly.com/allyzent/discovery, info@allyzent.com) -> 1-day follow-up.
+
+# AI (live since Nov 25, 2026): DM with today's tools + the toolkit link. DEMO (live): 4 quick questions + email, then Calendly booking, AI agent line, info@allyzent.com.
+# BUILD is NOT a keyword. Use only AI, BLUEPRINT, DEMO.

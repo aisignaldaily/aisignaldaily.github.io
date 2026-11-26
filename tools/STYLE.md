@@ -9,8 +9,8 @@
 Daily schedule = 4 feed posts + Stories:
 - 9:15 AM carousel - USEFUL/FREE: free tools, "this free X replaces a $Y thing", tool comparisons ("ChatGPT vs Gemini vs Claude for <task>, tested"), money/time savers. Goal: saves + sends.
 - 12:30 PM Reel - WILD/FUN: "AI did something wild", someone-asked-AI experiments, the internet reacts, light humor/memes. Goal: sends to non-followers.
-- 5:45 PM carousel - AI YOU CAN USE how-to (Tue = Allyzent AI, Thu = Latis AI company post). Goal: saves + DEMO leads.
-- 7:45 PM Reel - Mon/Wed/Sat BUILDER LESSONS (see that section); other days the single biggest story of the day explained for normal people. Goal: follows.
+- 5:45 PM carousel - AI YOU CAN USE how-to (Tue/Thu = Build it while company posts are paused; see COMPANY_POSTS.txt). Goal: saves + DEMO leads.
+- 7:45 PM Reel - SUNDAY BUILDER LESSONS (see that section; moved from Mon/Wed/Sat by the Nov 26 signature calendar); other days the single biggest story of the day explained for normal people. Goal: follows.
 Diversity rules (hard):
 - Max ONE post per company per day (Google, OpenAI, Anthropic, Meta, Microsoft, Apple, Nvidia, xAI...). Today's Nov 25 feed was 3 Google posts out of 5: never again.
 - At least 2 of the 4 daily posts must NOT be a big-company press release: tools, people/builders, experiments, jobs/money, open source, robots, humor.
@@ -33,6 +33,12 @@ Revenue rules:
 - Company posts end card: "Comment DEMO" + "Book a demo: aisignaldaily.github.io/demo". Demo page: https://aisignaldaily.github.io/demo/
 
 Read this before building any post. Where it differs from the run instructions, THIS FILE WINS on style; the run instructions win on rules (no rumors, real people in credited photos/clips, or third-party AI fakes only when the fake is the news and clearly labeled; we never create AI likenesses of real people (see "Real people" below), AI visuals: men allowed (fictional, fully and professionally dressed), never women or female figures, never nudity, vulgar or suggestive content, no gambling/alcohol, sources, labels).
+
+## FOLLOW TRIGGER (hard rule, Raheel approved Nov 26, 2026)
+Our reviewer's lowest score on real posts is the follow trigger (4 then 5 on Nov 26). Follows are the goal, so EVERY feed post must give a reason to come back tomorrow:
+- Series name + number on the cover or first beat when it is a series ("Free swaps #3", "Builder lessons #2", "We asked AI #1").
+- The end card or last caption line promises the NEXT post concretely: "Follow: next Monday we fact-check another viral AI answer" / "Follow for tomorrow's free swap". Never vague ("follow for more").
+- The pre-flight reviewer treats a follow score below 6 as a must-fix.
 
 ## What Instagram rewards right now
 1. Watch time / completion (Reels) - hook must land in the first 1.5 s.
@@ -59,7 +65,7 @@ Our version (honest, so it builds trust instead of getting called out in comment
 - Screenshots: official GitHub repo header or the tool's own site (Playwright in the Higgsfield sandbox), cropped to the name/description/stars area, NO people or avatars in frame. No recreated logos.
 - Skip voice-cloning tools and anything for cloning people, piracy, cracked software, or "free" versions of paid apps that break terms. Don't feature tools we use or sell against (Higgsfield, ElevenLabs/Vapi) as targets to cancel.
 - CTA: our ManyChat keyword is "AI" (not GITHUB): end slide "Comment AI and we'll DM you all the links" and the links page entry for that post lists every tool link (main one first).
-- Caption: hook with the monthly total, the swaps as a short list ("Notion → AppFlowy"), the watch-out line, "Source: official pricing pages + GitHub, checked <date>", save/send lines, AI CTA, question ("Which one are you switching first?"), max 5 hashtags.
+- Caption: hook with the monthly total, the swaps as a short list ("Notion → AppFlowy"), the watch-out line, "Source: official pricing pages + GitHub, checked <date>", save/send lines, AI CTA, question ("Which one are you switching first?"), hashtags per the HASHTAG TEST (max 3; zero on Tue/Thu/Sat).
 
 ## "Build it" blueprint series (Raheel, Nov 25, 2026) — Tuesdays and Thursdays in the 5:45 PM slot (while company posts are paused)
 Reference: @ai.byarsh "Build your own AI assistant OS in 5 steps" (9 slides; 706 likes, 514 comments, 793 SENDS — more sends than likes = people forward it to the friend who'd build it). Why it works: one aspirational outcome ("your own AI assistant on your laptop"), numbered build steps with ONE concrete thing each (a copy-paste prompt, a folder tree, a 3-tier table, real tool/repo cards with stars), a "payoff" slide, comment-keyword CTA. It feels like a blueprint you'd pay for.
@@ -145,7 +151,7 @@ Rank story ideas by shareability, not importance. Best performers on top AI page
 Avoid: dry funding news, benchmarks without a "so what", anything that needs more than one sentence to understand.
 
 ## Carousel cover (slide 1) - the "Evolving" formula, adapted
-- Top 55-60%: one strong visual. Options in order: (a) official product screenshot / UI / press image, or a real credited photo/frame of the real person in the story (founder, engineer), (b) bold graphic or chart, (c) Higgsfield AI image (robots, devices, abstract tech, or a fictional man fully dressed in a work setting; never women, never AI versions of real people; labeled "Made with AI").
+- Top 55-60%: one strong visual. Options in order: (a) official product screenshot / UI / press image (no photos or frames of real people: runs never download them, see "Real, not AI" defaults), (b) bold graphic or chart, (c) Higgsfield AI image (robots, devices, abstract tech, or a fictional man fully dressed in a work setting; never women, never AI versions of real people; labeled "Made with AI").
 - Bottom 40-45%: GIANT all-caps headline, white Anton, tight leading, 2-4 key words in mint #3DF5C8, max ~14 words, fills the width. Thin dark gradient behind text.
 - Tiny "SWIPE ⬅️" tag bottom-right; small "@aisignaldaily.news" + mint signal mark bottom-left.
 - The headline alone must make someone stop and want to send it.
@@ -160,7 +166,7 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 - 12-20 s. Text on screen from frame 1 (most watch muted). First 1.5 s = the hook as giant text; no logo intro.
 - A visual change every 2-3 s (cut, zoom, new text card, clip). Big captions centered in the safe area.
 - End on a loop-friendly frame (last frame flows into the first) to boost replays.
-- Higgsfield clips (when connected): 3-5 s b-roll beats behind text - robots, devices, futuristic workspaces, abstract data visuals. May include a fictional man (fully, professionally dressed, e.g. at a desk, in a lab, using a device). Never women or female figures, never real people or lookalikes, never nudity, vulgar or suggestive content. Max ONE Higgsfield clip per day (~35 credits, seedance_2_5, 9:16, 5 s), only when there is no official footage; check balance first and skip if under 100 credits. Label "Made with AI" in caption and on screen corner.
+- Higgsfield clips (when connected): 3-5 s b-roll beats behind text - robots, devices, futuristic workspaces, abstract data visuals. May include a fictional man (fully, professionally dressed, e.g. at a desk, in a lab, using a device). Never women or female figures, never real people or lookalikes, never nudity, vulgar or suggestive content. Max ONE Higgsfield clip per day (~35 credits, seedance_2_5, 9:16, 5 s), only on Mon/Wed/Fri evening Reels during the CLIP TEST (see below), only when there is no official footage; check balance first and skip if under 100 credits. Label "Made with AI" in caption and on screen corner.
 - Official company demo clips beat everything for launches - always credit.
 - Real-people clips ("the engineer who built X says...") are allowed - see "Real people" below.
 
@@ -203,7 +209,7 @@ Runs never download or rip footage/photos of real people from the web (YouTube, 
 - SEND trigger: "Send this to a friend who ___" (vary it).
 - "Comment AI and we'll DM you today's tools + our free AI toolkit 👇"
 - A question that is easy to answer in 1-3 words ("Would you trust it? Yes or no").
-- 3-5 relevant hashtags max (Instagram caps posts at 5 since Dec 2025; hashtags barely help reach, keywords in caption/on-screen text/alt text matter more for search).
+- Hashtags: follow the HASHTAG TEST in "Research notes" (max 3 very specific; zero on Tue/Thu/Sat). Keywords in caption/on-screen text/alt text matter more for search.
 - Alt text on every image: a plain description with keywords.
 
 ## Hook formulas (rotate; never reuse the same opener twice in a day)
@@ -217,7 +223,7 @@ Runs never download or rip footage/photos of real people from the web (YouTube, 
 - "The internet is losing it over ___."
 
 ## Volume (schedule v6, Raheel Nov 25 2026: 4 feed posts/day + breaking only when amazing)
-CURRENT: 4 feed posts daily (CT): 9:15 AM carousel (news/useful) · 12:30 PM Reel (wild/fun or quick trick) · 5:45 PM carousel ("AI you can use" how-to) · 7:45 PM Reel (Builder lessons Mon/Wed/Sat, otherwise biggest story) + 8:30 PM Stories. The 3:45 PM afternoon slot is OFF. Plus at most ONE spontaneous breaking post per day, only for truly big confirmed news (breaking watch). The v5 text below is history.
+CURRENT: 4 feed posts daily (CT): 9:15 AM carousel (news/useful) · 12:30 PM Reel (wild/fun or quick trick) · 5:45 PM carousel ("AI you can use" how-to) · 7:45 PM Reel (Builder lessons on Sunday, otherwise biggest story) + 8:30 PM Stories. The 3:45 PM afternoon slot is OFF (confirmed by Raheel Nov 26: on for Nov 26 only, off from Nov 27; its scheduled task is switched off after the Nov 26 post). Plus at most ONE spontaneous breaking post per day, only for truly big confirmed news (breaking watch). The v5 text below is history.
 
 ## Volume (old: schedule v5, Nov 25 2026)
 Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI you can use", quick) · 3:45 PM carousel (news) · 5:45 PM carousel ("AI you can use" deep how-to; Tue = Allyzent AI post, Thu = Latis AI post) · 7:45 PM Reel (biggest story) · 8:30 PM 2 Stories. Never state a number of posts per day publicly. Quality > volume: skip a slot rather than post filler.
@@ -239,7 +245,7 @@ Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI yo
 - Always disclose: "Full disclosure: Allyzent AI / Latis AI is our team." Never imply a partnership with ElevenLabs, Vapi or any other company; name them as tools only, no logos as art.
 - Only real facts: published site numbers labeled "customer-reported"; no invented results or income claims. Verify third-party features/prices on their official sites at post time.
 - CTA keyword DEMO is LIVE in ManyChat: commenting DEMO starts a DM that asks 4 quick questions + email, then offers the Calendly booking, the AI agent line and info@allyzent.com. Use exactly: `Comment "DEMO" and we'll DM you the options 👇` (instead of the usual "AI" CTA on company posts).
-- Company post caption order: hook, 3-5 DIY steps summary, honest "where DIY gets hard" line, "Or let Allyzent AI / Latis AI do it for you.", DEMO CTA, "Full disclosure: Allyzent AI / Latis AI is our team.", "Source: <tool docs>", "Visuals: Made with AI" if used, 3-5 hashtags.
+- Company post caption order: hook, 3-5 DIY steps summary, honest "where DIY gets hard" line, "Or let Allyzent AI / Latis AI do it for you.", DEMO CTA, "Full disclosure: Allyzent AI / Latis AI is our team.", "Source: <tool docs>", "Visuals: Made with AI" if used, hashtags per the HASHTAG TEST (max 3; zero on Tue/Thu/Sat).
 
 ## "AI you can use" series (12:30 PM Reel + 5:45 PM carousel)
 - Goal: saves + shares from practical value, while staying a news page (never a "make money" page).
@@ -256,6 +262,7 @@ An hourly watcher (7 AM-9 PM CT) may post ONE breaking-news Reel per day outside
 ## Weekly report rules (updated every Monday by the report run; newest first)
 Standing instructions for the Monday report run (Raheel, Nov 26, 2026: "I trust you can do your own research"):
 - Also compare the voice test (voice yes/no) and the hashtag test (0 vs 1-3 hashtags, decide after 2 weeks from Nov 27).
+- Also compare the CLIP TEST (clip yes/no on evening Reels): plays per reach, average watch time, sends and follows if available. Decide after 2 weeks from Nov 27.
 - OUTSIDE RESEARCH, ~15 min: what AI content went viral this week on Instagram/TikTok/YouTube Shorts/X (formats, hooks, topics), new official Instagram ranking/feature news (Mosseri, Instagram Creators blog), new studies on what drives sends/saves/follows. Web search/fetch only; never scrape Instagram or bypass blocks. Keep only sourced findings; add the 2-3 best ideas for our audience as dated bullets with sources to "Research notes", mark any new format as a "test" here, and include them in the email ("Outside research: best new ideas + what we're testing").
 
 (none yet)
@@ -264,7 +271,7 @@ Standing instructions for the Monday report run (Raheel, Nov 26, 2026: "I trust 
 Why it works: a hot new model + "insane things" curiosity + every slide is a moving demo (awe, Berger's STEPPS) + "here are 17" list. Their clips are other people's demos taken from X; we do NOT do that (no ripping from X/Instagram, and Instagram demotes non-original reposts). Our spin, which is more original: WE build the demos ourselves and screen-record them.
 - How: the run writes each demo itself (single HTML file, canvas/JS, no external assets or libraries; small games, toy apps, visual effects, a useful mini tool like a bill splitter or budget planner), opens it with Playwright in the Higgsfield sandbox (or locally) with recordVideo, 6-8 s per clip. Slide = 1080x1350 dark mint layout: kicker "BUILT WITH AI · n/N", 2-line headline (what it is + "One prompt. One HTML file."), the clip in the middle, the exact prompt underneath, footer "Built & recorded by us with Claude · Made with AI". Cost: 0 Higgsfield credits.
 - Mix: ~1/3 "wow" (games, 3D-looking scenes), ~2/3 things a normal person or small business would actually use (bill splitter, invoice maker, booking page, habit tracker). Useful ones drive saves; wow ones drive sends.
-- Honesty: say which model/tool really built it (e.g. "Claude" in this run), never claim another model built it, never claim "in 5 minutes" unless timed. Last slide: "Want the prompts? Comment BUILD" + toolkit link.
+- Honesty: say which model/tool really built it (e.g. "Claude" in this run), never claim another model built it, never claim "in 5 minutes" unless timed. Last slide: "Want the prompts? Comment AI" + toolkit link (BUILD is not a ManyChat keyword; AI, BLUEPRINT and DEMO are the only live ones).
 - Format: Instagram carousel with video slides (Buffer create_post type "post", assets = mix of {video} and {image}, max 10 items here). First run: if Buffer rejects mixed video assets, post the same content as one Reel (clips back to back, 2-3 s each, hook text from frame 1).
 - Credit: if a demo idea came from someone's public post, say "Idea inspired by <handle>" and link it; never copy their code or visuals.
 - Cadence: when a big new model launches (breaking watch or radar), make a "We tested <model>: N things it built" post within 1-3 days; otherwise one "Built with AI" post every ~2 weeks in a Build it slot. Pre-flight review applies.
@@ -334,6 +341,12 @@ Inspiration only: restructureai's blueprint library (https://restructure-europe.
 - Script: max ~2.4 words per second of Reel; trim silences (silenceremove) and use atempo 1.06 so it doesn't drag; time each scene to its line (+0.6 s). On-screen captions always stay (most people watch muted).
 - Labels: caption says "Voice: AI-generated". Never clone or imitate a real person's voice.
 - Budget: ~0.6 credits per line; a 60 s explainer ≈ 8-10 credits total.
+
+## Clip test (Raheel approved Nov 26, 2026; starts Fri Nov 27)
+Why: the daily Higgsfield seedance clip (~35 credits) is about half of all daily credit spend (~70/day = ~13 days of credits at 928) for 5 seconds of one Reel, with no evidence it adds watch time or follows. Our best benchmarks open with REAL motion (product demos, demos we built), not AI b-roll.
+- Evening Reel on MON/WED/FRI: may use ONE seedance clip for the hook (same rules as before).
+- Evening Reel on TUE/THU/SAT/SUN: NO seedance clip. Free motion instead, in this order: official product clip offered as a direct file on the company's own site (product/screen only, no people), a Playwright screen recording of the real tool/page (Higgsfield sandbox, 0 credits), a code-animated hook scene (like tools/explainer/), or slow-zoom stills. The hook must still MOVE in the first second.
+- Log "clip: yes/no" in the REVIEW_LOG line of every evening Reel. The Monday report compares the two groups and decides after 2 weeks: keep the clip daily, keep 3x/week, or drop it.
 
 ## Research notes (Nov 26, 2026) - what the data says, and what we do about it
 Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlational), Mosseri via Search Engine Journal, UT Austin/McCombs emotion study (387K WeChat articles), Instagram Creators blog (trial reels), CreatorDB (evolving.ai).

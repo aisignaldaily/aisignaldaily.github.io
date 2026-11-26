@@ -27,7 +27,7 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 
 ## How posting works
 - Scheduled cloud tasks post through **Buffer** (org 6b06f0d4dc0cc7b427fd05ce, Instagram channel 6b06f1348541f09ecb9dc442).
-  - Daily slots (CT): 9:15 morning carousel · 12:30 midday Reel · 3:45 afternoon carousel · 5:45 practical carousel · 7:45 evening Reel · 8:30 Stories.
+  - Daily slots (CT): 9:15 morning carousel · 12:30 midday Reel · 5:45 practical carousel · 7:45 evening Reel · 8:30 Stories. The 3:45 afternoon carousel is OFF from Nov 27 (Raheel, Nov 26: quality over volume).
   - Also: hourly breaking-news watch (max 1/day) · watchdog · Monday 7:23 weekly report.
 - Before making a post, a run claims its slot with `claims/YYYY-MM-DD-<slot>.txt`. If the file exists, someone else owns that slot.
 - **Pre-flight review:** an independent agent scores every draft with `tools/REVIEW_RUBRIC.md` before the preview email. Scores go in `tools/REVIEW_LOG.md`.
@@ -68,6 +68,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
   - one idea per slide;
   - surprise, or a worry plus its fix.
 - Losers: income bait, comment-only bait, niche audiences, reposts.
+- Follow trigger (hard rule): every post names its series/number and promises the next post concretely. Details: STYLE.md "FOLLOW TRIGGER".
 - Carousels get ~9x the saves of single images; Reels get the most interactions. The Reel payoff must start before ~8 s.
 - Our edge: our own demos and checked facts (fact-checks, verified prices) where others repost.
 
@@ -75,6 +76,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - **Voice:** explainers and how-tos are always voiced ("Grady"). News Reels are voiced Mon/Wed/Fri only, as the test.
 - **Hashtags:** max 3; zero on Tue/Thu/Sat. Log "hashtags: N".
 - **Virality predictor:** Higgsfield's tool, checked against real results each week.
+- **Clip test (from Nov 27):** the evening Reel uses the Higgsfield video clip (~35 credits) only Mon/Wed/Fri; other days use free motion (official clips, screen recordings, code animation). Log "clip: yes/no". Details: STYLE.md "Clip test".
 
 ## Queued
 - Tue Dec 1, 5:45 PM: Allyzent AI blueprint post (sales half).
