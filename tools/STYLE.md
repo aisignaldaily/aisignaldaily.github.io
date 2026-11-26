@@ -85,6 +85,25 @@ Our version:
 - Verify EVERY item at post time: it exists, the one-line description is accurate, price/free tier from the official site, GitHub stars via gh api (round down). Popular lists online are full of invented star counts and dead tools: if you can't verify it, it's not on our list. No icons/avatars copied from others (names only), no anime/character images.
 - Never repeat a list topic within 4 weeks; the links page entry lists every item's official link, grouped by row.
 
+## VIRAL PLAYBOOK (distilled from Raheel's reference posts, Nov 25, 2026) — read before every post
+Reference results (@ai.byarsh carousels): free software swaps 4,008 likes / 3,142 sends · 12 weekend AI projects 1,175 / 1,394 sends · 30 best plugins 1,301 / 1,275 sends · own AI assistant 706 / 793 sends · "one post everywhere" 256 / 269 sends.
+What the winners share (do all of these):
+1. A concrete PERSONAL outcome in the hook: save money, save hours, "your own X", "build in one weekend". Broad pain beats niche workflow (the creator-only post did 15x worse).
+2. A number on the cover: "$305 a month", "12 projects", "30 best", "5 steps".
+3. One idea per slide, same layout every slide, numbered (01/12), "Next: ..." teaser so people swipe to the end.
+4. Proof on every slide: a real price, a real screenshot/repo card, a concrete benefit checklist, a copy-paste prompt.
+5. A SEND trigger: it's useful to a specific friend or coworker ("send to the friend who pays for everything").
+6. One recurring look + series + keyword CTA ("Comment AI") so the profile looks like a system worth following.
+7. Sends ~= or > likes on every winner: judge our posts in the weekly report by sends per reach first.
+What we never copy: invented numbers or star counts, copied logos/icons, other people's photos, movie/anime characters, income dashboards or "make money" framing, comment-gating the only useful part (we always give the value in the post; the DM is a bonus with links).
+
+## "Idea gallery" format (from "12 AI projects you can build in one weekend") — use in The List or Build it slots, max once a week
+- Cover: "<N> <things> you can build/do with AI <in a weekend / this week>" + number in mint.
+- One idea per slide: outcome headline ("Your personal AI chief of staff"), one-line subtitle, a MATCHED-SERIES Higgsfield image of a clean laptop/phone mockup showing the idea (no people, no faces, no avatars, no money piles), and a short checklist of 4-5 concrete benefits; footer names the real tool(s) to build it with (e.g. "Build it with: ChatGPT Projects + Zapier") — verified.
+- Label mockups honestly: small "Concept mockup · Made with AI" on each image slide.
+- Budget: up to ~15 Higgsfield credits for this format (gpt_image_2_6 ~0.75 cr per slide); keep the same scene/light/props across slides.
+- The links page entry lists each idea with the real tools + a starter prompt.
+
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
 - **AI said/did something wild** ("Grok called humans 'bags of meat'") - personality + surprise.
