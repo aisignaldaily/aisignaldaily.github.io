@@ -1,0 +1,121 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(../fonts/Anton-Regular.ttf)}
+@font-face{font-family:InterB;src:url(../fonts/Inter-Bold.otf)}
+@font-face{font-family:InterM;src:url(../fonts/Inter-Medium.otf)}
+@font-face{font-family:Mono;src:url(../fonts/DejaVuSansMono.ttf)}
+html,body{margin:0;background:#06090f}canvas{display:block}
+</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Code-drawn explainer (AI Signal Daily). render(t) is deterministic: the recorder sets t frame by frame.
+const C=document.getElementById('c'),X=C.getContext('2d'),W=1080,H=1920;
+const BG='#06090f',PANEL='#0e1624',PANEL2='#0a111c',LINE='#1d2a3c',INK='#f5f7fa',MUTED='#8b98a5',SOFT='#c9d4dc',MINT='#3df5c8',AMBER='#ffb547',PURPLE='#c9b8ff';
+// scene durations (seconds) - overwritten by window.DUR from the narration lengths
+let DUR=window.DUR||[4.6,5.2,3.8,3.8,3.2,3.8,3.2,4.0,4.2,4.6,4.6];
+const ease=x=>x<0?0:x>1?1:1-Math.pow(1-x,3), clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)), lerp=(a,b,p)=>a+(b-a)*p;
+const seg=(p,a,b)=>clamp((p-a)/(b-a));
+function rr(x,y,w,h,r,fill,stroke,lw=3){X.beginPath();X.roundRect(x,y,w,h,r);if(fill){X.fillStyle=fill;X.fill()}if(stroke){X.lineWidth=lw;X.strokeStyle=stroke;X.stroke()}}
+function txt(s,x,y,font,color,align='left',base='alphabetic'){X.font=font;X.fillStyle=color;X.textAlign=align;X.textBaseline=base;X.fillText(s,x,y)}
+function wrap(s,x,y,maxW,lh,font,color,align='left'){X.font=font;const words=s.split(' ');let line='',yy=y;for(const w of words){const t=line?line+' '+w:w;if(X.measureText(t).width>maxW&&line){txt(line,x,yy,font,color,align);line=w;yy+=lh}else line=t}txt(line,x,yy,font,color,align);return yy}
+function alpha(a,f){X.save();X.globalAlpha*=clamp(a);f();X.restore()}
+const ROBOT=["..XXXX..",".X....X.","X.X..X.X","X......X","X.XXXX.X",".X....X.","..XXXX..","XXXXXXXX","X.XXXX.X","X.XXXX.X","..X..X..","..X..X.."];
+function robot(cx,cy,s,col,blink=0){const w=8*s,h=12*s;ROBOT.forEach((r,j)=>[...r].forEach((c,i)=>{if(c==='X'){X.fillStyle=col;X.fillRect(cx-w/2+i*s,cy-h/2+j*s,s,s)}}));if(blink<.5){X.fillStyle=BG;}X.fillStyle=col;X.fillRect(cx-w/2+2*s,cy-h/2+2*s,s,s);X.fillRect(cx-w/2+5*s,cy-h/2+2*s,s,s)}
+function chip(x,y,w,label,value,col,p){alpha(ease(p),()=>{rr(x,y,w,118,18,'#0b131f',col,2);txt(label,x+22,y+38,'22px Mono',col);txt(value,x+22,y+96,'52px Anton',INK)})}
+function tool(x,y,name,col,p=1){alpha(ease(p),()=>{X.font='30px InterB';const w=X.measureText(name).width+64;rr(x,y,w,58,29,'#0a111c',col,2);X.beginPath();X.arc(x+28,y+29,8,0,7);X.fillStyle=col;X.fill();txt(name,x+46,y+40,'30px InterB',INK)})}
+// frame shared by all helper scenes
+function frame(mod,col,idx,p){rr(60,470,960,1060,34,'#0b1220',col,4);txt('● '+mod,540,450,'26px Mono',col,'center');
+  // footer progress
+  rr(60,1560,960,76,38,'#0b1220',col,3);for(let i=0;i<11;i++){X.beginPath();X.arc(470+i*48,1598,11,0,7);X.fillStyle=i<=idx?col:'transparent';X.fill();X.lineWidth=2;X.strokeStyle=col;X.stroke()}txt('AI SIGNAL DAILY',100,1608,'24px Mono',MUTED)}
+function caption(s,p){alpha(seg(p,0,.08)*(1-seg(p,.94,1)),()=>{wrap(s,540,1740,920,70,'54px InterB',INK,'center')})}
+function header(a,b,col,p){chip(60,220,450,a[0],a[1],col,seg(p,0,.2));chip(570,220,450,b[0],b[1],LINE==col?MUTED:'#2a3a52',seg(p,.08,.28));}
+
+const SCENES=[
+// 0 hook
+(p,t)=>{const a=seg(p,0,.25);alpha(a,()=>{txt('FREE BLUEPRINT',540,360,'34px Mono',MINT,'center')});
+  alpha(seg(p,.05,.3),()=>{txt('8 AI HELPERS',540,560,'150px Anton',INK,'center');txt('RUN YOUR SALES',540,720,'120px Anton',INK,'center');txt('& MARKETING',540,860,'120px Anton',MINT,'center')});
+  for(let i=0;i<8;i++){const pp=seg(p,.25+i*.05,.45+i*.05);const x=150+i*112,y=1120-Math.sin(pp*Math.PI)*60;alpha(pp,()=>robot(x,y,11,i<5?MINT:AMBER))}
+  alpha(seg(p,.6,.8),()=>{rr(340,1280,400,100,50,null,MINT,3);txt('+ YOU: FINAL YES',540,1345,'40px InterB',MINT,'center')});},
+// 1 hub overview
+(p,t)=>{const cx=540,cy=930,R=330;const names=['Scout','Writer','Designer','Scheduler','DM helper','Lead keeper','Booker','Closer'];
+  txt('THE WHOLE TEAM',540,330,'72px Anton',INK,'center');
+  names.forEach((n,i)=>{const ang=-Math.PI/2+i*2*Math.PI/8,x=cx+Math.cos(ang)*R,y=cy+Math.sin(ang)*R,col=i<5?MINT:AMBER,pp=seg(p,.05+i*.06,.3+i*.06);
+    X.save();X.globalAlpha=ease(pp);X.strokeStyle=col;X.lineWidth=4;X.setLineDash([12,10]);X.lineDashOffset=-t*40;X.beginPath();X.moveTo(cx,cy);X.lineTo(lerp(cx,x,ease(pp)),lerp(cy,y,ease(pp)));X.stroke();X.restore();
+    alpha(pp,()=>{rr(x-125,y-62,250,124,24,PANEL,col,3);robot(x,y-14,5,col);txt(n,x,y+46,'28px InterB',INK,'center')})});
+  const pulse=1+Math.sin(t*4)*.03;alpha(seg(p,0,.2),()=>{X.beginPath();X.arc(cx,cy,110*pulse,0,7);X.fillStyle='#10231f';X.fill();X.lineWidth=4;X.strokeStyle=MINT;X.stroke();txt('YOU',cx,cy+6,'64px Anton',MINT,'center');txt('final yes',cx,cy+48,'26px InterM',SOFT,'center')});
+  alpha(seg(p,.55,.75),()=>{txt('● 5 GET YOU NOTICED',100,1440,'34px InterB',MINT);txt('● 3 BOOK THE JOBS',100,1500,'34px InterB',AMBER)});},
+// 2 Scout
+(p,t)=>{frame('01 MARKETING · SCOUT',MINT,2,p);header(['SEARCH INTEREST','RISING ↑'],['FOUND BY','THE SCOUT'],MINT,p);
+  rr(110,540,860,520,22,PANEL2,LINE,2);txt('"small kitchen ideas" · example',140,595,'26px Mono',MUTED);
+  X.save();X.beginPath();X.rect(130,600,820,440);X.clip();X.strokeStyle=MINT;X.lineWidth=7;X.beginPath();const n=60,q=ease(seg(p,.1,.75));for(let i=0;i<=n*q;i++){const x=150+i*(780/n),k=i/n,y=980-(k<.6?k*120+Math.sin(i*.9)*18:72+(k-.6)*2.4*300)+(k<.6?0:Math.sin(i)*6);i?X.lineTo(x,y):X.moveTo(x,y)}X.stroke();X.restore();
+  alpha(seg(p,.65,.8),()=>{rr(760,620,180,70,35,MINT);txt('SPIKE',850,668,'34px InterB',BG,'center')});
+  tool(110,1110,'Google Trends',MINT,seg(p,.3,.5));tool(470,1110,'Your reviews',MINT,seg(p,.38,.58));tool(110,1190,'Your DMs',MINT,seg(p,.46,.66));
+  alpha(seg(p,.7,.9),()=>{robot(870,1340,12,MINT);txt('→ post idea',110,1360,'44px InterB',INK)});},
+// 3 Writer
+(p,t)=>{frame('01 MARKETING · WRITER',MINT,3,p);header(['WRITTEN','5 POSTS'],['IN YOUR','VOICE'],MINT,p);
+  rr(140,560,360,420,20,PANEL2,MINT,3);txt('brand.md',170,615,'30px Mono',MINT);['voice: friendly','offer: kitchens','never: jargon','book: link'].forEach((s,i)=>txt(s,170,690+i*64,'28px Mono',SOFT));
+  for(let i=0;i<5;i++){const pp=ease(seg(p,.2+i*.1,.45+i*.1));const x=lerp(320,600+(i%2)*40,pp),y=lerp(760,560+i*120,pp);alpha(pp,()=>{rr(x,y,340,100,16,PANEL,MINT,2);txt('POST '+(i+1),x+20,y+44,'28px InterB',INK);rr(x+20,y+62,250-i*20,12,6,'#1f4a40')})}
+  tool(140,1200,'ChatGPT',MINT,seg(p,.3,.5));tool(420,1200,'Claude',MINT,seg(p,.36,.56));tool(140,1280,'Canva',MINT,seg(p,.42,.62));},
+// 4 Scheduler
+(p,t)=>{frame('01 MARKETING · SCHEDULER',MINT,4,p);header(['SHIPPED','4 / 4'],['AT THE TIME','IT LANDS'],MINT,p);
+  ['Instagram','Facebook','TikTok','LinkedIn'].forEach((n,i)=>{const x=170+i*245,y=620,fill=clamp(seg(p,.1+i*.15,.45+i*.15));
+    txt(n,x,y,'26px InterB',SOFT,'center');txt(['18:00','12:30','21:00','08:00'][i],x,y+44,'30px Mono',MUTED,'center');
+    X.strokeStyle=MINT;X.lineWidth=4;X.beginPath();X.moveTo(x-60,y+80);X.lineTo(x+60,y+80);X.lineTo(x,y+200);X.lineTo(x+60,y+320);X.lineTo(x-60,y+320);X.lineTo(x,y+200);X.closePath();X.stroke();
+    X.fillStyle='#1f4a40';X.beginPath();X.moveTo(x-60+60*fill,y+80+120*fill);X.lineTo(x+60-60*fill,y+80+120*fill);X.lineTo(x,y+200);X.fill();
+    X.fillStyle=MINT;X.beginPath();X.moveTo(x-60*fill,y+320-0);X.lineTo(x+60*fill,y+320);X.lineTo(x,y+320-120*fill);X.fill();
+    alpha(seg(fill,.95,1),()=>{rr(x-70,y+360,140,64,32,MINT);txt('POSTED',x,y+402,'24px InterB',BG,'center')})});
+  tool(110,1200,'Buffer',MINT,seg(p,.2,.4));tool(360,1200,'Meta Business Suite',MINT,seg(p,.28,.48));},
+// 5 DM helper
+(p,t)=>{frame('01 MARKETING · DM HELPER',MINT,5,p);const sec=Math.min(4,Math.floor(seg(p,.25,.6)*4));header(['REPLY TIME','0:0'+sec],['YOUR LINK','SENT'],MINT,p);
+  rr(110,560,860,600,26,PANEL2,LINE,2);
+  alpha(seg(p,.1,.2),()=>{rr(150,600,520,90,45,'#18263a');txt('💬 comment: "PRICE"',180,658,'32px InterB',INK)});
+  alpha(seg(p,.25,.32)*(1-seg(p,.55,.6)),()=>{for(let i=0;i<3;i++){X.beginPath();X.arc(760+i*40,760,10+Math.sin(t*10+i)*3,0,7);X.fillStyle=MUTED;X.fill()}});
+  alpha(seg(p,.58,.68),()=>{rr(330,740,600,200,30,'#10231f',MINT,2);wrap('Thanks! Here\'s our price list + booking link 👇',360,800,540,46,'32px InterB',INK);rr(360,880,240,44,22,MINT);txt('Book now',480,911,'26px InterB',BG,'center')});
+  alpha(seg(p,.7,.8),()=>{txt('✓ sent in your voice, 24/7',150,1080,'36px InterB',MINT)});
+  tool(110,1200,'ManyChat',MINT,seg(p,.2,.4));},
+// 6 Lead keeper
+(p,t)=>{frame('02 SALES · LEAD KEEPER',AMBER,6,p);header(['LEADS LOST','0'],['ALL IN','ONE LIST'],AMBER,p);
+  const jars=[['COLD',300],['WARM',540],['HOT',780]];jars.forEach(([n,x],i)=>{X.strokeStyle=AMBER;X.lineWidth=4;X.beginPath();X.moveTo(x-90,780);X.lineTo(x-90,1080);X.lineTo(x+90,1080);X.lineTo(x+90,780);X.stroke();txt(n,x,1130,'30px InterB',i==2?AMBER:SOFT,'center')});
+  const drops=[[0,.15],[2,.25],[1,.35],[2,.45],[1,.55],[2,.62]];drops.forEach(([j,s],k)=>{const pp=ease(seg(p,s,s+.15));const x=jars[j][1]+((k%2)?-30:30),y=lerp(560,1040-Math.floor(k/3)*0-((drops.slice(0,k).filter(d=>d[0]==j).length)*70),pp);alpha(seg(p,s,s+.03),()=>{X.beginPath();X.arc(x,y,30,0,7);X.fillStyle=j==2?AMBER:j==1?'#c9a15a':'#5d6b7a';X.fill()})});
+  tool(110,1200,'HubSpot CRM',AMBER,seg(p,.2,.4));tool(430,1200,'Google Sheets',AMBER,seg(p,.28,.48));},
+// 7 Booker
+(p,t)=>{frame('02 SALES · BOOKER',AMBER,7,p);header(['BACK-AND-FORTH','0 TEXTS'],['STATUS', seg(p,.6,.62)>0?'BOOKED':'...'],AMBER,p);
+  rr(150,560,780,560,22,PANEL2,LINE,2);['MON','TUE','WED','THU','FRI'].forEach((d,i)=>txt(d,250+i*145,620,'26px Mono',MUTED,'center'));
+  for(let r=0;r<5;r++)for(let c=0;c<5;c++){const on=(r==2&&c==3);const k=seg(p,.45,.6);rr(190+c*145,650+r*90,120,70,12,on?(k>0?`rgba(255,181,71,${k})`:'#18263a'):'#18263a')}
+  const k=ease(seg(p,.15,.45));const cx=lerp(860,190+3*145+60,k),cy=lerp(1250,650+2*90+35,k);alpha(seg(p,.1,.2)*(1-seg(p,.6,.7)),()=>{X.fillStyle=INK;X.beginPath();X.moveTo(cx,cy);X.lineTo(cx+34,cy+40);X.lineTo(cx+14,cy+42);X.lineTo(cx+6,cy+64);X.closePath();X.fill()});
+  alpha(seg(p,.62,.72),()=>{txt('✓ in your calendar + reminder sent',540,1080,'34px InterB',AMBER,'center')});
+  tool(110,1200,'Calendly',AMBER,seg(p,.2,.4));tool(380,1200,'Cal.com',AMBER,seg(p,.28,.48));},
+// 8 Closer
+(p,t)=>{frame('02 SALES · CLOSER',AMBER,8,p);header(['QUOTE','PAID ✓'],['REVIEW','★★★★★'],AMBER,p);
+  const steps=[['QUOTE','$ example'],['PAY LINK','card ✓'],['FOLLOW-UP','day 2 · 5 · 10'],['REVIEW','★★★★★']];
+  steps.forEach(([a,b],i)=>{const pp=seg(p,.1+i*.17,.3+i*.17),y=580+i*130;alpha(pp,()=>{rr(150,y,780,104,20,PANEL2,AMBER,2);txt(a,190,y+66,'38px Anton',INK);txt(b,890,y+64,'30px InterB',AMBER,'right')});if(i&&pp>0){X.strokeStyle=AMBER;X.lineWidth=3;X.beginPath();X.moveTo(540,y-26);X.lineTo(540,y);X.stroke()}});
+  tool(110,1200,'Stripe Payment Links',AMBER,seg(p,.2,.4));tool(560,1200,'Kit email',AMBER,seg(p,.28,.48));},
+// 9 Coach loop
+(p,t)=>{frame('03 THE LOOP · COACH',PURPLE,9,p);header(['EVERY','MONDAY'],['MORE OF','WHAT BOOKED'],PURPLE,p);
+  const bars=[['Kitchen tips',.9],['Before/after',.6],['Price posts',.35],['Memes',.12]];bars.forEach(([n,v],i)=>{const y=600+i*105,w=560*v*ease(seg(p,.1+i*.06,.4+i*.06));txt(n,150,y+50,'30px InterB',SOFT);rr(420,y+14,Math.max(w,1),52,12,i==0?PURPLE:'#3a2f6a')});
+  const k=ease(seg(p,.5,.85));X.save();X.strokeStyle=PURPLE;X.lineWidth=6;X.setLineDash([16,12]);X.lineDashOffset=-t*50;X.beginPath();X.arc(540,1140,110,Math.PI*.2,Math.PI*.2+k*Math.PI*1.8);X.stroke();X.restore();
+  alpha(seg(p,.55,.7),()=>{txt('back to the Scout',540,1152,'34px InterB',INK,'center')});},
+// 10 end
+(p,t)=>{alpha(seg(p,0,.2),()=>{txt('THE FULL',540,520,'120px Anton',INK,'center');txt('BLUEPRINT',540,660,'150px Anton',MINT,'center');txt('IS FREE',540,800,'120px Anton',INK,'center')});
+  alpha(seg(p,.2,.4),()=>{rr(170,900,740,140,70,MINT);txt('Comment BLUEPRINT',540,992,'64px InterB',BG,'center')});
+  alpha(seg(p,.35,.55),()=>{txt('8 helpers · real free plans · copy-paste prompts',540,1120,'32px InterM',SOFT,'center')});
+  for(let i=0;i<8;i++){alpha(seg(p,.4+i*.03,.55+i*.03),()=>robot(150+i*112,1300+Math.sin(t*3+i)*10,10,i<5?MINT:AMBER))}
+  alpha(seg(p,.6,.8),()=>{txt('@aisignaldaily.news',540,1480,'40px InterB',INK,'center');txt('Made with code + AI voice',540,1540,'26px InterM',MUTED,'center')});}
+];
+const CAPS=["Eight AI helpers can run a small business's sales and marketing.","Five get you noticed. Three book the jobs. You keep the final yes.","The Scout spots what customers search for this week.","The Writer turns it into a week of posts, in your voice.","The Scheduler posts on time, every time.","The DM helper answers comments in seconds, with your link.","The Lead keeper makes sure no lead gets lost.","The Booker: they pick a time, it lands in your calendar.","The Closer: quote, pay link, follow-up, review.","Every Monday the Coach checks what booked, and feeds it back.","The full blueprint is free. Comment BLUEPRINT."];
+window.TOTAL=()=>DUR.reduce((a,b)=>a+b,0);
+window.render=function(t){X.fillStyle=BG;X.fillRect(0,0,W,H);
+  // subtle grid
+  X.strokeStyle='rgba(61,245,200,0.04)';X.lineWidth=1;for(let x=0;x<W;x+=60){X.beginPath();X.moveTo(x,0);X.lineTo(x,H);X.stroke()}for(let y=0;y<H;y+=60){X.beginPath();X.moveTo(0,y);X.lineTo(W,y);X.stroke()}
+  let s=0,acc=0;while(s<DUR.length-1&&t>=acc+DUR[s]){acc+=DUR[s];s++}
+  const p=clamp((t-acc)/DUR[s]);const fade=Math.min(seg(p,0,.06),1-seg(p,.97,1));
+  X.save();X.globalAlpha=s==0?Math.min(1,1-seg(p,.97,1)):fade;SCENES[s](p,t);X.restore();
+  if(s>0&&s<10)caption(CAPS[s],p);
+  if(s==0)alpha(seg(p,.1,.2),()=>wrap(CAPS[0],540,1640,920,64,'48px InterB',SOFT,'center'));
+  // watermark
+  txt('AI SIGNAL DAILY',540,120,'30px Mono',MUTED,'center');
+};
+window.setDur=d=>{DUR=d};
+document.fonts.ready.then(()=>{window.READY=true;render(0)});
+</script></body></html>
