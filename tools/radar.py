@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """AI Signal Daily trend radar. Run it in the Higgsfield sandbox (it has open internet):
     python3 repo/tools/radar.py [hours=6]  -> prints a ranked list of what is rising right now
-Sources: official AI blogs, AI tech news, Reddit rising/hot, Hacker News front page, Hugging Face
+Sources: official AI blogs, AI tech news, Hacker News front page, Hugging Face
 and GitHub trending, Product Hunt, Google Trends (US). Stdlib only. A failing source is reported, never faked.
 Use it to FIND topics; always verify facts at the primary source before posting."""
 import json, re, sys, time, html, urllib.request
@@ -48,21 +48,12 @@ def feed(src, url, ai_only=True):
 
 FEEDS = [("OpenAI", "https://openai.com/news/rss.xml", False), ("Google AI blog", "https://blog.google/technology/ai/rss/", False),
          ("Google DeepMind", "https://deepmind.google/blog/rss.xml", False), ("Nvidia blog", "https://blogs.nvidia.com/feed/", True),
-         ("Microsoft AI", "https://blogs.microsoft.com/ai/feed/", False), ("Meta AI", "https://ai.meta.com/blog/rss/", False),
          ("TechCrunch AI", "https://techcrunch.com/category/artificial-intelligence/feed/", False),
          ("The Verge AI", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", False),
          ("Product Hunt", "https://www.producthunt.com/feed", True), ("Google Trends US", "https://trends.google.com/trending/rss?geo=US", True)]
 for s, u, a in FEEDS: feed(s, u, a)
 
-for sub in ["ChatGPT", "OpenAI", "singularity", "artificial", "LocalLLaMA", "ClaudeAI"]:
-    for kind in ["rising", "hot"]:
-        try:
-            d = json.loads(get(f"https://www.reddit.com/r/{sub}/{kind}.json?limit=15"))
-            for p in d["data"]["children"]:
-                p = p["data"]
-                if p.get("stickied"): continue
-                add(f"Reddit r/{sub} ({kind})", p["title"], "https://www.reddit.com" + p["permalink"], p["created_utc"], p.get("score", 0), False)
-        except Exception as e: errors.append(f"Reddit r/{sub} {kind}: {e}")
+# Reddit blocks automated reads (HTTP 403); we respect that. Find Reddit buzz via normal web search instead.
 
 try:
     d = json.loads(get("https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=60"))
