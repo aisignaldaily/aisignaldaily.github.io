@@ -131,7 +131,10 @@ Runs never download or rip footage/photos of real people from the web (YouTube, 
 - "Stop doing ___. AI does it in 10 seconds."
 - "The internet is losing it over ___."
 
-## Volume (schedule v5, Nov 25 2026)
+## Volume (schedule v6, Raheel Nov 25 2026: 4 feed posts/day + breaking only when amazing)
+CURRENT: 4 feed posts daily (CT): 9:15 AM carousel (news/useful) · 12:30 PM Reel (wild/fun or quick trick) · 5:45 PM carousel ("AI you can use" how-to) · 7:45 PM Reel (Builder lessons Mon/Wed/Sat, otherwise biggest story) + 8:30 PM Stories. The 3:45 PM afternoon slot is OFF. Plus at most ONE spontaneous breaking post per day, only for truly big confirmed news (breaking watch). The v5 text below is history.
+
+## Volume (old: schedule v5, Nov 25 2026)
 Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI you can use", quick) · 3:45 PM carousel (news) · 5:45 PM carousel ("AI you can use" deep how-to; Tue = Allyzent AI post, Thu = Latis AI post) · 7:45 PM Reel (biggest story) · 8:30 PM 2 Stories. Never state a number of posts per day publicly. Quality > volume: skip a slot rather than post filler.
 
 
