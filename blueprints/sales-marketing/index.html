@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Sales and Marketing Blueprint</title>
+<meta name="description" content="A free blueprint from AI Signal Daily: run your small business's sales and marketing with 8 AI helpers and free or low-cost tools. Real prices, copy-paste prompts, and what still needs you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#06090f;--panel:#0e1624;--panel2:#0a111c;--line:#1d2a3c;--ink:#f5f7fa;--muted:#8b98a5;--soft:#c9d4dc;--acc:#3df5c8;--acc-ink:#06090f;--warm:#ffb547;--deep:#10231f;--edge:#1f4a40}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px 56px}
+header{text-align:center;padding:44px 0 10px}
+.kicker{display:inline-block;font-size:13px;font-weight:700;color:var(--acc);border:1px solid var(--acc);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+h1{font:400 clamp(34px,9vw,54px)/1.03 Anton,Impact,sans-serif;letter-spacing:.5px;margin:0;text-wrap:balance}
+h1 b,h2 b{color:var(--acc);font-weight:400}
+.sub{color:var(--soft);margin:12px auto 0;max-width:46ch}
+.updated{font-size:13px;color:var(--muted);margin-top:10px}
+h2{font:400 30px/1.1 Anton,Impact,sans-serif;letter-spacing:.4px;margin:44px 0 10px}
+h2 small{display:block;font:500 14px/1.5 Inter,sans-serif;color:var(--muted);letter-spacing:0;margin-top:6px}
+p{color:var(--soft)}
+.map{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:12px;margin-top:22px}
+.side{font:800 14px/1.3 Inter,sans-serif;letter-spacing:.4px;text-transform:uppercase;margin:28px 0 8px}
+.side.mk{color:var(--acc)}.side.sl{color:var(--warm)}.side.co{color:#c9b8ff}
+.job{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--c,var(--acc));border-radius:16px;padding:16px;margin-bottom:12px}
+.job .top{display:flex;gap:12px;align-items:flex-start}
+.num{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font:400 18px/1 Anton,Impact,sans-serif;background:color-mix(in srgb,var(--c,var(--acc)) 18%,transparent);color:var(--c,var(--acc))}
+.job h3{margin:2px 0 2px;font-size:18px;line-height:1.3}
+.job .what{margin:0;color:var(--soft);font-size:15px}
+.tools{margin:12px 0 0;display:grid;gap:6px}
+.tool{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-decoration:none}
+.tool:hover{border-color:var(--c,var(--acc))}
+.tool b{display:block;font-size:15px}
+.tool span{display:block;font-size:13.5px;color:var(--muted)}
+.price{font-size:12.5px;font-weight:800;color:var(--acc-ink);background:var(--c,var(--acc));border-radius:999px;padding:3px 9px;white-space:nowrap}
+.price.paid{background:transparent;color:var(--c,var(--acc));border:1px solid var(--c,var(--acc))}
+.prompt{margin:10px 0 0;background:#0a111c;border:1px dashed var(--edge);border-radius:12px;padding:10px 12px;font-size:14.5px;color:var(--soft);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start}
+.prompt q{quotes:none}
+.copy{font:700 13px Inter,sans-serif;color:var(--acc);background:transparent;border:1px solid var(--acc);border-radius:999px;padding:6px 12px;min-height:36px;cursor:pointer}
+.copy.done{background:var(--acc);color:var(--acc-ink)}
+.copy:focus-visible,.tool:focus-visible,.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.time{font-size:13px;color:var(--muted);margin:8px 0 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;margin-bottom:12px}
+.card.feature{background:linear-gradient(160deg,var(--deep),var(--panel) 60%);border-color:var(--edge)}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:0 0 12px;font-size:15px}
+ol.start{counter-reset:s;list-style:none;margin:0;padding:0}
+ol.start li{position:relative;padding:12px 14px 12px 52px;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:8px;color:var(--soft)}
+ol.start li::before{counter-increment:s;content:counter(s);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-weight:800;display:grid;place-items:center;font-size:14px}
+ol.start b{color:var(--ink)}
+ul.plain{margin:0;padding-left:20px;color:var(--soft)}
+ul.plain li{margin-bottom:8px}
+pre.file{white-space:pre-wrap;background:#0a111c;border:1px solid var(--line);border-radius:14px;padding:14px;font:14px/1.55 ui-monospace,Menlo,Consolas,monospace;color:var(--soft);margin:0}
+.btn{display:flex;justify-content:center;align-items:center;gap:8px;padding:13px 20px;min-height:48px;border-radius:999px;font-weight:800;text-decoration:none;border:1px solid var(--acc);margin-top:8px;text-align:center}
+.btn.primary{background:var(--acc);color:var(--acc-ink)}
+.btn.ghost{color:var(--acc)}
+.btn.warm{border-color:var(--warm);color:var(--warm)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media(max-width:560px){.two{grid-template-columns:minmax(0,1fr)}}
+.flow{display:grid;grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);gap:8px;align-items:center}
+.col{display:grid;gap:6px;padding:12px;border-radius:16px}
+.col b{font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+.col span{display:block;padding:9px 12px;border-radius:10px;font-weight:700;font-size:15px}
+.col em{font-style:normal;font-size:13px;color:var(--muted);margin-top:4px}
+.col.mk{background:var(--deep);border:1px solid var(--edge)}.col.mk b{color:var(--acc)}.col.mk span{background:#0a111c;border:1px solid var(--edge)}
+.col.sl{background:#1d160a;border:1px solid #5a4316}.col.sl b{color:var(--warm)}.col.sl span{background:#0a111c;border:1px solid #5a4316}
+.arrow{text-align:center;font-size:26px;color:var(--muted)}
+.you{margin:12px 0 0;text-align:center;padding:10px;border:1px dashed var(--acc);border-radius:12px;color:var(--acc);font-weight:700;font-size:14.5px}
+.back{margin:8px 0 0;padding:12px;border-radius:12px;background:#1a1430;border:1px solid #3a2f6a;color:var(--soft);font-size:14.5px}
+.back b{color:#c9b8ff}
+@media(max-width:560px){.flow{grid-template-columns:minmax(0,1fr)}.arrow{transform:rotate(90deg);line-height:1}.prompt{grid-template-columns:minmax(0,1fr)}.prompt .copy{justify-self:start}}
+.fine{color:var(--muted);font-size:13.5px}
+footer{margin-top:40px;text-align:center;font-size:13px;color:var(--muted)}
+footer a{color:var(--soft)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kicker">Free blueprint · AI Signal Daily</span>
+    <h1>YOUR AI SALES &amp; MARKETING <b>TEAM</b></h1>
+    <p class="sub">8 AI helpers that find ideas, make posts, answer DMs, catch leads, book calls and follow up, using free or low-cost tools. You keep the final say.</p>
+    <p class="updated">Prices checked on official pages, Nov 26, 2026. They change often, so check before you pay.</p>
+  </header>
+
+  <div class="map" aria-label="How the loop works">
+    <div class="flow">
+      <div class="col mk"><b>Marketing</b><span>1 Scout</span><span>2 Writer</span><span>3 Designer</span><span>4 Scheduler</span><span>5 DM helper</span></div>
+      <div class="arrow" aria-hidden="true">&rarr;</div>
+      <div class="col sl"><b>Sales</b><span>6 Lead keeper</span><span>7 Booker</span><span>8 Closer</span><em>Comments and DMs become booked jobs</em></div>
+    </div>
+    <div class="you">You approve posts, prices and promises</div>
+    <div class="back"><span aria-hidden="true">&#8635;</span> <b>Coach</b>, every Monday: what brought bookings goes back to the Scout, so next week makes more of it</div>
+  </div>
+
+  <h2>FIRST, WRITE ONE <b>BRAND FILE</b><small>Every AI helper reads the same file, so everything sounds like you. Copy this into a Google Doc, fill it in once, and paste it at the start of every AI chat (or into a ChatGPT Project / Claude Project so it's always there).</small></h2>
+  <div class="prompt"><pre class="file" id="brandFile">BUSINESS: [name], [what you sell], [city / area served]
+CUSTOMERS: [who buys, their top 3 problems, words they use]
+OFFER: [main services + prices or price ranges]
+VOICE: [3 words, e.g. friendly, direct, local]. Never say: [words you hate]
+PROOF: [real reviews, years in business, numbers you can stand behind]
+BOOKING: [your booking link] · HOURS: [hours] · PHONE: [number]
+RULES: no fake reviews, no made-up results, no prices I didn't list.</pre><button class="copy" data-copy="brandFile">Copy</button></div>
+
+  <p class="side mk">Marketing: get noticed</p>
+
+  <article class="job" style="--c:#3df5c8">
+    <div class="top"><span class="num">1</span><div><h3>Scout: finds what your customers care about this week</h3><p class="what">Spots rising searches and the questions people keep asking, so you post what they're already looking for.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://trends.google.com/"><div><b>Google Trends</b><span>See what people in your area search for</span></div><span class="price">Free</span></a>
+      <a class="tool" href="https://business.google.com/"><div><b>Your Google reviews + DMs</b><span>The best source of real customer words</span></div><span class="price">Free</span></a>
+    </div>
+    <div class="prompt"><q id="p1">Here's my brand file and my last 20 customer messages and reviews: [paste]. List the 10 questions and worries customers mention most, and turn each into a post idea with a hook under 10 words.</q><button class="copy" data-copy="p1">Copy</button></div>
+  </article>
+
+  <article class="job" style="--c:#3df5c8">
+    <div class="top"><span class="num">2</span><div><h3>Writer: a week of posts in one sitting</h3><p class="what">Turns the Scout's ideas into captions, emails and short video scripts in your voice.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://chatgpt.com/"><div><b>ChatGPT</b><span>Free plan works for this</span></div><span class="price">Free plan</span></a>
+      <a class="tool" href="https://claude.ai/"><div><b>Claude</b><span>Free plan works for this</span></div><span class="price">Free plan</span></a>
+    </div>
+    <div class="prompt"><q id="p2">Using my brand file, write 5 Instagram posts for next week from these ideas: [paste]. Each: a hook under 10 words, 3 short useful lines, one question for comments, and "Book: [link]". No hashtags over 5. No claims that aren't in my brand file.</q><button class="copy" data-copy="p2">Copy</button></div>
+  </article>
+
+  <article class="job" style="--c:#3df5c8">
+    <div class="top"><span class="num">3</span><div><h3>Designer: visuals without a designer</h3><p class="what">Branded post images, flyers and short videos from templates. Real photos of your work beat AI images for trust.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://www.canva.com/"><div><b>Canva</b><span>Templates + AI tools; set your brand colors once</span></div><span class="price">Free plan</span></a>
+    </div>
+    <p class="time">Tip: one template, same colors, every post. People follow what they recognize.</p>
+  </article>
+
+  <article class="job" style="--c:#3df5c8">
+    <div class="top"><span class="num">4</span><div><h3>Scheduler: posts go out on time, every time</h3><p class="what">Load the week on Sunday; it publishes while you work.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://buffer.com/pricing"><div><b>Buffer</b><span>Free: up to 3 channels, 10 scheduled posts per channel. Paid from $6/month per channel.</span></div><span class="price">Free plan</span></a>
+      <a class="tool" href="https://business.facebook.com/"><div><b>Meta Business Suite</b><span>Schedule Instagram + Facebook posts</span></div><span class="price">Free</span></a>
+    </div>
+  </article>
+
+  <article class="job" style="--c:#3df5c8">
+    <div class="top"><span class="num">5</span><div><h3>DM helper: answers comments and DMs in seconds</h3><p class="what">Someone comments a keyword, they instantly get a DM with your link, price list or booking page. This is how comments turn into customers.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://manychat.com/pricing"><div><b>ManyChat</b><span>Comment-a-word, get-a-DM automations for Instagram and Facebook. Has a free plan; check its current limits.</span></div><span class="price">Free plan</span></a>
+    </div>
+    <div class="prompt"><q id="p5">Using my brand file, write a friendly Instagram DM flow: (1) thank them for commenting and offer the [price list / booking link] with a button, (2) the message with the link, (3) a follow-up 1 day later if they didn't book. Under 40 words each.</q><button class="copy" data-copy="p5">Copy</button></div>
+  </article>
+
+  <p class="side sl">Sales: turn interest into booked jobs</p>
+
+  <article class="job" style="--c:#ffb547">
+    <div class="top"><span class="num">6</span><div><h3>Lead keeper: no lead gets lost</h3><p class="what">Every person who DMs, calls or fills a form lands in one list with notes and a next step.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://www.hubspot.com/products/crm"><div><b>HubSpot CRM</b><span>"100% free with no expiration date" (HubSpot); advanced features are paid</span></div><span class="price">Free</span></a>
+      <a class="tool" href="https://sheets.google.com/"><div><b>Google Sheets</b><span>Simplest start: Name · Source · Wants · Next step · Date</span></div><span class="price">Free</span></a>
+    </div>
+    <div class="prompt"><q id="p6">Here are this week's new leads with their messages: [paste]. For each, rate them hot / warm / cold with one reason, and write my next message to them (under 50 words, my voice from the brand file).</q><button class="copy" data-copy="p6">Copy</button></div>
+  </article>
+
+  <article class="job" style="--c:#ffb547">
+    <div class="top"><span class="num">7</span><div><h3>Booker: they pick a time, it lands in your calendar</h3><p class="what">No back-and-forth texts. Put the link in your bio, DMs and every post.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://calendly.com/pricing"><div><b>Calendly</b><span>Free plan: 1 event type, 1 connected calendar; automated reminders are limited on free</span></div><span class="price">Free plan</span></a>
+      <a class="tool" href="https://cal.com/"><div><b>Cal.com</b><span>Open-source alternative with a free plan</span></div><span class="price">Free plan</span></a>
+    </div>
+  </article>
+
+  <article class="job" style="--c:#ffb547">
+    <div class="top"><span class="num">8</span><div><h3>Closer: quote, deposit, follow-up, review</h3><p class="what">Send the quote with a pay link, follow up people who went quiet, and ask happy customers for a review.</p></div></div>
+    <div class="tools">
+      <a class="tool" href="https://stripe.com/pricing"><div><b>Stripe Payment Links</b><span>No monthly fee; 2.9% + 30¢ per successful US card payment</span></div><span class="price paid">Per payment</span></a>
+      <a class="tool" href="https://kit.com/pricing"><div><b>Kit (email)</b><span>Free up to 1,000 subscribers; broadcasts yes, automated sequences are paid</span></div><span class="price">Free plan</span></a>
+    </div>
+    <div class="prompt"><q id="p8">Write 3 short follow-ups for a customer who got my quote for [service, price] and went quiet: day 2 (helpful), day 5 (answer a likely worry), day 10 (friendly last check). Then write a 2-line review request for happy customers with my Google review link: [link].</q><button class="copy" data-copy="p8">Copy</button></div>
+  </article>
+
+  <p class="side co">The loop: get better every week</p>
+
+  <article class="job" style="--c:#c9b8ff">
+    <div class="top"><span class="num">↻</span><div><h3>Coach: 20 minutes every Monday</h3><p class="what">Look at what actually brought bookings, then tell the Scout to make more of it. This is what makes the whole team smarter over time.</p></div></div>
+    <div class="prompt"><q id="pc">Here are last week's posts with reach, saves, shares and DMs, plus which leads booked and where they came from: [paste]. What worked, what didn't, and give me 3 changes for next week. Be blunt and only use what the numbers show.</q><button class="copy" data-copy="pc">Copy</button></div>
+  </article>
+
+  <h2>DON'T WANT 10 TOOLS? <b>START WITH 3</b></h2>
+  <ol class="start">
+    <li><b>Writer + Scheduler.</b> One hour on Sunday: ChatGPT or Claude writes the week, Buffer posts it.</li>
+    <li><b>Booker.</b> A booking link in your bio and every post, so interest turns into appointments.</li>
+    <li><b>DM helper.</b> One keyword ("PRICE", "BOOK") that sends your link automatically.</li>
+  </ol>
+  <p class="time">Rough setup time for these three: an afternoon (our estimate). Add one more helper each week.</p>
+
+  <h2>WHAT STILL <b>NEEDS YOU</b><small>AI moves the information. You run the business.</small></h2>
+  <ul class="plain">
+    <li><b>Approving what goes out.</b> Read posts and replies before they go live, at least at the start.</li>
+    <li><b>Prices, discounts and promises.</b> Never let AI quote prices or deadlines you didn't set.</li>
+    <li><b>Real conversations.</b> Hot leads, complaints and anything personal go to a human.</li>
+    <li><b>Honesty.</b> No fake reviews or made-up results; it breaks platform rules and trust.</li>
+    <li><b>Privacy and consent.</b> Only message people who contacted you or opted in.</li>
+  </ul>
+
+  <h2>WE RUN OUR PAGE <b>THIS WAY</b><small>Not a theory: AI Signal Daily uses the same loop every day.</small></h2>
+  <div class="card">
+    <p><b>Scout:</b> a trend radar checks AI news sites, Hacker News, Product Hunt and Google Trends. <b>Writer + Designer:</b> Claude writes and builds the slides, Higgsfield makes the visuals. <b>Scheduler:</b> Buffer publishes. <b>DM helper:</b> ManyChat sends the links when you comment. <b>Coach:</b> a Monday report reads the numbers and updates the rules. <b>You (our founder):</b> gets a preview email before every post and can stop it with one reply.</p>
+  </div>
+
+  <h2>WANT IT BUILT <b>FOR YOU?</b><small>This blueprint is free to use on your own. If you want it set up and connected for your business, our team builds it. Full disclosure: Allyzent AI and Latis AI are our team.</small></h2>
+  <div class="two">
+    <article class="card feature">
+      <h3>Allyzent AI · done for you</h3>
+      <p>Best for the <b>Sales</b> side: an AI that answers calls, texts and chats 24/7, qualifies leads, books appointments, sends reminders and follows up, connected to the software you already use.</p>
+      <a class="btn primary" href="https://calendly.com/allyzent/discovery">Book a free call</a>
+      <a class="btn ghost" href="tel:+17135978651">Call their AI agent: +1 (713) 597-8651</a>
+    </article>
+    <article class="card feature">
+      <h3>Latis AI · do it yourself, in one place</h3>
+      <p>Best for the <b>Marketing</b> side: create and publish posts, reply to DMs and email, run calling agents and Meta ads from one AI workspace. Bring your own API keys and pay providers directly.</p>
+      <a class="btn warm" href="https://latisai.com/">Book a meeting</a>
+    </article>
+  </div>
+
+  <h2>MORE <b>FREE STUFF</b></h2>
+  <a class="btn primary" href="../../toolkit/#join">Get the free AI toolkit by email</a>
+  <a class="btn ghost" href="https://www.instagram.com/aisignaldaily.news/">Follow @aisignaldaily.news for one useful AI tip a day</a>
+
+  <p class="fine" style="margin-top:28px">Sources for prices and plan limits (checked Nov 26, 2026): <a href="https://buffer.com/pricing">Buffer pricing</a> · <a href="https://www.hubspot.com/products/crm">HubSpot CRM</a> · <a href="https://help.convertkit.com/en/articles/4113291-the-convertkit-free-plan">Kit free plan</a> · <a href="https://stripe.com/pricing">Stripe pricing</a> · Calendly free-plan limits via <a href="https://cal.com/blog/is-calendly-free">Cal.com's summary</a> · <a href="https://manychat.com/pricing">ManyChat pricing</a>. Tools are listed because they're useful; nobody paid to be here. Setup times are our estimates.</p>
+
+  <footer>Made by <a href="../../">AI Signal Daily</a> · <a href="../../toolkit/">Free toolkit</a></footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var el=document.getElementById(b.dataset.copy);var t=el?el.innerText:'';var done=function(){b.textContent='Copied';b.classList.add('done');setTimeout(function(){b.textContent='Copy';b.classList.remove('done')},1600)};try{navigator.clipboard.writeText(t).then(done,done)}catch(e){done()}})});
+</script>
+</body>
+</html>
