@@ -1,2 +1,2 @@
-BLUEPRINT: not live yet
-# Raheel or Claude changes the first line to "BLUEPRINT: live" once the ManyChat keyword BLUEPRINT sends the blueprint DM.
+BLUEPRINT: live
+# Raheel confirmed Nov 26, 2026: comment BLUEPRINT -> DM with "Send me the blueprint" button -> blueprint link + "Book a demo" (calendly.com/allyzent/discovery, info@allyzent.com) -> 1-day follow-up.
