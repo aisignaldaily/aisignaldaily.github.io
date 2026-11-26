@@ -40,6 +40,13 @@ Our reviewer's lowest score on real posts is the follow trigger (4 then 5 on Nov
 - The end card or last caption line promises the NEXT post concretely: "Follow: next Monday we fact-check another viral AI answer" / "Follow for tomorrow's free swap". Never vague ("follow for more").
 - The pre-flight reviewer treats a follow score below 6 as a must-fix.
 
+## FOLLOW-GATE for the toolkit (Raheel's decision, recorded Nov 26, 2026)
+The free toolkit is our follow magnet: people get it by FOLLOWING + commenting "AI" (ManyChat DMs the link), or by email signup (beehiiv) on the links page.
+- Never put the toolkit URL (aisignaldaily.github.io/toolkit/) in a caption, on a slide, in a Story link sticker, in the bio, or as a link in `const signals` on the links page. Say "Follow + comment AI and we'll DM you the free toolkit" instead.
+- The links page (aisignaldaily.github.io) may show what the toolkit contains and the email signup, but no "open the toolkit" link.
+- Blueprint pages (blueprints/<slug>/) are NOT gated: they are the demo-lead magnet and may be linked directly (captions, links page, BLUEPRINT DM).
+- Raheel checks in ManyChat that the "AI" flow requires "is following" before sending the link.
+
 ## What Instagram rewards right now
 1. Watch time / completion (Reels) - hook must land in the first 1.5 s.
 2. SENDS (DM shares) - the strongest signal for reaching NON-followers (weighted far above likes).
@@ -271,7 +278,7 @@ Standing instructions for the Monday report run (Raheel, Nov 26, 2026: "I trust 
 Why it works: a hot new model + "insane things" curiosity + every slide is a moving demo (awe, Berger's STEPPS) + "here are 17" list. Their clips are other people's demos taken from X; we do NOT do that (no ripping from X/Instagram, and Instagram demotes non-original reposts). Our spin, which is more original: WE build the demos ourselves and screen-record them.
 - How: the run writes each demo itself (single HTML file, canvas/JS, no external assets or libraries; small games, toy apps, visual effects, a useful mini tool like a bill splitter or budget planner), opens it with Playwright in the Higgsfield sandbox (or locally) with recordVideo, 6-8 s per clip. Slide = 1080x1350 dark mint layout: kicker "BUILT WITH AI · n/N", 2-line headline (what it is + "One prompt. One HTML file."), the clip in the middle, the exact prompt underneath, footer "Built & recorded by us with Claude · Made with AI". Cost: 0 Higgsfield credits.
 - Mix: ~1/3 "wow" (games, 3D-looking scenes), ~2/3 things a normal person or small business would actually use (bill splitter, invoice maker, booking page, habit tracker). Useful ones drive saves; wow ones drive sends.
-- Honesty: say which model/tool really built it (e.g. "Claude" in this run), never claim another model built it, never claim "in 5 minutes" unless timed. Last slide: "Want the prompts? Comment AI" + toolkit link (BUILD is not a ManyChat keyword; AI, BLUEPRINT and DEMO are the only live ones).
+- Honesty: say which model/tool really built it (e.g. "Claude" in this run), never claim another model built it, never claim "in 5 minutes" unless timed. Last slide: "Want the prompts? Follow + comment AI" (no direct toolkit link: see FOLLOW-GATE; BUILD is not a ManyChat keyword; AI, BLUEPRINT and DEMO are the only live ones).
 - Format: Instagram carousel with video slides (Buffer create_post type "post", assets = mix of {video} and {image}, max 10 items here). First run: if Buffer rejects mixed video assets, post the same content as one Reel (clips back to back, 2-3 s each, hook text from frame 1).
 - Credit: if a demo idea came from someone's public post, say "Idea inspired by <handle>" and link it; never copy their code or visuals.
 - Cadence: when a big new model launches (breaking watch or radar), make a "We tested <model>: N things it built" post within 1-3 days; otherwise one "Built with AI" post every ~2 weeks in a Build it slot. Pre-flight review applies.
