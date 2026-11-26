@@ -433,5 +433,6 @@ All other slots stay news + quick useful tips. If a signature post can't be made
 3. Comment keyword per Reel with a real DM payoff (ManyChat). Keep the follow-gate.
 4. Proof Reel "our last 10 posts" only once we have real numbers; pin our 3 best posts.
 **2-week TEST (Raheel approved Nov 26; start Sat Nov 28 at 7:45 PM; Tue/Thu/Sat 7:45 Reel slot = free-motion days, so no clip credits):**
-- 3 Reels/week, replacing those evening Reels (not added). Log "style: cookin-test" in tools/REVIEW_LOG.md with views, comments, follows.
-- Keep if the test Reels beat our other evening Reels (views >= 2x median OR comments >= 1% of views). Otherwise drop. The Monday report compares.
+- This is a MIX, not a replacement of AI news: news Reels stay in the 12:30 slot and the other evenings; the cookin-style Reels take the Tue/Thu/Sat 7:45 slot (3 per week, 6 in two weeks). No extra posts are added on top of the daily slots (quality over volume, credits). Log "style: cookin-test" in tools/REVIEW_LOG.md with views, comments, follows.
+- Compare after 2 weeks (Monday report, Dec 14): test Reels vs our news Reels on views, comments per view, follows per Reel.
+- PIVOT RULE (Raheel, Nov 26): if the cookin-style Reels get clearly more (views >= 2x our median news Reel OR comments >= 1% of views, across most of the 6), we pivot: grow it to 5-6 a week and make it the main Reel style, news stays as the fact-checked layer. If mixed, keep 1-2 a week. If worse, drop it.
