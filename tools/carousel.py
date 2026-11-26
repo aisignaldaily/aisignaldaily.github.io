@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """AI Signal Daily carousel slide builder (Claude-made slides, no credits).
+Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total); see each function docstring.
 Usage: python3 carousel.py spec.json  -> writes 02.jpg, 03.jpg ... into spec["outdir"] (default ".")
 spec = {"total": 6, "start": 2, "outdir": "out",
   "slides": [
@@ -114,7 +115,44 @@ def cover(s,n,T):
     y=head(d,s["headline"],560,s.get("size",132))
     if s.get("sub"): y=para(d,s["sub"],y+30,36,WHITE,980)
     return img
-R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end}
+def pill(d,x,y,text,fill,ink,size=34,pad=26):
+    f=F(IB,size); w=d.textlength(text,font=f)+2*pad; d.rounded_rectangle((x,y,x+w,y+size+30),(size+30)//2,fill=fill); d.text((x+pad,y+13),text,font=f,fill=ink); return x+w
+def swap(s,n,T):
+    """Free-swap slide: {"type":"swap","num":"01","paid":"Notion Plus","free":"AppFlowy","price":"$10/mo",
+    "headline":"NOTION, *WITHOUT THE BILL*","body":"1-2 sentences","image":"local screenshot path (official page, no people)",
+    "tags":["Notes","Open source","Self-host"],"note":"Needs: download + install (5 min)"}"""
+    img,d=layer(); y=150
+    d.text((70,y-20),s["num"],font=F(ANTON,150),fill=ACC)
+    nx=70+d.textlength(s["num"],font=F(ANTON,150))+30
+    d.text((nx,y+40),f'{s["paid"]}  →  {s["free"]}',font=F(IB,34),fill=WHITE)
+    d.text((nx,y+90),f'{s["price"]}  →  $0',font=F(IB,34),fill=MUTED)
+    y=head(d,s["headline"],y+200,s.get("size",88),center=False,x0=70)
+    y=para(d,s.get("body",""),y+36,34,(214,222,230),940,False,70)
+    if s.get("image") and os.path.exists(s["image"]):
+        im=Image.open(s["image"]).convert("RGB"); maxw,maxh=W-140,360
+        r=min(maxw/im.width,maxh/im.height); im=im.resize((int(im.width*r),int(im.height*r)))
+        fr=Image.new("RGBA",(im.width+16,im.height+16),(0,0,0,0)); ImageDraw.Draw(fr).rounded_rectangle((0,0,fr.width-1,fr.height-1),18,fill=(40,52,66))
+        fr.paste(im,(8,8)); img.alpha_composite(fr,(int((W-fr.width)/2),int(y+24))); y+=fr.height+44
+    x=70
+    for t in s.get("tags",[])[:4]: x=pill(d,x,y,t,CARD,WHITE,28,20)+12
+    y+=80
+    x=pill(d,70,y,"YOU PAY "+s["price"],(255,107,107),BG,34); pill(d,x+16,y,"FREE OPTION $0",ACC,BG,34)
+    if s.get("note"): para(d,s["note"],y+90,28,MUTED,940,False,70)
+    return img
+def bill(s,n,T):
+    """Bill slide: {"type":"bill","headline":"*$305* A MONTH","items":[{"name":"Notion","plan":"Plus","price":10}, ...],"note":"Prices: official pricing pages, <date>"}"""
+    img,d=layer(); y=head(d,s["headline"],170,s.get("size",110))+30
+    items=s["items"]; tot=sum(i["price"] for i in items)
+    d.rounded_rectangle((70,y,W-70,y+70*len(items)+150),28,fill=CARD); yy=y+30
+    for i in items:
+        d.text((110,yy),i["name"],font=F(IB,34),fill=WHITE); d.text((110+d.textlength(i["name"]+"  ",font=F(IB,34)),yy+4),i.get("plan",""),font=F(IM,28),fill=MUTED)
+        p=f'${i["price"]:g}/mo'; d.text((W-110-d.textlength(p,font=F(IB,34)),yy),p,font=F(IB,34),fill=(255,140,140)); yy+=70
+    d.line((110,yy+5,W-110,yy+5),fill=(40,52,66),width=2)
+    t=f'${tot:,.2f}'.rstrip('0').rstrip('.')+"/mo"; d.text((110,yy+30),"Every month",font=F(IB,34),fill=WHITE); d.text((W-110-d.textlength(t,font=F(ANTON,64)),yy+12),t,font=F(ANTON,64),fill=ACC)
+    y=yy+150
+    if s.get("note"): para(d,s["note"],y+10,26,MUTED)
+    return img
+R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill}
 def main(p):
     s=json.load(open(p)); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
     for sl in s["slides"]:
