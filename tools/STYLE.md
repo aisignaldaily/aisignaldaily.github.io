@@ -40,6 +40,10 @@ Read this before building any post. Where it differs from the run instructions, 
 4. Originality - our own design and commentary on top of sources, never plain reposts.
 5. Text on slides, captions and alt text are read for search (Instagram SEO) - use plain keywords.
 
+## Trend radar (Raheel, Nov 25, 2026): find what's already viral, make OUR OWN version
+When picking a topic, also check what is blowing up right now: Reddit hot posts (r/ChatGPT, r/artificial, r/singularity, r/OpenAI, r/LocalLLaMA), Google Trends (AI-related rising searches), and the top AI stories on The Verge / TechCrunch / Reuters tech. If Raheel forwarded a post or link (email "AI Signal Daily idea" or similar), prefer it. Remake the IDEA with our own hook, design, sources and angle; never repost or copy someone's post, captions or visuals (Instagram demotes non-original reposts since Apr 2026). Verify every fact as usual.
+- Learn from our own numbers: read the latest "weekly report" rules section below (added by the Monday report run) and follow it.
+
 ## Pick stories by "would someone send this to a friend?"
 Rank story ideas by shareability, not importance. Best performers on top AI pages this month:
 - **AI said/did something wild** ("Grok called humans 'bags of meat'") - personality + surprise.
@@ -152,3 +156,9 @@ Five feed slots + Stories (CT): 9:15 AM carousel (news) · 12:30 PM Reel ("AI yo
 - Verify every step and price on the tool's official site/docs at post time; cite it as Source. If a step can't be verified, cut it.
 - Never income/earnings claims, never "get rich", no Etsy/dropshipping money promises, no affiliate links unless Raheel adds them.
 - Tue and Thu 5:45 PM = company post version (see "Company posts" above). Other days: no company mention unless genuinely relevant.
+
+## Breaking news (Raheel approved Nov 25, 2026)
+An hourly watcher (7 AM-9 PM CT) may post ONE breaking-news Reel per day outside the schedule when something truly big is confirmed. It writes `claims/YYYY-MM-DD-breaking.txt`, and if a regular slot is due within 90 minutes it also writes that slot's claim file with the text `breaking replaced this slot`, so the slot run and the watchdog skip it. Regular runs: if today's breaking claim exists, never repeat that story.
+
+## Weekly report rules (updated every Monday by the report run; newest first)
+(none yet)
