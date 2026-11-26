@@ -96,26 +96,42 @@ const SCENES=[
   const bars=[['Kitchen tips',.9],['Before/after',.6],['Price posts',.35],['Memes',.12]];bars.forEach(([n,v],i)=>{const y=600+i*105,w=560*v*ease(seg(p,.1+i*.06,.4+i*.06));txt(n,150,y+50,'30px InterB',SOFT);rr(420,y+14,Math.max(w,1),52,12,i==0?PURPLE:'#3a2f6a')});
   const k=ease(seg(p,.5,.85));X.save();X.strokeStyle=PURPLE;X.lineWidth=6;X.setLineDash([16,12]);X.lineDashOffset=-t*50;X.beginPath();X.arc(540,1140,110,Math.PI*.2,Math.PI*.2+k*Math.PI*1.8);X.stroke();X.restore();
   alpha(seg(p,.55,.7),()=>{txt('back to the Scout',540,1152,'34px InterB',INK,'center')});},
-// 10 end
-(p,t)=>{alpha(seg(p,0,.2),()=>{txt('THE FULL',540,520,'120px Anton',INK,'center');txt('BLUEPRINT',540,660,'150px Anton',MINT,'center');txt('IS FREE',540,800,'120px Anton',INK,'center')});
-  alpha(seg(p,.2,.4),()=>{rr(170,900,740,140,70,MINT);txt('Comment BLUEPRINT',540,992,'64px InterB',BG,'center')});
-  alpha(seg(p,.35,.55),()=>{txt('8 helpers · real free plans · copy-paste prompts',540,1120,'32px InterM',SOFT,'center')});
-  for(let i=0;i<8;i++){alpha(seg(p,.4+i*.03,.55+i*.03),()=>robot(150+i*112,1300+Math.sin(t*3+i)*10,10,i<5?MINT:AMBER))}
-  alpha(seg(p,.6,.8),()=>{txt('@aisignaldaily.news',540,1480,'40px InterB',INK,'center');txt('Made with code + AI voice',540,1540,'26px InterM',MUTED,'center')});}
+// 10 full system: 35 automations light up
+(p,t)=>{const G=[['Scout',MINT,['Trend alerts','Review mining','Competitor watch','FAQ finder']],['Writer',MINT,['Weekly posts','Captions','Email newsletter','Video scripts']],['Designer',MINT,['Post graphics','Flyers','Story cards']],['Scheduler',MINT,['Instagram + Facebook','TikTok','Google Business posts','Best-time posting']],['DM helper',MINT,['Comment → DM','FAQ auto-replies','Price list sender','After-hours replies']],['Lead keeper',AMBER,['Lead forms','Call logging','Lead scoring','Missed-call text-back']],['Booker',AMBER,['Online booking','Confirmations','Reminders','No-show rebooking']],['Closer',AMBER,['Quotes','Pay links','Follow-ups','Review requests','Referral asks']],['Coach',PURPLE,['Weekly report','What booked','Next week plan']]];
+  const total=35,lit=Math.min(total,Math.floor(ease(seg(p,.08,.82))*total+0.0001));
+  chip(60,170,450,'AUTOMATIONS RUNNING',lit+' / 35',MINT,seg(p,0,.1));chip(570,170,450,'TOOLS CONNECTED',Math.min(12,Math.ceil(lit*12/35))+' / 12','#2a3a52',seg(p,0,.1));
+  let k=0;const colX=[60,410,760],cw=320;let colY=[340,340,340];
+  G.forEach(([name,col,tasks],gi)=>{const c=gi%3;let y=colY[c];txt(name.toUpperCase(),colX[c]+4,y+24,'24px Mono',col);y+=36;
+    tasks.forEach(tk=>{const on=k<lit;const just=on&&k>=lit-2;rr(colX[c],y,cw,52,12,on?(just?col:'#0f1d1a'):'#0a111c',on?col:LINE,2);
+      txt((on?'✓ ':'')+tk,colX[c]+14,y+35,'23px InterB',on?(just?BG:INK):MUTED);y+=60;k++});colY[c]=y+18});
+  },
+// 11 DIY vs built
+(p,t)=>{txt('TO DO IT YOURSELF',540,330,'40px Mono',MUTED,'center');
+  const rows=[['12','tools to sign up for'],['35','automations to set up'],['∞','connections to keep working']];
+  rows.forEach(([n,l],i)=>alpha(seg(p,.05+i*.1,.25+i*.1),()=>{rr(110,400+i*170,860,140,24,PANEL,LINE,2);txt(n,200,505+i*170,'96px Anton',AMBER,'center');txt(l,300,488+i*170,'42px InterB',INK)}));
+  alpha(seg(p,.45,.6),()=>{txt('OR',540,1000,'64px Anton',MUTED,'center')});
+  alpha(seg(p,.55,.7),()=>{rr(110,1050,860,230,28,'#10231f',MINT,3);txt('WE BUILD IT FOR YOU',540,1140,'64px Anton',MINT,'center');txt('set up, connected, maintained',540,1205,'34px InterM',SOFT,'center');txt('Allyzent AI · Latis AI',540,1252,'30px InterB',INK,'center')});
+  alpha(seg(p,.7,.85),()=>{txt('Full disclosure: Allyzent AI and Latis AI are our team.',540,1330,'26px InterM',MUTED,'center')});},
+// 12 end: two choices
+(p,t)=>{alpha(seg(p,0,.15),()=>{txt('PICK ONE',540,420,'120px Anton',INK,'center')});
+  alpha(seg(p,.1,.3),()=>{rr(110,520,860,260,30,PANEL,MINT,3);txt('DO IT YOURSELF',540,600,'34px Mono',MINT,'center');txt('Comment BLUEPRINT',540,690,'70px InterB',INK,'center');txt('free blueprint · 8 helpers · real prompts',540,745,'28px InterM',SOFT,'center')});
+  alpha(seg(p,.25,.45),()=>{rr(110,830,860,260,30,'#10231f',MINT,3);txt('HAVE IT BUILT',540,910,'34px Mono',MINT,'center');rr(250,950,580,100,50,MINT);txt('Comment DEMO',540,1020,'64px InterB',BG,'center')});
+  for(let i=0;i<8;i++){alpha(seg(p,.4+i*.03,.55+i*.03),()=>robot(150+i*112,1250+Math.sin(t*3+i)*10,10,i<5?MINT:AMBER))}
+  alpha(seg(p,.55,.75),()=>{txt('@aisignaldaily.news',540,1440,'40px InterB',INK,'center');txt('Made with code + AI voice',540,1500,'26px InterM',MUTED,'center')});}
 ];
-const CAPS=["Eight AI helpers can run a small business's sales and marketing.","Five get you noticed. Three book the jobs. You keep the final yes.","The Scout spots what customers search for this week.","The Writer turns it into a week of posts, in your voice.","The Scheduler posts on time, every time.","The DM helper answers comments in seconds, with your link.","The Lead keeper makes sure no lead gets lost.","The Booker: they pick a time, it lands in your calendar.","The Closer: quote, pay link, follow-up, review.","Every Monday the Coach checks what booked, and feeds it back.","The full blueprint is free. Comment BLUEPRINT."];
+const CAPS=["Eight AI helpers can run a small business's sales and marketing.","Five get you noticed. Three book the jobs. You keep the final yes.","The Scout spots what customers search for this week.","The Writer turns it into a week of posts, in your voice.","The Scheduler posts on time, every time.","The DM helper answers comments in seconds, with your link.","The Lead keeper makes sure no lead gets lost.","The Booker: they pick a time, it lands in your calendar.","The Closer: quote, pay link, follow-up, review.","Every Monday the Coach checks what booked, and feeds it back.","35 automations, every day, across 12 tools.","Build it yourself with the free blueprint, or have our team build it.",""];
 window.TOTAL=()=>DUR.reduce((a,b)=>a+b,0);
 window.render=function(t){X.fillStyle=BG;X.fillRect(0,0,W,H);
   // subtle grid
   X.strokeStyle='rgba(61,245,200,0.04)';X.lineWidth=1;for(let x=0;x<W;x+=60){X.beginPath();X.moveTo(x,0);X.lineTo(x,H);X.stroke()}for(let y=0;y<H;y+=60){X.beginPath();X.moveTo(0,y);X.lineTo(W,y);X.stroke()}
   let s=0,acc=0;while(s<DUR.length-1&&t>=acc+DUR[s]){acc+=DUR[s];s++}
-  const p=clamp((t-acc)/DUR[s]);const fade=Math.min(seg(p,0,.06),1-seg(p,.97,1));
+  const p=clamp((t-acc)/DUR[s]);if(s>=12)X.globalAlpha=1;const fade=Math.min(seg(p,0,.06),1-seg(p,.97,1));
   X.save();X.globalAlpha=s==0?Math.min(1,1-seg(p,.97,1)):fade;SCENES[s](p,t);X.restore();
-  if(s>0&&s<10)caption(CAPS[s],p);
+  if(s>0&&s<12)caption(CAPS[s],p);
   if(s==0)alpha(seg(p,.1,.2),()=>wrap(CAPS[0],540,1640,920,64,'48px InterB',SOFT,'center'));
   // watermark
   txt('AI SIGNAL DAILY',540,120,'30px Mono',MUTED,'center');
 };
 window.setDur=d=>{DUR=d};
-document.fonts.ready.then(()=>{window.READY=true;render(0)});
+Promise.all(['40px Anton','40px InterB','40px InterM','40px Mono'].map(f=>document.fonts.load(f))).then(()=>document.fonts.ready).then(()=>{window.READY=true;render(0)});
 </script></body></html>
