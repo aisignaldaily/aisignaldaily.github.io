@@ -417,3 +417,21 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 | Sun | 7:45 evening Reel | **Builder lessons** |
 | Mon/Wed/Fri/Sun | 9:15 morning carousel | **Free swaps** |
 All other slots stay news + quick useful tips. If a signature post can't be made well today (no verifiable topic, tool down), make the slot's normal post instead and say why in the preview email. One-off company posts in COMPANY_POSTS.txt win over this calendar on their dates.
+
+## Competitor study: @cookin.code + the accounts he follows (Raheel asked Nov 26, 2026; public data only, no saves/shares visible)
+**What we saw (cookin.code, 28 posts, 13.1K followers, ~3 weeks old, follows only 96):**
+- About 10 of 28 Reels broke out (29K-346K views); the rest sit at 3-7K. Hits have 2x more comments than likes (e.g. 346K views, 4.8K likes, 10.6K comments); duds have 20-300 comments. Caption of the top Reel: one line "Comment 'Hack' and I'll send it your way!" + 5 hashtags. Comment-for-link (almost surely DM automation) is the engine.
+- Style: code-animated motion poster, dark background, no face, "[Tool] x Claude" logo pair, ONE promise, green "FREE" stamp, one big number (stars, $100/mo -> $0). Topic that wins: free Claude / GitHub / open-source tools. Off-topic posts (sale promo, "What is GitHub?") drop to 3K.
+- Best Reel is a meta "my last 10 posts" proof Reel (757K total views, virality score per post).
+- Money: bio link is a Google form selling "create viral videos like mine with AI" (he sells the growth method).
+- His following list is mostly AI-growth / "comment for the link" creators (cristianews.ai 38.3K, jayantcreates.ai 51.5K "AI for Instagram growth", ai.nxtlvl 13.4K, gracebuilds.ai 4.1K, montyautomates 519) plus unrelated big accounts. @ai.nxtlvl runs the SAME playbook and even the same topics (free repos, "test your idea on customers", Claude skills): mostly 3-6K views with one 65.6K hit. So the format is copied widely; expect saturation and volatile reach.
+**Honest limits:** one account, 3 weeks, survivorship bias, no saves/shares. His "free" and "beats GPT-5.6" claims are unverified, and his audience is developers, not our normal people + small-business owners.
+**Correction to our rule:** comment-only bait loses. Comment-gated Reels WITH a delivered payoff (DM with the link/prompt) can win. Our AI keyword + follow-gate is already this mechanic.
+**What we adopt (never copy titles, layouts or the x-Claude poster look; ours must look different):**
+1. Code-animated "free tool, verified" Reels, built with tools/reel.py (no Higgsfield credits). One promise + one verified number + before/after price. "Free" only if checked (our rule stays).
+2. Normal-person topics, not GitHub stars: tasks for a small business, real price cuts, tools that truly cost $0.
+3. Comment keyword per Reel with a real DM payoff (ManyChat). Keep the follow-gate.
+4. Proof Reel "our last 10 posts" only once we have real numbers; pin our 3 best posts.
+**2-week TEST (Raheel approved Nov 26; start Sat Nov 28 at 7:45 PM; Tue/Thu/Sat 7:45 Reel slot = free-motion days, so no clip credits):**
+- 3 Reels/week, replacing those evening Reels (not added). Log "style: cookin-test" in tools/REVIEW_LOG.md with views, comments, follows.
+- Keep if the test Reels beat our other evening Reels (views >= 2x median OR comments >= 1% of views). Otherwise drop. The Monday report compares.

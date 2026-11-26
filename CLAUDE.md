@@ -68,7 +68,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
   - a big number or a chain;
   - one idea per slide;
   - surprise, or a worry plus its fix.
-- Losers: income bait, comment-only bait, niche audiences, reposts.
+- Losers: income bait, comment-only bait (comment-gated Reels WITH a delivered DM payoff can win), niche audiences, reposts.
 - Follow trigger (hard rule): every post names its series/number and promises the next post concretely. Details: STYLE.md "FOLLOW TRIGGER".
 - Carousels get ~9x the saves of single images; Reels get the most interactions. The Reel payoff must start before ~8 s.
 - Our edge: our own demos and checked facts (fact-checks, verified prices) where others repost.
@@ -79,6 +79,8 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - **Hashtags:** max 3; zero on Tue/Thu/Sat. Log "hashtags: N".
 - **Virality predictor:** Higgsfield's tool, checked against real results each week.
 - **Clip test (from Nov 27):** the evening Reel uses the Higgsfield video clip (~35 credits) only Mon/Wed/Fri; other days use free motion (official clips, screen recordings, code animation). Log "clip: yes/no". Details: STYLE.md "Clip test".
+
+- **cookin.code test (from Sat Nov 28):** code-animated "free tool, verified" Reels on Tue/Thu/Sat 7:45 (replace, not add), comment keyword + DM payoff. Keep only if views >= 2x our median evening Reel or comments >= 1% of views. Details: STYLE.md "Competitor study".
 
 ## Queued
 - Fri Nov 27, 7:45 PM: first "Price Drop" Reel (MAGI-2, our own test clip with Higgsfield magi_2). Details: STYLE.md "Planned queue".
