@@ -39,7 +39,8 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 ## Where things live
 | Path | What |
 |---|---|
-| `tools/STYLE.md` | full playbook: series, hooks, captions, real-people rules, voice rules, research notes, weekly rules |
+| `tools/STYLE.md` | full playbook: series, hooks, captions, real-people rules, voice rules, research notes, weekly rules. The ONLY file to edit. |
+| `tools/slots/<slot>.md` + `tools/build_slots.py` | GENERATED short slices of STYLE.md per run (morning, midday, practical, evening, stories, breaking, friday) so runs read ~50-90% less. After ANY edit to STYLE.md run `python3 tools/build_slots.py` and commit the slices with it. Never edit slices by hand. |
 | `tools/REVIEW_RUBRIC.md` / `tools/REVIEW_LOG.md` | reviewer criteria + benchmark posts / scores per post |
 | `tools/carousel.py`, `tools/reel.py`, `tools/story.py` | slide, Reel and Story builders |
 | `tools/explainer/sales_marketing.html` | code-animated explainer template (67 s, 13 scenes); copy it for industry videos |
