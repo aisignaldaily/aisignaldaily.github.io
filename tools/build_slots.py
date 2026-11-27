@@ -16,7 +16,7 @@ CORE = [
     "Working with Raheel", "FOLLOW TRIGGER", "FOLLOW-GATE", "\"Real, not AI\"", "Real people",
     "Captions", "Hook formulas", "PRE-FLIGHT REVIEW", "VIRAL PLAYBOOK", "Research notes",
     "WEEKLY SIGNATURE CALENDAR", "Weekly report rules", "Planned queue", "Links-page entries",
-    "VIEWER PSYCHOLOGY", "RESEARCH v3",
+    "VIEWER PSYCHOLOGY", "RESEARCH v3", "OUR OWN REEL NUMBERS",
 ]
 SLOTS = {
     "morning": ["\"Free swaps\"", "\"The List\"", "\"Idea gallery\"", "Trend radar", "Pick stories",

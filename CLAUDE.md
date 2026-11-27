@@ -82,13 +82,15 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 
 - Research v3 (Nov 27, live study of 7 accounts): one outlier carries every account, so judge formats by medians and make each Part 1 stand alone; the cartoon-presenter + italic-accent look is a sold template, so keep ours (mint highlighter, robot mascot); keyword posts put the keyword promise in caption line 2 AND the end, with the full value and one honest limit in the caption; binary vote ("Comment A or B, the majority decides Part 2"); skip GTA/trading/money trends; NO new tests until the Dec 14 report. Details: STYLE.md "RESEARCH v3".
 
+- Our own Reel numbers (Nov 27, 4 followers): avg watch 6-8 s on every Reel, 0-1 follows. Defaults: payoff on screen by second 3, a concrete number in the hook (person's name is not the hook), 10-12 s news/tool Reels, end card names series + next part. Details: STYLE.md "OUR OWN REEL NUMBERS".
+
 ## Running experiments (the Monday report decides)
 - **Voice:** explainers and how-tos are always voiced ("Grady"). News Reels are voiced Mon/Wed/Fri only, as the test.
 - **Hashtags:** max 3; zero on Tue/Thu/Sat. Log "hashtags: N".
 - **Virality predictor:** Higgsfield's tool, checked against real results each week.
 - **Clip test (from Nov 27):** the evening Reel uses the Higgsfield video clip (~35 credits) only Mon/Wed/Fri; other days use free motion (official clips, screen recordings, code animation). Log "clip: yes/no". Details: STYLE.md "Clip test".
 
-- **cookin.code test (from Sat Nov 28, 2 weeks):** a MIX with AI news, not a replacement. Code-animated "free tool, verified" Reels take the Tue/Thu/Sat 7:45 slot (6 total: per week 2 "free tool, verified" + 1 news Reel in the same poster style, to separate style from topic), comment keyword + DM payoff. Pivot rule: if they clearly beat our news Reels (views >= 2x median OR comments >= 1% of views), make this the main Reel style (5-6/week); if mixed keep 1-2/week; if worse drop. Details: STYLE.md "Competitor study". Tracker Reel format (0/5 to 5/5 tracker + one proof card per item + keyword DM; from @_post2all, Nov 27) is tested inside this slot; STYLE.md "TRACKER REEL".
+- **cookin.code test (from Sat Nov 28, 2 weeks):** a MIX with AI news, not a replacement. Code-animated "free tool, verified" Reels take the Tue/Thu/Sat 7:45 slot (6 total: per week Sat + Tue "free tool, verified" and Thu "We tested it"; news stays on Mon/Wed/Fri; style vs topic is confounded, judged Dec 14), comment keyword + DM payoff. Pivot rule: if they clearly beat our news Reels (views >= 2x median OR comments >= 1% of views), make this the main Reel style (5-6/week); if mixed keep 1-2/week; if worse drop. Details: STYLE.md "Competitor study". Tracker Reel format (0/5 to 5/5 tracker + one proof card per item + keyword DM; from @_post2all, Nov 27) is tested inside this slot; STYLE.md "TRACKER REEL".
 
 ## Queued
 - Fri Nov 27, 7:45 PM: first "Price Drop" Reel (MAGI-2, our own test clip with Higgsfield magi_2). Details: STYLE.md "Planned queue".
