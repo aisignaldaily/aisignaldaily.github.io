@@ -42,6 +42,8 @@ Takeaway: broad personal outcome + proof + concrete per-slide value + send trigg
 - Say which of the 6 jobs (stop, stay, save, send, like, follow) this post does best and which it fails. A post must do STOP, STAY and at least one of SAVE/SEND well.
 - Hook type: name it (proof-first, worry+fix, myth-bust, audience filter, honest don't, specific forward-reference, number) and say whether a different type would be stronger for this topic, with evidence from the benchmarks.
 - Followability: would a stranger who liked this know exactly what they get by following (series name + number + dated next part)? Would they expect it to be useful again tomorrow?
+- Ending and caption (from STYLE.md "Slides 2-6" and RESEARCH v3): is the LAST slide / end card the best one (payoff + a send line naming a person + the dated next part), not a bare "follow for more"? Carousels: is the second-to-last slide a one-screen cheat sheet worth a screenshot? Keyword posts: caption line 1 = hook, line 2 = the keyword promise, the full value in the caption, one honest limit line, the keyword again at the end; the post is useful without the DM.
+- Connection: does every beat carry a concrete result for a specific person (prompt, number, before/after), never a bare definition? Is the post clearly OURS (own test, comparison, design, commentary), with third-party footage at most about a third of the runtime?
 - Main goal guess: which single metric is this post most likely to win (saves, sends or follows), and the one change that would raise it most.
 
 ## Also return
