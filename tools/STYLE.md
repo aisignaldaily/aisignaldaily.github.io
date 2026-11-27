@@ -177,7 +177,9 @@ Pattern: "You've seen '<claim>' everywhere. We checked it." -> what's true, what
 - Midday or evening news slots on non-signature days. Different from Monday's "We asked AI" (that one checks an AI's answer; this one checks a viral claim about AI).
 
 ## NEWS-LIGHT DAYS: fallback list (Raheel approved Nov 26, 2026)
-Never post a weak "news" story just to fill a slot. If no story passes "would someone send this to a friend?", go down this list in order:
+Never post a weak "news" story just to fill a slot. If no story passes "would someone send this to a friend?", go down this list in order (Raheel Nov 27: "if no good news, post something a few days old that is amazing, or a builder post with real people"):
+0a. A STRONG story from the last 2-5 days that we have NOT posted. Allowed only if it is still the best AI story available, with the real date on the post ("Nov 24") and never framed as "today" or "just". It must pass the same send test as fresh news; "old" is not a reason to post it, "amazing and still unseen by our audience" is. Evergreen practical tips (like the Aug 2025 Translate feature on Nov 27, which scored medium-low) rank BELOW this.
+0b. A "Builder lessons" post with a REAL person: a founder/engineer/researcher's own words from a talk, interview, podcast or their own post (rules in "Builder lessons" and "Real people"). Needs a verifiable source dated within the last 14 days or one that is still widely discussed; exact quotes under 15 words each, paraphrase the rest in our own words; credited real photo only; never invent or "reconstruct" a quote; never the same person twice in 2 weeks; never an AI likeness of the person. Our one Builder Reel so far (Claude Code engineer) drew 67 views, 6 s average watch and 0 follows, so keep the first 3 s on the number or the payoff, not the name. Person vs no-person is still open until Dec 14: log "person-named: yes/no".
 1. A Price Drop from the last 7 days.
 2. Viral AI claim, fact-checked.
 3. "Wait, AI can do THAT?" (surprising but real, verified on official docs).
