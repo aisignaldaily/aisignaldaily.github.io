@@ -80,6 +80,8 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - Sound design v2 (Nov 27): still no music. Reels may use our own synthesized foley (soft whooshes, ticks, chimes, a thud on the payoff) over a very quiet natural bed (night air, rain, room air), made with `tools/sound.py` (0 credits, no licences). Voiced Reels: narrator first, sound ducked ~12 dB. Carousels stay silent. A draft, not proven; log "sound"; judged Dec 14. Details: STYLE.md "SOUND DESIGN v2".
 - New formats (Nov 26): **Price Drop** (real before/after prices, try it ourselves, never "free"/"open-source" unless true) and **Viral AI claim, fact-checked** (check the claim, never attack the creator). On news-light days use the fallback list in STYLE.md "NEWS-LIGHT DAYS" instead of a weak story.
 
+- Research v3 (Nov 27, live study of 7 accounts): one outlier carries every account, so judge formats by medians and make each Part 1 stand alone; the cartoon-presenter + italic-accent look is a sold template, so keep ours (mint highlighter, robot mascot); keyword posts put the keyword promise in caption line 2 AND the end, with the full value and one honest limit in the caption; binary vote ("Comment A or B, the majority decides Part 2"); skip GTA/trading/money trends; NO new tests until the Dec 14 report. Details: STYLE.md "RESEARCH v3".
+
 ## Running experiments (the Monday report decides)
 - **Voice:** explainers and how-tos are always voiced ("Grady"). News Reels are voiced Mon/Wed/Fri only, as the test.
 - **Hashtags:** max 3; zero on Tue/Thu/Sat. Log "hashtags: N".
