@@ -86,7 +86,8 @@ def beat_layer(path,b,i,n,ai,dark=False):
     t=f"{i}/{n}"; tf=F(IB,26); tw=d.textlength(t,font=tf)
     d.rounded_rectangle((W-70-tw-28,240,W-70,282),21,fill=(6,9,15,200)); d.text((W-70-tw-14,245),t,font=tf,fill=WHITE)
     if ai:
-        tf2=F(IB,22); s="Made with AI"; d.text((W-70-d.textlength(s,font=tf2),292),s,font=tf2,fill=MUTED)
+        tf2=F(IB,22); s="Made with AI"; sw=d.textlength(s,font=tf2)  # dark pill so the label never disappears into the art
+        d.rounded_rectangle((W-70-sw-14,288,W-70+4,322),16,fill=(6,9,15,210)); d.text((W-70-sw-5,292),s,font=tf2,fill=WHITE)
     img.save(path)
 
 def end_card(path,e):
@@ -95,6 +96,8 @@ def end_card(path,e):
     tf=F(IB,46); t='Comment "AI" for today\'s tools'
     d.rounded_rectangle((120,1220,W-120,1320),50,fill=ACC); d.text(((W-d.textlength(t,font=tf))/2,1243),t,font=tf,fill=BG)
     t2="Follow @aisignaldaily.news"; d.text(((W-d.textlength(t2,font=tf))/2,1370),t2,font=tf,fill=WHITE)
+    if e.get("sub"):  # optional follow-trigger line, e.g. "Next: Sat 7:45 PM, a free tool we verified"
+        sf=F(IM,38); d.text(((W-d.textlength(e["sub"],font=sf))/2,1450),e["sub"],font=sf,fill=ACC)
     img.convert("RGB").save(path)
 
 def main(spec_path):
