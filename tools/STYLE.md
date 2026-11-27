@@ -520,6 +520,15 @@ Why: music pulls attention away from the point, so sound must serve the picture.
 6. IDEAS NOT BUILT YET: a signature "signal ping" (a short rising tone echoing our radio-wave logo) at the hook and the payoff of every Reel; a different bed per series (rain = how-tos, night air = after-hours/business stories); paper-rustle on slide-turns for slides-with-motion Reels.
 7. TEST: log "sound: foley+bed / bed only / none" per Reel. Compare average watch time and sends per reach against comparable silent or bed-only Reels in the Dec 14 report; Raheel's ear decides what feels right before anything is judged by numbers.
 
+## WORD-HIGHLIGHT CAPTIONS (Raheel Nov 27, 2026: "if it's good, adopt it"; sample built and judged the same day)
+Why: voiced Reels played with the sound off still need the words. Honest status: one visual sample, no performance data. It is a quality improvement, not a proven lever; judged Dec 14 with the other tests (no new test was added).
+1. WHEN: VOICED Reels only (explainers, Build it, We tested it, Mon/Wed/Fri voiced news Reels). NEVER on silent Reels or carousels.
+2. NOT ON TOP OF HEADLINES: the sample showed that captions repeating big burned-in headline text look crowded. On a voiced Reel the captions REPLACE the headline cards; keep only the big number, the source line and the end card as on-screen text.
+3. LOOK: 3 words at a time, uppercase Montserrat Bold, white with a black outline, the spoken word in our mint (#A8F590), lower third (about 300 px from the bottom, clear of the Instagram buttons). No emoji, no logos.
+4. TOOL: tools/captions.py voice.wav video.mp4 out.mp4 (run in the Higgsfield sandbox; faster-whisper gives word timings, ffmpeg burns them, 0 credits). Use the same narration file that is in the video. If the voice was sped up, pass --speed.
+5. PACE: Higgsfield seed_audio / Grady reads slowly (about 2 words per second). Write narration for 10-12 s Reels (about 25-30 words) so it fits without speeding it up.
+6. LOG: "captions: yes/no" per Reel. Dec 14: compare average watch time and sends per reach, captions vs no captions, only against voiced Reels. Drop the rule if it shows nothing.
+
 ## TRACKER REEL (from @_post2all study, Nov 27, 2026; Raheel approved "Ok")
 Source: a "Don't post until these 5 free Claude skills" Reel (4.8K likes, 6.4K comments, 6.8K sends, 14.1K saves; saves and sends far above likes = utility signal). Learn the pattern, never copy text, visuals or repos.
 1. PATTERN: a tracker row at the top fills 0/5 to 5/5 (a numbered tile becomes a card with a green check); one proof card per item (name, stars, licence, one line); a short caption pill under each card; end with ONE keyword + a delivered DM with all the links.
