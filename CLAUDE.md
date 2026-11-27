@@ -82,7 +82,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 
 - Research v3 (Nov 27, live study of 7 accounts): one outlier carries every account, so judge formats by medians and make each Part 1 stand alone; the cartoon-presenter + italic-accent look is a sold template, so keep ours (mint highlighter, robot mascot); keyword posts put the keyword promise in caption line 2 AND the end, with the full value and one honest limit in the caption; binary vote ("Comment A or B, the majority decides Part 2"); skip GTA/trading/money trends; NO new tests until the Dec 14 report. Details: STYLE.md "RESEARCH v3".
 
-- Our own Reel numbers (Nov 27, 4 followers): avg watch 6-8 s on every Reel, 0-1 follows. Defaults: payoff on screen by second 3, a concrete number in the hook (person's name is not the hook), 10-12 s news/tool Reels, end card names series + next part. Details: STYLE.md "OUR OWN REEL NUMBERS".
+- Our own Reel numbers (Nov 27, 4 followers): avg watch 6-8 s on every Reel, 0-1 follows. Defaults: payoff on screen by second 3, a concrete number first, real person's name second (person vs no-person is open until Dec 14), 10-12 s news/tool Reels, end card names series + next part. Details: STYLE.md "OUR OWN REEL NUMBERS".
 
 ## Running experiments (the Monday report decides)
 - **Voice:** explainers and how-tos are always voiced ("Grady"). News Reels are voiced Mon/Wed/Fri only, as the test.
