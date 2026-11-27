@@ -250,3 +250,4 @@ Why: music pulls attention away from the point, so sound must serve the picture.
 5. NO MUSIC, NO RECOGNISABLE TUNES: a ring or chime is a single short tone, never a melody. No licensed sounds. Synthesized sound needs no label (only AI voice gets "Voice: AI-generated").
 6. IDEAS NOT BUILT YET: a signature "signal ping" (a short rising tone echoing our radio-wave logo) at the hook and the payoff of every Reel; a different bed per series (rain = how-tos, night air = after-hours/business stories); paper-rustle on slide-turns for slides-with-motion Reels.
 7. TEST: log "sound: foley+bed / bed only / none" per Reel. Compare average watch time and sends per reach against comparable silent or bed-only Reels in the Dec 14 report; Raheel's ear decides what feels right before anything is judged by numbers.
+

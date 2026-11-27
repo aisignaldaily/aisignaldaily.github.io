@@ -516,3 +516,10 @@ Why: music pulls attention away from the point, so sound must serve the picture.
 5. NO MUSIC, NO RECOGNISABLE TUNES: a ring or chime is a single short tone, never a melody. No licensed sounds. Synthesized sound needs no label (only AI voice gets "Voice: AI-generated").
 6. IDEAS NOT BUILT YET: a signature "signal ping" (a short rising tone echoing our radio-wave logo) at the hook and the payoff of every Reel; a different bed per series (rain = how-tos, night air = after-hours/business stories); paper-rustle on slide-turns for slides-with-motion Reels.
 7. TEST: log "sound: foley+bed / bed only / none" per Reel. Compare average watch time and sends per reach against comparable silent or bed-only Reels in the Dec 14 report; Raheel's ear decides what feels right before anything is judged by numbers.
+
+## TRACKER REEL (from @_post2all study, Nov 27, 2026; Raheel approved "Ok")
+Source: a "Don't post until these 5 free Claude skills" Reel (4.8K likes, 6.4K comments, 6.8K sends, 14.1K saves; saves and sends far above likes = utility signal). Learn the pattern, never copy text, visuals or repos.
+1. PATTERN: a tracker row at the top fills 0/5 to 5/5 (a numbered tile becomes a card with a green check); one proof card per item (name, stars, licence, one line); a short caption pill under each card; end with ONE keyword + a delivered DM with all the links.
+2. OUR SPIN: for normal people and small-business owners ("5 free AI tools for X, verified"), not developer repos. Fits the cookin.code Tue/Thu/Sat 7:45 "free tool, verified" slot; no new slot.
+3. RULES: every star count, price and licence verified from the source on posting day and cited; never "free"/"open-source" unless true; keyword needs a real DM payoff (links), one keyword per post; paper theme; sound per SOUND DESIGN v2.
+4. TEST: part of the cookin.code test. Log "format: tracker". Judge in the Dec 14 report (views, sends per reach, comments). Keep only if it beats the plain cookin-style Reels.
