@@ -532,3 +532,9 @@ Lens only, not a post format. The source carousel had generic definitions and no
 2. LATER: Social proof (real replies and results once the page has followers).
 3. PARKED: Founder-led (faceless page; mascot test is the closest), Heritage, Cultural, Aspirational/lifestyle, Emotional-for-its-own-sake.
 4. RULE: every connection beat must carry a concrete result for a specific person ("Try this" prompt, number, before/after), never a bare definition.
+
+## MOTION CHECKLIST (from a read-only look at motionmaxxing / HyperFrames / animation-principles, Nov 27, 2026; nothing installed)
+Vetted on public pages only. Claims are the authors', not tested by us; Raheel's eye decides. Extends EXPLAINER DESIGN RULES.
+1. BORROW (cheap, fits our GSAP renderer): landings decelerate, exits accelerate (we already do power2.out / power2.in); elements move in from an edge or arrive from oversize, avoid growing from scale 0 (our token pop does this, soften it); overshoot small (about 9% or less); no more than ~3 flat frames in a row; end hold about 0.6-1.4 s, final shot at most a quarter of the film (our 15 s demo holds ~1.8 s: trim); one hero element per frame.
+2. DISAGREE / TEST: motionmaxxing bans page chrome (progress bars, counters). Two big accounts (@_post2all 14.1K saves, @theo_the_editor 1.6K saves) use progress bars and win, so the TRACKER REEL test stays; judge it on our own numbers.
+3. NOT ADOPTED: HyperFrames (HTML to MP4 via headless Chrome seek + FFmpeg, Apache-2.0) is the same design as our render_frames.py; revisit only if our renderer breaks or we need its linter/audio mixer. motionmaxxing's voice.py uses ElevenLabs incl. music (we use Grady, no music) and install.sh was not reviewed; animation-principles (MIT, 156 stars) is generic text with no timing values. Never install a third-party skill without reading its scripts first; cloud runs can only use what lives in this repo.

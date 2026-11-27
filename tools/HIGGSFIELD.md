@@ -44,3 +44,6 @@ Same as B but cheaper: ONE Higgsfield clip (hook) + "dark" animated beats + soun
 
 ## E) Daily Stories (5:30 PM): free, Claude-made
 `repo/tools/story.py` makes 1080x1920 cards: "newpost" (teaser of today's best post: kicker NEW POST, its headline, "Tap our profile to see it") and "question" (a "this or that" question with 2 options, "Reply in DM with your answer"). Buffer cannot add real Instagram poll stickers, so answers come as DMs (good for engagement). Post each card as Buffer Instagram type "story" (shouldShareToFeed false). 2 cards per day.
+
+## Sandbox gotcha: Playwright for tools/explainer/render_frames.py (found Nov 27, 2026)
+The sandbox has PYTHONPATH=/pkg/:/root/ and /root is unreadable, so `pip install` fails with PermissionError. Fix: `unset PYTHONPATH && pip install -q --target /home/user/pylib playwright`, then run with `PYTHONPATH=/home/user/pylib CHROME=/ms-playwright/chromium-1243/chrome-linux64/chrome python3 render_frames.py <html> <secs> <out.mp4> 30` (background it and poll; 15 s took ~9 min). GSAP is not in git: `npm pack gsap` into tools/explainer/vendor and copy gsap.min.js. Mix audio in the same sandbox, then upload with media_upload (PUT in the same command) and media_confirm.
