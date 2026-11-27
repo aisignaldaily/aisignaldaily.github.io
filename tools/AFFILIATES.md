@@ -10,7 +10,7 @@ Rules for every run:
 ## Approved (referral links live)
 | Program | Referral link | Terms | Approved on |
 |---|---|---|---|
-| Higgsfield | https://higgsfield.ai?fpr=mohammad-raheel-29168d | up to 25% of subscriptions incl. renewals, up to 12 months; organic only; say "independent affiliate"; no coupon/deal sites | Nov 26, 2026 (instant) |
+| Higgsfield | https://higgsfield.ai?fpr=mohammad-raheel-29168d | REAL dashboard terms (checked Nov 27): 10% recurring at Bronze; Silver $2,500+ referred revenue = 12%, Gold $5k = 15%, Platinum $25k = 20%, Diamond $100k = 25% (the "up to 25%" on the sign-up page is the top tier). Organic only; say "independent affiliate"; no coupon/deal sites. Dashboard: https://higgsfield.firstpromoter.com/home. STILL TO DO by Raheel: payout method + W-9/W-8BEN tax form (0 clicks, $0 so far) | Nov 26, 2026 (instant) |
 | OpusClip / Agent Opus | OpusClip: https://opus.pro/?via=mohammadax · Agent Opus: https://agent.opus.pro/?via=mohammadax (use exactly as recorded) | 25% of paid customers for 12 months; organic only (no paid ads, no impersonating the brand); say "independent affiliate"; dashboard affiliates.opus.pro (login = aisignaldaily.news@gmail.com email code); payout method set (PayPal, Nov 26) | Nov 26, 2026 (instant) |
 
 ## Applied / to apply (Raheel signs up himself: needs his name + payout details)
