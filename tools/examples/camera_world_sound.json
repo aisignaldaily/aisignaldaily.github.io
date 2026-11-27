@@ -1,0 +1,7 @@
+{"dur":15,"bed":"night","bed_db":-17,"foley_db":-8,
+ "cues":[[0.15,"ring"],[0.25,"pop"],
+  [2.85,"whoosh",{"len":1.0}],[3.5,"pop"],[4.1,"pop_hi"],
+  [4.4,"tick"],[4.55,"tick"],[4.68,"tick"],[4.82,"tick"],[4.95,"tick"],[5.12,"tick"],[5.25,"tick"],[5.4,"tick"],[5.52,"tick"],[5.66,"tick"],[5.85,"click"],
+  [6.65,"whoosh",{"len":1.0}],
+  [7.45,"tick"],[7.95,"chime"],[8.45,"tick"],[8.95,"chime"],[9.45,"tick"],[9.95,"chime"],
+  [10.35,"whoosh",{"len":1.0}],[11.8,"click"],[12.2,"stamp"],[13.2,"swell",{"len":1.5}]]}
