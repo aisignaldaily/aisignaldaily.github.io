@@ -1,0 +1,54 @@
+{
+ "total": 6,
+ "start": 1,
+ "outdir": ".",
+ "slides": [
+  {
+   "type": "cover",
+   "headline": "SNAP YOUR FRIDGE. AI PLANS *3 LEFTOVER MEALS.*",
+   "sub": "Turn tonight's Thanksgiving leftovers into dinners for the week. The free ChatGPT plan works.",
+   "size": 124
+  },
+  {
+   "type": "steps",
+   "headline": "HOW TO DO IT IN *3 TAPS*",
+   "steps": [
+    "Open your fridge and take one clear photo of the leftovers",
+    "In ChatGPT, tap + then \"Add photos & files\"",
+    "Paste the prompt on the next slide and send"
+   ],
+   "note": "Image uploads work on the Free plan (limits apply). The prompt is next..."
+  },
+  {
+   "type": "code",
+   "headline": "COPY THIS *PROMPT*",
+   "lines": [
+    "Here's a photo of my leftovers.",
+    "Plan [3] easy dinners for the",
+    "next [3] days using mostly this.",
+    "- Max [30] min each",
+    "- List anything I need to buy",
+    "- Eat the turkey first",
+    "Ask me about allergies first."
+   ],
+   "note": "Works the same in Gemini or Claude. Change the [numbers] to fit your family."
+  },
+  {
+   "type": "point",
+   "headline": "WATCH OUT: *THE 2-HOUR RULE*",
+   "body": "USDA: refrigerate leftovers within 2 hours. They keep 3 to 4 days in the fridge or 3 to 4 months frozen. Reheat to 165\u00b0F.",
+   "note": "AI can't see if food is safe. Trust the date, not the chatbot. Source: USDA FSIS, \"Leftovers and Food Safety\""
+  },
+  {
+   "type": "point",
+   "headline": "BONUS: *NO TURKEY SANDWICH #5*",
+   "body": "Reply \"make one of them a soup and one freezer-friendly\" and it rewrites the plan. Turkey eaten by Monday, the rest frozen.",
+   "note": "Last swipe: who to send this to..."
+  },
+  {
+   "type": "end",
+   "text": "SEND THIS TO WHOEVER'S TAKING *THE LEFTOVERS HOME*",
+   "follow": "Follow: tomorrow 9:15 AM is Free swaps, a paid tool you can replace"
+  }
+ ]
+}
