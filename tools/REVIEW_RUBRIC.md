@@ -37,7 +37,7 @@ Takeaway: broad personal outcome + proof + concrete per-slide value + send trigg
 7. CRAFT: One idea per slide, numbered, consistent layout, text size readable on a phone, no overflow/typos, slide 2 pays off the hook, ending gives a next step.
 
 ## Also return
-- Overall viral potential for a brand-new account: low / medium / high, and the single biggest weakness.
+- Overall viral potential for a brand-new account: low / medium-low / medium / medium-high / high, and the single biggest weakness. Our bar (Nov 27): medium-high, with hook, send and save each 7+. Mark anything old or unhelpful to a normal person (for example a 15-month-old feature shown as a tip) as low on hook and send.
 - Compared to the benchmarks: which benchmark is this closest to, and what is it missing vs that benchmark?
 - 3 alternative hooks (cover headline + caption line 1), then pick the best one and say why.
 - The 3 most impactful fixes, ranked, with exact wording.

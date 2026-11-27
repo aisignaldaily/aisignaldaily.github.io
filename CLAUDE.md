@@ -30,7 +30,7 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
   - Daily slots (CT): 9:15 morning carousel · 12:30 midday Reel · 5:45 practical carousel · 7:45 evening Reel · 8:30 Stories. The 3:45 afternoon carousel is OFF from Nov 27 (Raheel, Nov 26: quality over volume).
   - Also: hourly breaking-news watch (max 1/day) · watchdog · Monday 7:23 weekly report.
 - Before making a post, a run claims its slot with `claims/YYYY-MM-DD-<slot>.txt`. If the file exists, someone else owns that slot.
-- **Pre-flight review:** an independent agent scores every draft with `tools/REVIEW_RUBRIC.md` before the preview email. Scores go in `tools/REVIEW_LOG.md`.
+- **Pre-flight review:** two independent checks. (1) Topic check before building: new (last 14 days or truly surprising) and useful to a normal person, else next fallback. (2) An independent agent scores the finished draft with `tools/REVIEW_RUBRIC.md`; bar = medium-high with hook/send/save 7+ (Raheel, Nov 27). Below that after 2 rounds: ship only if medium and topic was "go", otherwise fallback or skip. Scores go in `tools/REVIEW_LOG.md`.
 - Media: Higgsfield (images, voice, sound) plus code-made slides and videos.
   - Credits: ~928 at last check; keep spend small.
   - The Higgsfield sandbox has internet access. The local shell can't reach github.io or cloudfront.
