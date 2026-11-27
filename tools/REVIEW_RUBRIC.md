@@ -35,12 +35,20 @@ Takeaway: broad personal outcome + proof + concrete per-slide value + send trigg
 5. CLARITY: Would a non-technical small-business owner understand every slide? Flag every jargon word.
 6. CREDIBILITY & ACCURACY: Any number, date, price, quote or claim that looks unverifiable, wrong, inflated or that commenters could attack? Dates must be America/Chicago. "Made with AI" labels present where needed? Real-people rules respected?
 7. CRAFT: One idea per slide, numbered, consistent layout, text size readable on a phone, no overflow/typos, slide 2 pays off the hook, ending gives a next step.
+8. STAY (retention; our biggest weakness: every Reel so far averaged 6-8 s watch and 0-1 follows, Nov 27): Is ONE specific question opened in the first frame and partly paid by second 3 (Reels) or slide 2 (carousels), fully paid by the end? Reels: is the payoff or the number on screen by second 3, is it 10-12 s for news/tool Reels, any dead beat a viewer would swipe on? Name the exact second or slide where people will drop.
+9. LIKE (emotional peak): one clear moment of awe at a real demo, relief ("it's free"), or a laugh. No outrage, no doom.
+
+## Viewer psychology check (the 6 jobs; from STYLE.md "VIEWER PSYCHOLOGY" and our own Reel numbers)
+- Say which of the 6 jobs (stop, stay, save, send, like, follow) this post does best and which it fails. A post must do STOP, STAY and at least one of SAVE/SEND well.
+- Hook type: name it (proof-first, worry+fix, myth-bust, audience filter, honest don't, specific forward-reference, number) and say whether a different type would be stronger for this topic, with evidence from the benchmarks.
+- Followability: would a stranger who liked this know exactly what they get by following (series name + number + dated next part)? Would they expect it to be useful again tomorrow?
+- Main goal guess: which single metric is this post most likely to win (saves, sends or follows), and the one change that would raise it most.
 
 ## Also return
-- Overall viral potential for a brand-new account: low / medium-low / medium / medium-high / high, and the single biggest weakness. Our bar (Nov 27): medium-high, with hook, send and save each 7+. Mark anything old or unhelpful to a normal person (for example a 15-month-old feature shown as a tip) as low on hook and send.
+- Overall viral potential for a brand-new account: low / medium-low / medium / medium-high / high, and the single biggest weakness. Our bar (Nov 27): medium-high, with hook, send, save each 7+ and, for Reels, STAY 7+. Mark anything old or unhelpful to a normal person (for example a 15-month-old feature shown as a tip) as low on hook and send.
 - Compared to the benchmarks: which benchmark is this closest to, and what is it missing vs that benchmark?
 - 3 alternative hooks (cover headline + caption line 1), then pick the best one and say why.
 - The 3 most impactful fixes, ranked, with exact wording.
 - Fact-check: pick the 2-3 claims most likely to be wrong and verify them (web search / official page). Report each as confirmed / wrong / unverifiable.
 - Honesty and bait check (each hit is a must-fix): quote any "you won't believe", "watch till the end", "stop scrolling", fake secrecy ("they don't want you to know", "feels illegal"), "delete X now", "99% don't know" without a source, ALL-CAPS orders or "!!", a question as the whole hook, any ask (comment, share, tag, follow) on slide 1 or in the first 3 s, more than one comment keyword, "comment YES" / "tag 3 friends" / "like if". Say whether slide 2 makes sense to someone who never saw slide 1, and whether a third-party clip or screenshot carries the whole post (originality risk).
-Keep it under 400 words.
+Keep it under 550 words.
