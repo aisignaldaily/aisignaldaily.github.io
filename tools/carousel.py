@@ -159,13 +159,13 @@ def swap(s,n,T):
     if s.get("note"): para(d,s["note"],y+90,28,MUTED,940,False,70)
     return img
 def bill(s,n,T):
-    """Bill slide (money or time: add "unit":"min" and "total_label":"For ONE idea"): {"type":"bill","headline":"*$305* A MONTH","items":[{"name":"Notion","plan":"Plus","price":10}, ...],"note":"Prices: official pricing pages, <date>"}"""
+    """Bill slide (money or time: add "unit":"min" and "total_label":"For ONE idea"): {"type":"bill","headline":"*$305* A MONTH","items":[{"name":"Notion","plan":"Plus","price":10}, ...],"note":"Prices: official pricing pages, <date>"}; add "free":true to show prices in the accent colour (a $0 recap)."""
     img,d=layer(); y=head(d,s["headline"],170,s.get("size",110))+30
     items=s["items"]; tot=sum(i["price"] for i in items)
     d.rounded_rectangle((70,y,W-70,y+70*len(items)+150),28,fill=CARD); yy=y+30
     for i in items:
         d.text((110,yy),i["name"],font=F(IB,34),fill=WHITE); d.text((110+d.textlength(i["name"]+"  ",font=F(IB,34)),yy+4),i.get("plan",""),font=F(IM,28),fill=MUTED)
-        u=s.get("unit","$"); p=(f'{i["price"]:g} min' if u=="min" else f'${i["price"]:g}/mo'); d.text((W-110-d.textlength(p,font=F(IB,34)),yy),p,font=F(IB,34),fill=(255,140,140)); yy+=70
+        u=s.get("unit","$"); p=(f'{i["price"]:g} min' if u=="min" else f'${i["price"]:g}/mo'); d.text((W-110-d.textlength(p,font=F(IB,34)),yy),p,font=F(IB,34),fill=ACC if s.get("free") else (255,140,140)); yy+=70
     d.line((110,yy+5,W-110,yy+5),fill=(40,52,66),width=2)
     t=(f'~{tot:g} min' if s.get("unit")=="min" else f'${tot:,.2f}'.rstrip('0').rstrip('.')+"/mo"); d.text((110,yy+30),s.get("total_label","Every month"),font=F(IB,34),fill=WHITE); d.text((W-110-d.textlength(t,font=F(ANTON,64)),yy+12),t,font=F(ANTON,64),fill=ACC)
     y=yy+150
