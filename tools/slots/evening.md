@@ -325,3 +325,4 @@ Defaults from Nov 27 (cheap, no downside, so NOT counted as new tests):
 3. LENGTH 10-12 s for news and tool Reels (explainers on Fridays keep their own length). Goal is completion: avg watch time >= 70% of the Reel's length. Log "length" and "avg watch" in REVIEW_LOG.md once the numbers are in.
 4. END CARD ASKS FOR THE FOLLOW. Last 2 s: series name + number + "Part N+1 <day>: <what>" (FOLLOW TRIGGER). Zero Reels so far converted a stranger, so this is not optional.
 5. Weekly report pulls average watch time and follows per Reel (app: Professional dashboard > Reels > tap Reel) and judges by median of 5+ Reels.
+
