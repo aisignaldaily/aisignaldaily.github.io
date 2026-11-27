@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """AI Signal Daily carousel slide builder (Claude-made slides, no credits).
-Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card), chat (you/AI example exchange + checklist), list (one category of a curated mega-list with progress dots); see each function docstring.
+Slide types: cover, point, steps, chart, quote, end, swap (free-swap card with screenshot), bill (monthly-cost list with total), code (folder tree / prompt / flow card), chat (you/AI example exchange + checklist), list (one category of a curated mega-list with progress dots), titlecard (series cover with kicker pill + two-tone headline + card-stack hero), versus (Before/After card pair, two-tone headline, one problem line + one fix line); see each function docstring.
 Usage: python3 carousel.py spec.json  -> writes 02.jpg, 03.jpg ... into spec["outdir"] (default ".")
 spec = {"total": 6, "start": 2, "outdir": "out",
-  "slides": [
+  "theme":"dark" or "paper" (optional; paper = VISUAL STYLE v2), "slides": [
     {"type":"point", "headline":"ONE CART FOR *EVERY STORE*", "body":"short explanation, 1-2 sentences"},
     {"type":"steps", "headline":"HOW TO *USE IT*", "steps":["Find a product...","Tap Add to cart","Wait for the alert"], "note":"US only"},
     {"type":"chart", "headline":"IT'S *290X* CHEAPER", "bars":[{"label":"Before","value":290},{"label":"After","value":1}], "unit":"x cost", "note":"Source: ..."},
@@ -15,6 +15,12 @@ import json, os, sys
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 HERE=os.path.dirname(os.path.abspath(__file__))
 W,H=1080,1350; BG=(6,9,15); ACC=(61,245,200); WHITE=(245,247,250); MUTED=(139,152,165); CARD=(14,20,30)
+THEMES={"dark":dict(BG=(6,9,15),ACC=(61,245,200),WHITE=(245,247,250),MUTED=(139,152,165),CARD=(14,20,30),SOFT=(214,222,230)),
+ "paper":dict(BG=(246,244,239),ACC=(0,122,99),WHITE=(16,19,24),MUTED=(128,134,142),CARD=(232,229,221),SOFT=(58,64,72))}
+THEME="dark"; HL=(61,245,200)
+def set_theme(name):
+    """"dark" (default, mint on near-black) or "paper" (warm off-white, ink text, mint highlighter; see STYLE.md VISUAL STYLE v2)."""
+    global THEME; THEME=name; globals().update(THEMES[name])
 ANTON=f"{HERE}/fonts/Anton-Regular.ttf"; IB=f"{HERE}/fonts/Inter-Bold.otf"; IM=f"{HERE}/fonts/Inter-Medium.otf"
 F=ImageFont.truetype; LOGO=Image.open(f"{HERE}/logo.png").convert("RGBA")
 
@@ -34,13 +40,16 @@ def wrap(d,text,fnt,maxw):
         else: lines.append(cur); cur=[w]
     lines.append(cur); return lines
 def head(d,text,y,size=104,maxw=940,center=True,x0=70):
-    text=norm(text); fnt=F(ANTON,size); lines=wrap(d,text,fnt,maxw)
-    while len(lines)>3 and size>72: size-=6; fnt=F(ANTON,size); lines=wrap(d,text,fnt,maxw)
+    text=norm(text); HF=IB if THEME=="paper" else ANTON; size=int(size*0.8) if THEME=="paper" else size; fnt=F(HF,size); lines=wrap(d,text,fnt,maxw)
+    while len(lines)>3 and size>60: size-=6; fnt=F(HF,size); lines=wrap(d,text,fnt,maxw)
     lh=int(size*1.06)
     for ln in lines:
         ws=[d.textlength(w.strip("*")+" ",font=fnt) for w in ln]; tw=sum(ws)-d.textlength(" ",font=fnt)
         x=(W-tw)/2 if center else x0
-        for w,wd in zip(ln,ws): d.text((x,y),w.strip("*"),font=fnt,fill=ACC if w.startswith("*") else WHITE); x+=wd
+        for w,wd in zip(ln,ws):
+            if w.startswith("*") and THEME=="paper": d.rectangle((x-8,y+int(size*0.14),x+wd-d.textlength(" ",font=fnt)+8,y+int(size*1.02)),fill=HL); d.text((x,y),w.strip("*"),font=fnt,fill=WHITE)
+            else: d.text((x,y),w.strip("*"),font=fnt,fill=ACC if w.startswith("*") else WHITE)
+            x+=wd
         y+=lh
     return y
 def para(d,text,y,size=40,col=WHITE,maxw=920,center=True,x0=80,font=IM):
@@ -52,6 +61,15 @@ def para(d,text,y,size=40,col=WHITE,maxw=920,center=True,x0=80,font=IM):
 def layer():
     L=Image.new("RGBA",(W,H),(0,0,0,0)); return L,ImageDraw.Draw(L)
 def base(n,total,swipe=True):
+    if THEME=="paper":
+        img=Image.new("RGBA",(W,H),BG); lg=LOGO.resize((52,52)); m=Image.new("L",(52,52),0); ImageDraw.Draw(m).rounded_rectangle((0,0,51,51),12,fill=255)
+        img.paste(lg,(48,44),m); d=ImageDraw.Draw(img)
+        d.text((112,46),"AI Signal Daily",font=F(IB,26),fill=WHITE); d.text((112,76),"@aisignaldaily.news",font=F(IB,20),fill=MUTED)
+        t=f"{n}/{total}"; tf=F(IB,26); tw=d.textlength(t,font=tf)
+        d.rounded_rectangle((W-48-tw-32,50,W-48,92),21,fill=CARD); d.text((W-48-tw-16,55),t,font=tf,fill=WHITE)
+        d.line((70,H-120,W-70,H-120),fill=(214,210,201),width=2); d.text((70,H-95),"aisignaldaily",font=F(IB,22),fill=MUTED)
+        if swipe: s="SWIPE →"; d.text((W-70-d.textlength(s,font=F(IB,24)),H-97),s,font=F(IB,24),fill=ACC)
+        return img,d
     img=Image.new("RGB",(W,H),BG)
     glow=Image.new("RGB",(W,H),BG); gd=ImageDraw.Draw(glow)
     gd.ellipse((W*0.15,-H*0.25,W*0.85,H*0.35),fill=(16,60,52)); glow=glow.filter(ImageFilter.GaussianBlur(160))
@@ -66,7 +84,7 @@ def base(n,total,swipe=True):
     if swipe: d.text((W-70-d.textlength(s,font=F(IB,24)),H-97),s,font=F(IB,24),fill=ACC)
     return img,d
 def point(s,n,T):
-    img,d=layer(); y=head(d,s["headline"],300,s.get("size",110)); y=para(d,s.get("body",""),y+50,42,(214,222,230))
+    img,d=layer(); y=head(d,s["headline"],300,s.get("size",110)); y=para(d,s.get("body",""),y+50,42,SOFT)
     if s.get("note"): para(d,s["note"],y+40,28,MUTED)
     return img
 def steps(s,n,T):
@@ -128,7 +146,7 @@ def swap(s,n,T):
     d.text((nx,y+40),f'{s["paid"]}  →  {s["free"]}',font=F(IB,34),fill=WHITE)
     d.text((nx,y+90),f'{s["price"]}  →  $0',font=F(IB,34),fill=MUTED)
     y=head(d,s["headline"],y+200,s.get("size",88),center=False,x0=70)
-    y=para(d,s.get("body",""),y+36,34,(214,222,230),940,False,70)
+    y=para(d,s.get("body",""),y+36,34,SOFT,940,False,70)
     if s.get("image") and os.path.exists(s["image"]):
         im=Image.open(s["image"]).convert("RGB"); maxw,maxh=W-140,360
         r=min(maxw/im.width,maxh/im.height); im=im.resize((int(im.width*r),int(im.height*r)))
@@ -159,7 +177,7 @@ def code(s,n,T):
     "lines":["vault/","├── raw/      everything captured","└── CLAUDE.md  the map"],"note":"optional tip"}
     Use for folder trees, prompts to copy, simple flows (A → B → C). Lines starting with '>' are drawn in mint."""
     img,d=layer(); y=head(d,s["headline"],170,s.get("size",100))
-    if s.get("body"): y=para(d,s["body"],y+44,34,(214,222,230),940)
+    if s.get("body"): y=para(d,s["body"],y+44,34,SOFT,940)
     lines=s["lines"]; fs=s.get("font",34); f=F(MONO,fs); lh=int(fs*1.5)
     top=y+40; d.rounded_rectangle((70,top,W-70,top+70+lh*len(lines)+30),26,fill=(14,18,26))
     for i,c in enumerate([(255,95,87),(254,188,46),(40,200,64)]): d.ellipse((100+i*34,top+22,120+i*34,top+42),fill=c)
@@ -200,7 +218,7 @@ def listing(s,n,T):
         d.rounded_rectangle((70,y,W-70,y+h),22,fill=(20,64,56) if hl else CARD, outline=ACC if hl else None, width=3 if hl else 0)
         nm=it["name"]; d.text((100,y+16),nm,font=F(IB,36),fill=WHITE)
         if it.get("sub"): d.text((100+d.textlength(nm+"  ",font=F(IB,36)),y+24),it["sub"],font=F(IM,24),fill=MUTED)
-        d.text((100,y+64),it.get("desc","")[:58],font=F(IM,27),fill=(200,210,220))
+        d.text((100,y+64),it.get("desc","")[:58],font=F(IM,27),fill=SOFT)
         if it.get("badge"):
             b=it["badge"]; bf=F(IB,28); bw=d.textlength(b,font=bf)
             d.rounded_rectangle((W-100-bw-28,y+16,W-100,y+60),22,fill=ACC if hl else (40,52,66)); d.text((W-100-bw-14,y+22),b,font=bf,fill=BG if hl else WHITE)
@@ -212,13 +230,74 @@ def listing(s,n,T):
             if x>W-80: break
             d.ellipse((x,y+24,x+2*r,y+24+2*r),fill=ACC if k<a else (50,62,76)); x+=2*r+6
     return img
-R={"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code,"chat":chat,"list":listing}
+
+def tone(d,l1,l2,y,size=88,x0=70,maxw=940):
+    """Two-tone headline: line 1 ink, line 2 grey (the gg.designhub-style hierarchy). Left aligned, Inter Bold, tight leading."""
+    f=F(IB,size); 
+    for text,col in ((l1,WHITE),(l2,MUTED)):
+        for ln in wrap(d,text,f,maxw): d.text((x0,y),' '.join(ln),font=f,fill=col); y+=int(size*1.08)
+    return y
+def check(d,cx,cy,r,col,ink):
+    d.ellipse((cx-r,cy-r,cx+r,cy+r),fill=col); d.line([(cx-r*0.45,cy),(cx-r*0.1,cy+r*0.38),(cx+r*0.5,cy-r*0.35)],fill=ink,width=max(3,int(r*0.22)),joint="curve")
+def dash(d,cx,cy,r,col,ink):
+    d.ellipse((cx-r,cy-r,cx+r,cy+r),fill=col); d.line([(cx-r*0.45,cy),(cx+r*0.45,cy)],fill=ink,width=max(3,int(r*0.22)))
+def titlecard(s,n,T):
+    """Series cover, paper-friendly: {"type":"titlecard","kicker":"FIX IT · 01","line1":"Stop typing","line2":"*vague* prompts","sub":"one line promise"}
+    Pill kicker + two-tone headline + a stack of tilted cards as the hero object (no people, no logos)."""
+    img,d=layer(); y=150
+    pill(d,70,y,s.get("kicker","SERIES"),HL if THEME=="paper" else ACC,(16,19,24) if THEME=="paper" else BG,32,26); y+=130
+    t1=norm(s["line1"]); y=head(d,t1+" "+s["line2"],y,s.get("size",118),center=False,x0=70) if False else y
+    f=F(IB,s.get("size",112))
+    for text,col in ((s["line1"],WHITE),(s["line2"],MUTED)):
+        for ln in wrap(d,text,f,940):
+            x=70
+            for w in ln:
+                ww=d.textlength(w.strip("*")+" ",font=f)
+                if w.startswith("*") and THEME=="paper": d.rectangle((x-8,y+16,x+ww-d.textlength(" ",font=f)+8,y+int(s.get("size",112)*0.98)),fill=HL); d.text((x,y),w.strip("*"),font=f,fill=WHITE)
+                else: d.text((x,y),w.strip("*"),font=f,fill=ACC if w.startswith("*") else col)
+                x+=ww
+            y+=int(s.get("size",112)*1.06)
+    if s.get("sub"): y=para(d,s["sub"],y+24,38,MUTED,940,False,70)
+    # hero: three tilted cards
+    cy=max(y+120,760)
+    for ang,dx,fill in ((-9,-150,CARD),(6,150,(210,206,196) if THEME=="paper" else (30,42,56)),(-2,0,HL if THEME=="paper" else ACC)):
+        c=Image.new("RGBA",(420,520),(0,0,0,0)); cd=ImageDraw.Draw(c); cd.rounded_rectangle((0,0,419,519),38,fill=fill)
+        for k,wd in enumerate((300,240,180)): cd.rounded_rectangle((44,60+k*54,44+wd,84+k*54),12,fill=(16,19,24) if fill in (HL,ACC) else MUTED)
+        c=c.rotate(ang,expand=True,resample=Image.BICUBIC); img.alpha_composite(c,(int(W/2-c.width/2+dx),int(cy-60)))
+    return img
+def versus(s,n,T):
+    """Before/After slide (our own version of the Don't/Do pair; fictional or our own examples, never brand logos):
+    {"type":"versus","num":"01","line1":"Say who it is for","line2":"not just what you want","problem":"grey one-liner (what goes wrong)","fix":"ink one-liner (the fix)",
+     "before":{"label":"Before","title":"Write me an email","lines":["no audience","no goal"],"caption":"Generic and forgettable."},
+     "after":{"label":"After","title":"Write 3 lines to a customer who paid late. Friendly, one ask.","lines":["audience","goal"],"caption":"Specific and usable."},"note":"Example, made with ChatGPT"}"""
+    img,d=layer(); y=140
+    d.text((70,y),s["num"]+".",font=F(IB,34),fill=MUTED); y+=60
+    y=tone(d,s["line1"],s["line2"],y,s.get("size",84))+14
+    y=para(d,s["problem"],y,32,MUTED,940,False,70); y=para(d,s["fix"],y+6,32,WHITE,940,False,70,IB)+24
+    cw=(W-140-28)//2; ch=s.get("card_h",470)
+    for i,key in enumerate(("before","after")):
+        c=s[key]; x0=70+i*(cw+28); good=(key=="after")
+        fill=(16,19,24) if (good and THEME=="paper") else (CARD if not good else (20,64,56)); ink=(245,247,250) if good else (MUTED if THEME=="paper" else WHITE)
+        d.rounded_rectangle((x0,y,x0+cw,y+ch),34,fill=fill)
+        tf=F(IB,36 if good else 34); yy=y+36
+        for ln in wrap(d,c["title"],tf,cw-64)[:6]: d.text((x0+32,yy),' '.join(ln),font=tf,fill=ink); yy+=48
+        yy=max(yy+18,y+ch-40-len(c.get("lines",[]))*52)
+        for t in c.get("lines",[])[:4]:
+            (check if good else dash)(d,x0+48,yy+20,16,HL if good else (180,176,168),(16,19,24) if good else (255,255,255))
+            d.text((x0+80,yy+4),t,font=F(IM,28),fill=ink); yy+=52
+        pill(d,x0,y+ch+22,c.get("label","After" if good else "Before"),(16,19,24) if THEME=="paper" and good else (HL if good else CARD),(245,247,250) if THEME=="paper" and good else ((6,9,15) if good else WHITE),28,22)
+        yc=y+ch+22+70
+        for ln in wrap(d,c.get("caption",""),F(IM,28),cw)[:2]: d.text((x0,yc),' '.join(ln),font=F(IM,28),fill=MUTED if not good else WHITE); yc+=38
+    if s.get("note"): para(d,s["note"],y+ch+175,26,MUTED,940,False,70)
+    return img
+R={"titlecard":titlecard,"versus":versus,"cover":cover,"point":point,"steps":steps,"chart":chart,"quote":quote,"end":end,"swap":swap,"bill":bill,"code":code,"chat":chat,"list":listing}
 def main(p):
-    s=json.load(open(p)); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
+    s=json.load(open(p)); set_theme(s.get("theme","dark")); T=s["total"]; n=s.get("start",2); out=s.get("outdir","."); os.makedirs(out,exist_ok=True); files=[]
     for sl in s["slides"]:
         f=f"{out}/{n:02d}.jpg"
         bg,_=base(n,T,swipe=sl["type"]!="end"); L=R[sl["type"]](sl,n,T); bb=L.getbbox() or (0,0,W,H)
         top,bot=130,H-140; h=bb[3]-bb[1]; y0=top+max(0,((bot-top)-h)//2)
+        if THEME=="paper" and sl["type"] in ("versus","titlecard"): y0=top
         bg.alpha_composite(L.crop((0,bb[1],W,bb[3])),(0,y0)); bg.convert("RGB").save(f,quality=92); files.append(f); n+=1
     print(json.dumps(files))
 if __name__=="__main__": main(sys.argv[1])

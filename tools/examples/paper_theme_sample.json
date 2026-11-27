@@ -1,0 +1,77 @@
+{
+ "theme": "paper",
+ "total": 5,
+ "start": 1,
+ "outdir": "/tmp/paper_sample",
+ "slides": [
+  {
+   "type": "titlecard",
+   "kicker": "FIX IT \u00b7 01",
+   "line1": "Stop typing",
+   "line2": "*vague* prompts",
+   "sub": "4 small fixes. Same AI, much better answers."
+  },
+  {
+   "type": "versus",
+   "num": "01",
+   "line1": "Say who it is for,",
+   "line2": "not just what you want",
+   "problem": "A vague prompt gets a vague answer.",
+   "fix": "Name the person and the goal.",
+   "before": {
+    "label": "Before",
+    "title": "Write me an email",
+    "lines": [
+     "no reader",
+     "no goal"
+    ],
+    "caption": "Generic and forgettable."
+   },
+   "after": {
+    "label": "After",
+    "title": "Write 3 lines to a customer who paid late. Friendly, one ask.",
+    "lines": [
+     "clear reader",
+     "clear goal"
+    ],
+    "caption": "Specific and ready to send."
+   },
+   "note": "Example prompts, made with ChatGPT"
+  },
+  {
+   "type": "versus",
+   "num": "02",
+   "line1": "Give it the facts,",
+   "line2": "not the whole file",
+   "problem": "Pasting everything buries the point.",
+   "fix": "Paste only the part that matters.",
+   "before": {
+    "label": "Before",
+    "title": "[40 pages pasted] Summarize this",
+    "lines": [
+     "too much noise"
+    ],
+    "caption": "Misses what you care about."
+   },
+   "after": {
+    "label": "After",
+    "title": "Here is page 12. List the 3 payment dates.",
+    "lines": [
+     "one page",
+     "one question"
+    ],
+    "caption": "Short, exact, checkable."
+   }
+  },
+  {
+   "type": "point",
+   "headline": "*Send this* to the friend who types \"make it better\"",
+   "body": "Fix it series, part 1 of 4. Next: how to make AI check its own work."
+  },
+  {
+   "type": "end",
+   "text": "Send this to the friend who *still writes vague prompts*",
+   "follow": "Fix it \u00b7 part 2 tomorrow"
+  }
+ ]
+}

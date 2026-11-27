@@ -42,7 +42,7 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 | `tools/STYLE.md` | full playbook: series, hooks, captions, real-people rules, voice rules, research notes, weekly rules. The ONLY file to edit. |
 | `tools/slots/<slot>.md` + `tools/build_slots.py` | GENERATED short slices of STYLE.md per run (morning, midday, practical, evening, stories, breaking, friday) so runs read ~50-90% less. After ANY edit to STYLE.md run `python3 tools/build_slots.py` and commit the slices with it. Never edit slices by hand. |
 | `tools/REVIEW_RUBRIC.md` / `tools/REVIEW_LOG.md` | reviewer criteria + benchmark posts / scores per post |
-| `tools/carousel.py`, `tools/reel.py`, `tools/story.py` | slide, Reel and Story builders |
+| `tools/carousel.py`, `tools/reel.py`, `tools/story.py` | slide, Reel and Story builders. carousel.py has two themes (dark default, "theme":"paper") + slide types titlecard and versus; example: `tools/examples/paper_theme_sample.json` |
 | `tools/explainer/sales_marketing.html` | code-animated explainer template (67 s, 13 scenes); copy it for industry videos |
 | `tools/explainer/camera_world_demo.html` + `render_frames.py` | camera-world explainer example (15 s, GSAP bundled via npm) and the frame renderer; rules in STYLE.md "EXPLAINER DESIGN RULES" |
 | `tools/radar.py` | trend radar (run in the Higgsfield sandbox) |
@@ -75,6 +75,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - Carousels get ~9x the saves of single images; Reels get the most interactions. The Reel payoff must start before ~8 s.
 - Our edge: our own demos and checked facts (fact-checks, verified prices) where others repost.
 - Viewer psychology + hook honesty (Nov 26 study of the top AI accounts): every post does 6 jobs (stop, stay, save, send, like, follow); carousel slide 2 is a second cover; no bait phrases and no engagement ask in the hook; one keyword per post with a real payoff; originality guard (third-party clips are a supporting beat, never the post). Tests: mascot, vote series, hook-type logging, carousel mix (Try-this card, who-can-use-it line, consistent cover pattern on ~half of practical carousels; from the @claudetipsandtricks study, Nov 26; Nov 27 added named-concept titles + Try-this card on Reels; parked: loop ending, recurring hero object, own screen recordings). Details: STYLE.md "VIEWER PSYCHOLOGY".
+- Visual style v2 (Nov 27): two themes chosen by series, never mixed in a post. DARK for news, breaking, Price Drop, The List, company posts; PAPER (warm off-white, two-tone sentence-case headline, numbered kicker, mint highlighter, Before/After card pair, lots of white space) for how-to/utility (Tue/Thu Build it, Free swaps, Fix it). No brand logos, people or music. Evidence: polish is table stakes, utility drives sends; test = paper vs the previous 2 weeks of dark how-tos, 10+ posts, judged Dec 21; log "theme" and "layout". Reveal/panorama mechanics stay parked. Details: STYLE.md "VISUAL STYLE v2".
 - New formats (Nov 26): **Price Drop** (real before/after prices, try it ourselves, never "free"/"open-source" unless true) and **Viral AI claim, fact-checked** (check the claim, never attack the creator). On news-light days use the fallback list in STYLE.md "NEWS-LIGHT DAYS" instead of a weak story.
 
 ## Running experiments (the Monday report decides)
