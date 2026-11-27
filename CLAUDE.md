@@ -73,6 +73,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - Follow trigger (hard rule): every post names its series/number and promises the next post concretely. Details: STYLE.md "FOLLOW TRIGGER".
 - Carousels get ~9x the saves of single images; Reels get the most interactions. The Reel payoff must start before ~8 s.
 - Our edge: our own demos and checked facts (fact-checks, verified prices) where others repost.
+- Viewer psychology + hook honesty (Nov 26 study of the top AI accounts): every post does 6 jobs (stop, stay, save, send, like, follow); carousel slide 2 is a second cover; no bait phrases and no engagement ask in the hook; one keyword per post with a real payoff; originality guard (third-party clips are a supporting beat, never the post). Tests: mascot, vote series, hook-type logging. Details: STYLE.md "VIEWER PSYCHOLOGY".
 - New formats (Nov 26): **Price Drop** (real before/after prices, try it ourselves, never "free"/"open-source" unless true) and **Viral AI claim, fact-checked** (check the claim, never attack the creator). On news-light days use the fallback list in STYLE.md "NEWS-LIGHT DAYS" instead of a weak story.
 
 ## Running experiments (the Monday report decides)

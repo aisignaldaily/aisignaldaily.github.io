@@ -8,6 +8,9 @@ You are reviewing a draft Instagram post you did not make. Be blunt. Score again
 - Carousels get more engagement per reach, Reels more reach (Buffer analysis of 4M+ posts).
 - People share what gives them social currency, practical value or strong emotion (awe, surprise, humor) — Jonah Berger, "Contagious" (STEPPS).
 - People follow when they expect more of the same value tomorrow: a clear promise, a recurring series, a consistent look.
+- Instagram does not recommend clickbait or engagement bait. Asking for comments, shares or tags to game reach can cost recommendations; a comment keyword that delivers a real resource is fine (Instagram via Social Media Today, Jun 2024). Since Apr 30, 2026, accounts that mostly repost within a rolling 30 days lose recommendations for carousels and photos too.
+- Clickbait drew no more curiosity than plain headlines and was judged less credible (Molina et al., CHI 2021); question headlines drew the most negative reactions (Engaging News Project, 2016); forceful "must" / "!!" wording raises resistance (Journal of Communication meta-analysis, 2026).
+- A skipped carousel is often re-shown starting at slide 2 (Mosseri, Oct 2024), so slide 2 must work on its own.
 
 ## Benchmarks (real results from posts Raheel collected, @ai.byarsh and evolving.ai, Nov 2026)
 | Post | Likes | Sends | Why it worked / didn't |
@@ -39,4 +42,5 @@ Takeaway: broad personal outcome + proof + concrete per-slide value + send trigg
 - 3 alternative hooks (cover headline + caption line 1), then pick the best one and say why.
 - The 3 most impactful fixes, ranked, with exact wording.
 - Fact-check: pick the 2-3 claims most likely to be wrong and verify them (web search / official page). Report each as confirmed / wrong / unverifiable.
+- Honesty and bait check (each hit is a must-fix): quote any "you won't believe", "watch till the end", "stop scrolling", fake secrecy ("they don't want you to know", "feels illegal"), "delete X now", "99% don't know" without a source, ALL-CAPS orders or "!!", a question as the whole hook, any ask (comment, share, tag, follow) on slide 1 or in the first 3 s, more than one comment keyword, "comment YES" / "tag 3 friends" / "like if". Say whether slide 2 makes sense to someone who never saw slide 1, and whether a third-party clip or screenshot carries the whole post (originality risk).
 Keep it under 400 words.

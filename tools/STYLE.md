@@ -203,7 +203,7 @@ Avoid: dry funding news, benchmarks without a "so what", anything that needs mor
 
 ## Slides 2-6
 - One idea per slide, 6-25 words, big text. Alternate layouts every slide (stat card, quote card, before/after, mini chart, "what it means for you").
-- Slide 2 must pay off the hook immediately (no slow intro).
+- Slide 2 must pay off the hook immediately (no slow intro) AND work as a second cover: Instagram often re-shows a skipped carousel starting at slide 2 (Mosseri, Oct 2024), so slide 2 must make sense to someone who never saw slide 1 (big headline, the most surprising fact, never "continued...").
 - Second-to-last: "Why it matters / what you can do today".
 - Last: "Send this to someone who [specific person: 'still writes emails by hand', 'thinks AI is a fad']" + "Comment AI for today's tools" + follow.
 
@@ -266,6 +266,10 @@ Runs never download or rip footage/photos of real people from the web (YouTube, 
 - "AI can now ___ in [seconds]. Here's how."
 - "Stop doing ___. AI does it in 10 seconds."
 - "The internet is losing it over ___."
+- "You don't need [paid thing] for [job]." (myth-bust; only if verified)
+- "Skip this if you love [doing X by hand]." / "Not for big companies." (audience filter: honest reverse psychology)
+- "Don't [common risky habit]. Do this instead." (honest don't; the fix is in the post)
+- Banned openers: see "VIEWER PSYCHOLOGY + HOOK HONESTY" (no "you won't believe", "watch till the end", "stop scrolling", fake secrecy, ALL-CAPS orders, question-only hooks).
 
 ## Volume (schedule v6, Raheel Nov 25 2026: 4 feed posts/day + breaking only when amazing)
 CURRENT: 4 feed posts daily (CT): 9:15 AM carousel (news/useful) · 12:30 PM Reel (wild/fun or quick trick) · 5:45 PM carousel ("AI you can use" how-to) · 7:45 PM Reel (Builder lessons on Sunday, otherwise biggest story) + 8:30 PM Stories. The 3:45 PM afternoon slot is OFF (confirmed by Raheel Nov 26: on for Nov 26 only, off from Nov 27; its scheduled task is switched off after the Nov 26 post). Plus at most ONE spontaneous breaking post per day, only for truly big confirmed news (breaking watch). The v5 text below is history.
@@ -334,7 +338,7 @@ Our spin, which is stronger: "We asked AI ... then checked if it's true."
 
 ## Hook lab + swipe teasers (from Raheel's @iknowig "I gave Claude one week to run my Instagram" prompts, Nov 25, 2026)
 Our system already does his 4 steps (trend radar = "find what goes viral", Reel script rules, reviewer alt hooks, full automation). Add these 3 habits to every post:
-1. HOOK LAB before building: write 5 cover hooks for the chosen topic, each using a different trigger (surprise, desire/benefit, curiosity gap, urgency "this week", ego "most people don't know"), max ~10 words, a number or name in each. Pick the best against the hook formulas above; keep the runner-up for the caption line 1 or a story. The reviewer still gets the final say. Never fear-mongering, rage-bait or fake controversy; a bold opinion must be defensible.
+1. HOOK LAB before building: write 5 cover hooks for the chosen topic, each using a different trigger (surprise, desire/benefit, curiosity gap, urgency "this week" (only real deadlines), ego "most people don't know" (only with a sourced number)), max ~10 words, a number or name in each. Pick the best against the hook formulas above; keep the runner-up for the caption line 1 or a story. The reviewer still gets the final say. Never fear-mongering, rage-bait or fake controversy; a bold opinion must be defensible.
 2. SWIPE TEASERS: end every middle slide with a one-line open loop that pulls the next swipe ("Most people stop here. The best one is next...", "But this only works if you do step 3...") plus a small "Swipe ->" pill. Keep them true: the next slide must pay off the tease. Not on the last slide.
 3. REEL SCRIPT SHAPE (under 30 s): hook text in the first 2 s, tension or surprise by 5 s, fast payoff, one replay moment (a number or visual worth pausing on), soft CTA (save/send) at the end, no logo intro.
 We skip from that post: "income system" and comment-keyword bait for income claims (no income claims, ever).
@@ -402,8 +406,8 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 - HASHTAG TEST (this overrides any hashtag count written in a run's own instructions): posts with hashtags averaged ~32% FEWER views in Metricool's data (correlation, not proof). New rule from Nov 27: max 3 very specific hashtags; on Tue/Thu/Sat post with ZERO hashtags. Log "hashtags: N" in the REVIEW_LOG line; the Monday weekly report compares views/reach for 0 vs 1-3 hashtags and decides after 2 weeks.
 - Emotions that spread: SURPRISE, ANXIETY (a worry + the fix), LOVE/warmth. Emotions that did NOT help: anger, sadness, plain joy. So: "Wait, AI can do THAT?" and "Your business is losing calls after 6 PM. Here's the fix." hooks; never outrage or doom-bait.
 - Most views come in the first 3 days, so a strong post keeps working: Stories should re-share our best post of the last 3 days, not only today's.
-- Trial reels (Instagram feature): a Reel is shown to NON-followers first and only goes to followers if it does well in 72 h. Great for testing hooks on a new account, but Buffer can't switch it on; Raheel can toggle "Trial" by hand when posting from the app. Optional.
-- Benchmark reality: evolving.ai posts ~38 times a week (~5/day) with ~4.8M followers and ~3.5% engagement; only ~21% of accounts under 10K followers grew in 2026. Volume + consistency + sends is what separates the ones that grow.
+- Trial reels (Instagram feature): a Reel is shown to NON-followers first and only goes to followers if it does well in 72 h. Great for testing hooks, but it needs 1,000+ followers (since Jul 2025, SocialPilot), so it is not open to us yet; Buffer can't switch it on either. Revisit at 1,000 followers.
+- Benchmark reality: evolving.ai posts ~38 times a week (~5/day) with ~4.8M followers and ~3.5% engagement; only ~21% of accounts under 10K followers grew in 2026. Correction (Nov 26 study, CreatorDB Oct 2026): volume alone does NOT predict growth. evolving.ai grew +0.6% in 30 days at ~38 posts/week; Sabrina Ramonov grew +18% in 90 days at ~11/week. A repeatable format with a real payoff + sends is what separates the ones that grow.
 
 ## WEEKLY SIGNATURE CALENDAR (Raheel approved Nov 26, 2026; starts Mon Nov 30) - overrides the slot's usual topic on these days
 | Day | Slot | Format (STYLE section) |
@@ -437,3 +441,35 @@ All other slots stay news + quick useful tips. If a signature post can't be made
 - SPLIT (Nov 26, decided for max followers/views/sends): of the 3 test Reels a week, 2 are "free tool, verified" and 1 is a NEWS Reel in the same code-animated poster style (one promise, one big number, source + date on screen). This separates STYLE from TOPIC. Log "topic: free-tool" or "topic: news". Do NOT add a separate daily "viral news" stream: news is crowded and perishable, and cookin.code's news-like posts did worst (about 3K views).
 - Compare after 2 weeks (Monday report, Dec 14): test Reels vs our news Reels on views, comments per view, follows per Reel.
 - PIVOT RULE (Raheel, Nov 26): if the cookin-style Reels get clearly more (views >= 2x our median news Reel OR comments >= 1% of views, across most of the 6), we pivot: grow it to 5-6 a week and make it the main Reel style, news stays as the fact-checked layer. If mixed, keep 1-2 a week. If worse, drop it.
+
+## VIEWER PSYCHOLOGY + HOOK HONESTY (top-account study, Raheel asked Nov 26, 2026; read before every post)
+Full report with sources (Raheel's private doc): https://claude.ai/artifact/WS9zg9wDKpokNVEuTGRwVj
+What the biggest AI accounts show (CreatorDB Oct 2026, the creators' own posts, Instagram statements): growth now comes from ONE repeatable format with a real payoff (comment keyword -> DM, often follow-gated), Reels for reach + carousels for saves, and speed on big news. Repost-heavy news pages have slowed: since Apr 30, 2026 Instagram stops recommending accounts whose posts in a rolling 30 days are mostly reposts, carousels and photos included. Volume alone does not predict growth.
+
+**Every post does 6 jobs (the pre-flight reviewer checks each):**
+1. STOP (frame 1 / slide 1): the result or the number, in plain words a stranger gets in 1.5 s. Never a topic-only title or a logo.
+2. STAY: open ONE specific question; pay part of it before 8 s (Reels) or on slide 2; pay all of it by the end. Never hold the whole payoff for the last second.
+3. SAVE: one thing to use later (copy-paste prompt, price table, checklist). Carousels: the second-to-last slide is a one-screen cheat sheet people can screenshot.
+4. SEND: one named person + reason (help, warn or amuse): "the friend who still pays for X". A warning only travels with the fix in the same post.
+5. LIKE: one emotional peak: awe at a real demo, relief that it's free, a laugh. No outrage, no doom.
+6. FOLLOW: series + number + the dated next part (FOLLOW TRIGGER). People reliably go back to unfinished things but do not remember them better (2025 meta-analysis), so make Part N easy to find: the same series name on every cover, "Part 2 of 3" big on the cover, the next time stated, and ask Raheel in the preview email to pin Part 1 while a series runs (pinning is app-only).
+
+**Hook honesty** (evidence: clickbait drew no more curiosity than plain headlines and looked less credible, CHI 2021; question headlines drew the most negative reactions, 2016; forceful "must"/"!!" language raises resistance, 2026 meta-analysis):
+- USE: a specific forward-reference ("The 3rd tool is from Google"), worry + fix, myth-bust ("You don't need a paid plan for this"), audience filter ("Skip this if you love doing invoices by hand", "Not for big companies"), honest don't ("Don't paste client data into free AI chats"), proof first ("We tested it: 40 min became 6"), social proof and deadlines only with a source.
+- NEVER: "you won't believe", "watch till the end", "stop scrolling", "they don't want you to know", "I could get in trouble for this", "feels illegal to know", "delete X now", "99% of people don't know" without a source, ALL-CAPS orders, "!!", a question as the whole hook.
+
+**Engagement asks** (Instagram, 2024: content that explicitly asks for comments, shares or tags to game reach may not be recommended; a keyword that delivers a real resource is fine):
+- No ask on slide 1 or in the first 3 s of a Reel. Asks live in the caption and on the last slide / end card.
+- ONE comment keyword per post, delivered within seconds by ManyChat, and the post is useful without it (already a rule).
+- One send line naming a specific person. Never "share this" alone, "comment YES", "type 1", "tag 3 friends", "like if".
+- Open questions are fine ("Which would you try first?").
+- If Account Status ever shows a recommendation problem, remove the send line first and tell Raheel.
+
+**Originality guard (Apr 30, 2026 rule):** every post must be ours: our test, comparison, structure, design or commentary. Official footage and screenshots are a credited supporting beat (our heuristic: at most about a third of a Reel's runtime), never the whole post. Never repost others' Reels, memes or carousels, even with credit.
+
+**Breaking-news speed:** being first matters when few others cover a story (Riley Brown's first ChatGPT video on launch day: ~200K followers in 2 weeks). If big pages already flooded it, make the better version (our test, verified numbers, the "so what") instead of the 50th summary.
+
+**TESTS** (log in REVIEW_LOG; the Monday report judges after 3+ posts each):
+- MASCOT (faces got 38% more likes in a 2014 study of 1.1M Instagram photos; we stay faceless): our pixel robot in the same corner on every Reel and carousel cover of a series. Log "mascot: yes/no"; compare likes and sends per reach.
+- VOTE SERIES (from saveo.house, "the comments decide"): in Built with AI (Wed 12:30) or Builder lessons (Sun 7:45), end Part 1 with an open choice ("Which should we build next: invoices or reviews?"), then really build the most-asked one in Part 2 at a stated time. Max one running at a time. Log "series-vote: yes". Judged in the Dec 21 report on follows per post vs other posts.
+- HOOK TYPE: log "hook: forward/worry-fix/myth/filter/dont/proof/news" and "send-target: <who>" so the report can compare sends + saves per reach by hook type.
