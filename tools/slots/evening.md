@@ -215,6 +215,7 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 | Fri | 12:30 midday | **60-s explainer video** (made by the separate "Friday explainer" scheduled run, which claims the midday slot; the normal midday run then stops) |
 | Sat | 9:15 morning carousel | **The List** |
 | Sun | 7:45 evening Reel | **Builder lessons** |
+| Sun | 5:45 practical carousel | **What is X** beginner carousel (paper theme) |
 | Mon/Wed/Fri/Sun | 9:15 morning carousel | **Free swaps** |
 All other slots stay news + quick useful tips. If a signature post can't be made well today (no verifiable topic, tool down), make the slot's normal post instead and say why in the preview email. One-off company posts in COMPANY_POSTS.txt win over this calendar on their dates.
 
@@ -301,17 +302,6 @@ Why: voiced Reels played with the sound off still need the words. Honest status:
 4. TOOL: tools/captions.py voice.wav video.mp4 out.mp4 (run in the Higgsfield sandbox; faster-whisper gives word timings, ffmpeg burns them, 0 credits). Use the same narration file that is in the video. If the voice was sped up, pass --speed.
 5. PACE: Higgsfield seed_audio / Grady reads slowly (about 2 words per second). Write narration for 10-12 s Reels (about 25-30 words) so it fits without speeding it up.
 6. LOG: "captions: yes/no" per Reel. Dec 14: compare average watch time and sends per reach, captions vs no captions, only against voiced Reels. Drop the rule if it shows nothing.
-
-## "WHAT IS X" BEGINNER CAROUSELS (Raheel asked Nov 27, 2026 after the @vibecodingiseasy study; NOT a test before Dec 14)
-Why: the GitHub explainer on @vibecodingiseasy got about 83K saves on 63K likes, and beginners said "made for me". But it is one outlier on an account with 45.9K followers, and most of its posts sit at 9K-60K views. Honest status: a good idea for saves and sends, not a promise of virality. Its comments also showed that a funny voice drew more replies than the lesson, so we copy the format and the question, not the voice or the look.
-1. SLOT: Sunday "Builder lessons" slot, as a CAROUSEL (saves are the goal; carousels earn about 9x the saves of single images per our research). A Reel version only when the answer fits in 10-12 s.
-2. ONE BEGINNER QUESTION PER POST, answered in full: "What is <X>?" plus the three questions a beginner asks next (Is it safe? Do I need a special tool? What do I do first / what breaks?). Pick terms beginners actually search for (GitHub, API key, MCP server, repo, deploy, database).
-3. CHECK BEFORE SAYING: every claim cites its official doc or primary source. No "free" unless the price page says so. Include one honest limit (for example "check the license before reusing code").
-4. SEND LINE NAMES A PERSON: "Send this to the friend who keeps saying they'll learn to code." Save line: "Save this before you need it." (Only in the caption, never as bait in the hook.)
-5. OUR LOOK: paper theme (the how-to theme), our mint highlighter and robot mascot. No cartoon presenter, no copying their "Claude..." kicker or titles.
-6. NO INCOME LANGUAGE: never "make money with AI", never "learn to earn". Their bio does this; we do not.
-7. TOOLS WE DID NOT TEST: "Every tool tested by us" must stay true. A post may explain a tool we did not test only if it says so in the slide or caption ("Read from the official docs, not tested by us yet"). Never place an untested tool in the "tested" list or the bio.
-8. LOG: "series: what-is-x", "saves", "sends", "follows". Compare against the other Sunday posts at the Dec 14 report. If saves are not above the median of the other carousels, drop the series.
 
 ## TRACKER REEL (from @_post2all study, Nov 27, 2026; Raheel approved "Ok")
 Source: a "Don't post until these 5 free Claude skills" Reel (4.8K likes, 6.4K comments, 6.8K sends, 14.1K saves; saves and sends far above likes = utility signal). Learn the pattern, never copy text, visuals or repos.

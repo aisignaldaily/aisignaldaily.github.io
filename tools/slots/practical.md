@@ -247,6 +247,7 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 | Fri | 12:30 midday | **60-s explainer video** (made by the separate "Friday explainer" scheduled run, which claims the midday slot; the normal midday run then stops) |
 | Sat | 9:15 morning carousel | **The List** |
 | Sun | 7:45 evening Reel | **Builder lessons** |
+| Sun | 5:45 practical carousel | **What is X** beginner carousel (paper theme) |
 | Mon/Wed/Fri/Sun | 9:15 morning carousel | **Free swaps** |
 All other slots stay news + quick useful tips. If a signature post can't be made well today (no verifiable topic, tool down), make the slot's normal post instead and say why in the preview email. One-off company posts in COMPANY_POSTS.txt win over this calendar on their dates.
 
@@ -303,6 +304,17 @@ Inspiration (not to copy): @gg.designhub "How to fix a boring design", 8 slides,
 5. BUILD IT: tools/carousel.py has "theme":"paper" plus two slide types, "titlecard" (series cover: kicker pill, two-tone headline, card-stack hero) and "versus" (Before/After pair). Working example spec: tools/examples/paper_theme_sample.json (python3 tools/carousel.py tools/examples/paper_theme_sample.json). The point and end slides work in both themes (use sentence case headlines in paper). Add alt text to every slide when the poster supports it. Export sRGB JPEG, 1080 px wide.
 6. TEST (honest version): per-post noise is huge, so this will not be proven by a handful of posts. Log "theme: paper/dark" and "layout: versus/plain" in REVIEW_LOG. Compare paper how-to carousels against the previous two weeks of dark how-to carousels (sends per reach, saves per reach, follows per reach), 10+ posts each before any conclusion; keep gated-keyword posts out of the comparison. Decide in the Dec 21 report. Do not stack this with the carousel mix and named-title tests on the same post when judging; log all tags so the report can separate them.
 7. STILL PARKED: swipe-to-reveal and panorama mechanics. Evidence says no proof yet. Panorama (seamless line, see "Swipe mechanics") is the first to test, only after the paper look has 15 posts; reveal only if the last slide is truly better than the first. Music is the one reach lever Instagram has endorsed for carousels; our no-music rule stands until Raheel changes it.
+
+## "WHAT IS X" BEGINNER CAROUSELS (Raheel asked Nov 27, 2026 after the @vibecodingiseasy study; NOT a test before Dec 14)
+Why: the GitHub explainer on @vibecodingiseasy got about 83K saves on 63K likes, and beginners said "made for me". But it is one outlier on an account with 45.9K followers, and most of its posts sit at 9K-60K views. Honest status: a good idea for saves and sends, not a promise of virality. Its comments also showed that a funny voice drew more replies than the lesson, so we copy the format and the question, not the voice or the look.
+1. SLOT: Sunday 5:45 PM practical carousel (moved Nov 27 from the Sunday 7:45 Reel slot, which stays Builder lessons with a real person). Carousel because saves are the goal (about 9x the saves of single images per our research). Weekly, starting Sun Nov 29.
+2. ONE BEGINNER QUESTION PER POST, answered in full: "What is <X>?" plus the three questions a beginner asks next (Is it safe? Do I need a special tool? What do I do first / what breaks?). Pick terms beginners actually search for (GitHub, API key, MCP server, repo, deploy, database).
+3. CHECK BEFORE SAYING: every claim cites its official doc or primary source. No "free" unless the price page says so. Include one honest limit (for example "check the license before reusing code").
+4. SEND LINE NAMES A PERSON: "Send this to the friend who keeps saying they'll learn to code." Save line: "Save this before you need it." (Only in the caption, never as bait in the hook.)
+5. OUR LOOK: paper theme (the how-to theme), our mint highlighter and robot mascot. No cartoon presenter, no copying their "Claude..." kicker or titles.
+6. NO INCOME LANGUAGE: never "make money with AI", never "learn to earn". Their bio does this; we do not.
+7. TOOLS WE DID NOT TEST: "Every tool tested by us" must stay true. A post may explain a tool we did not test only if it says so in the slide or caption ("Read from the official docs, not tested by us yet"). Never place an untested tool in the "tested" list or the bio.
+8. LOG: "series: what-is-x", "saves", "sends", "follows". Compare against the other Sunday posts at the Dec 14 report. If saves are not above the median of the other carousels, drop the series.
 
 ## RESEARCH v3: what the winners do (Nov 27, 2026; Raheel asked for a full study; Instagram viewed logged-in in Chrome + web sources)
 Accounts checked live on Nov 27: saveo.house (237K, 20 posts), cookin.code (13.2K, 29 posts), itsflxkzy (9.6K, 42 posts), aisenseii (9K, 25 posts), evolving.ai (4.9M), godofprompt (387K, 802 posts), sabrina_ramonov (1.2M, 2,328 posts). Public numbers only (views, likes, comments); saves/sends are not visible except where shown.

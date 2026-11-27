@@ -434,6 +434,7 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 | Fri | 12:30 midday | **60-s explainer video** (made by the separate "Friday explainer" scheduled run, which claims the midday slot; the normal midday run then stops) |
 | Sat | 9:15 morning carousel | **The List** |
 | Sun | 7:45 evening Reel | **Builder lessons** |
+| Sun | 5:45 practical carousel | **What is X** beginner carousel (paper theme) |
 | Mon/Wed/Fri/Sun | 9:15 morning carousel | **Free swaps** |
 All other slots stay news + quick useful tips. If a signature post can't be made well today (no verifiable topic, tool down), make the slot's normal post instead and say why in the preview email. One-off company posts in COMPANY_POSTS.txt win over this calendar on their dates.
 
@@ -533,7 +534,7 @@ Why: voiced Reels played with the sound off still need the words. Honest status:
 
 ## "WHAT IS X" BEGINNER CAROUSELS (Raheel asked Nov 27, 2026 after the @vibecodingiseasy study; NOT a test before Dec 14)
 Why: the GitHub explainer on @vibecodingiseasy got about 83K saves on 63K likes, and beginners said "made for me". But it is one outlier on an account with 45.9K followers, and most of its posts sit at 9K-60K views. Honest status: a good idea for saves and sends, not a promise of virality. Its comments also showed that a funny voice drew more replies than the lesson, so we copy the format and the question, not the voice or the look.
-1. SLOT: Sunday "Builder lessons" slot, as a CAROUSEL (saves are the goal; carousels earn about 9x the saves of single images per our research). A Reel version only when the answer fits in 10-12 s.
+1. SLOT: Sunday 5:45 PM practical carousel (moved Nov 27 from the Sunday 7:45 Reel slot, which stays Builder lessons with a real person). Carousel because saves are the goal (about 9x the saves of single images per our research). Weekly, starting Sun Nov 29.
 2. ONE BEGINNER QUESTION PER POST, answered in full: "What is <X>?" plus the three questions a beginner asks next (Is it safe? Do I need a special tool? What do I do first / what breaks?). Pick terms beginners actually search for (GitHub, API key, MCP server, repo, deploy, database).
 3. CHECK BEFORE SAYING: every claim cites its official doc or primary source. No "free" unless the price page says so. Include one honest limit (for example "check the license before reusing code").
 4. SEND LINE NAMES A PERSON: "Send this to the friend who keeps saying they'll learn to code." Save line: "Save this before you need it." (Only in the caption, never as bait in the hook.)

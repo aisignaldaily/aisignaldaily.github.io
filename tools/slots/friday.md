@@ -196,6 +196,7 @@ Sources: Metricool 2026 study (24.4M posts, 375K accounts; vendor data, correlat
 | Fri | 12:30 midday | **60-s explainer video** (made by the separate "Friday explainer" scheduled run, which claims the midday slot; the normal midday run then stops) |
 | Sat | 9:15 morning carousel | **The List** |
 | Sun | 7:45 evening Reel | **Builder lessons** |
+| Sun | 5:45 practical carousel | **What is X** beginner carousel (paper theme) |
 | Mon/Wed/Fri/Sun | 9:15 morning carousel | **Free swaps** |
 All other slots stay news + quick useful tips. If a signature post can't be made well today (no verifiable topic, tool down), make the slot's normal post instead and say why in the preview email. One-off company posts in COMPANY_POSTS.txt win over this calendar on their dates.
 
