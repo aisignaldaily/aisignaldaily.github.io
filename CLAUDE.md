@@ -44,6 +44,7 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 | `tools/REVIEW_RUBRIC.md` / `tools/REVIEW_LOG.md` | reviewer criteria + benchmark posts / scores per post |
 | `tools/carousel.py`, `tools/reel.py`, `tools/story.py` | slide, Reel and Story builders |
 | `tools/explainer/sales_marketing.html` | code-animated explainer template (67 s, 13 scenes); copy it for industry videos |
+| `tools/explainer/camera_world_demo.html` + `render_frames.py` | camera-world explainer example (15 s, GSAP bundled via npm) and the frame renderer; rules in STYLE.md "EXPLAINER DESIGN RULES" |
 | `tools/radar.py` | trend radar (run in the Higgsfield sandbox) |
 | `tools/HIGGSFIELD.md` | how to make media with Higgsfield + credit rules |
 | `tools/MANYCHAT.txt`, `tools/COMPANY_POSTS.txt` | ManyChat keyword status, company-post switch + one-offs |

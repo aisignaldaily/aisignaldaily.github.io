@@ -1,0 +1,198 @@
+<!--
+Camera-world explainer demo (AI Signal Daily, Nov 26 2026). One 15 s law-firm intake flow: example data only.
+Setup: GSAP is NOT committed (license). In this folder run:
+  npm pack gsap@3.12.5 && mkdir -p vendor && tar -xzf gsap-3.12.5.tgz package/dist/gsap.min.js && cp package/dist/gsap.min.js vendor/ && rm -rf package gsap-3.12.5.tgz
+Render: python3 render_frames.py camera_world_demo.html 15 out.mp4   (needs Playwright + Chrome + ffmpeg)
+Rules it follows: STYLE.md "EXPLAINER DESIGN RULES". window.seek(t) is deterministic.
+-->
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(../fonts/Anton-Regular.ttf)}
+@font-face{font-family:InterB;src:url(../fonts/Inter-Bold.otf)}
+@font-face{font-family:InterM;src:url(../fonts/Inter-Medium.otf)}
+@font-face{font-family:Mono;src:url(../fonts/DejaVuSansMono.ttf)}
+html,body{margin:0;background:#05080f}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden;background:#05080f}
+.bg{position:absolute;inset:0}
+#g1{background:linear-gradient(180deg,#04060b 0%,#071019 55%,#0b2a2b 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(110px);opacity:.55}
+#b1{width:760px;height:760px;background:#0f6b5c;left:-200px;top:900px}
+#b2{width:620px;height:620px;background:#3b2a7a;right:-220px;top:300px;opacity:.45}
+#b3{width:520px;height:520px;background:#7a5a14;left:300px;top:1500px;opacity:.28}
+#grain{position:absolute;inset:-80px;opacity:.07;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>")}
+#world{position:absolute;left:0;top:0;width:1080px;height:3900px;transform-origin:0 0}
+.card{position:absolute;background:#0e1624;border:3px solid #1d2a3c;border-radius:40px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.lbl{opacity:0;position:absolute;font:34px InterM;color:#8b98a5;white-space:nowrap;text-align:center}
+.t{font-family:InterB;color:#f5f7fa}
+#token{position:absolute;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:#3df5c8;box-shadow:0 0 50px 10px rgba(61,245,200,.55)}
+#hl{position:absolute;left:70px;width:940px;top:150px;height:240px}
+#hlfade{position:absolute;left:0;top:0;width:1080px;height:560px;background:linear-gradient(180deg,rgba(4,6,11,.97) 0%,rgba(4,6,11,.9) 38%,rgba(4,6,11,0) 100%)}
+.h{position:absolute;left:0;top:0;width:940px;font:78px/1.06 InterB;color:#f5f7fa;opacity:0}
+.h em{font-style:normal;color:#3df5c8}
+#brand{position:absolute;left:70px;top:70px;font:30px Mono;color:#8b98a5;letter-spacing:2px}
+#ex{position:absolute;left:0;width:1080px;top:1810px;text-align:center;font:30px Mono;color:#8b98a5}
+</style></head>
+<body><div id="stage">
+ <div class="bg" id="g1"></div>
+ <div class="blob" id="b1"></div><div class="blob" id="b2"></div><div class="blob" id="b3"></div>
+ <div id="world">
+  <svg width="1080" height="3900" style="position:absolute;left:0;top:0">
+   <path id="trackBg" d="" fill="none" stroke="#16263a" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 24"/>
+   <path id="track" d="" fill="none" stroke="#3df5c8" stroke-width="10" stroke-linecap="round"/>
+  </svg>
+
+  <div id="token"></div>
+
+  <!-- A: the call (330,520) -->
+  <div class="card" id="cA" style="left:50px;top:340px;width:560px;height:400px">
+   <svg id="rings" width="560" height="400" style="position:absolute;left:0;top:0"><circle cx="280" cy="140" r="60" fill="none" stroke="#ffb547" stroke-width="5" opacity="0"/><circle cx="280" cy="140" r="60" fill="none" stroke="#ffb547" stroke-width="5" opacity="0"/></svg>
+   <div id="phone" style="position:absolute;left:230px;top:90px;width:100px;height:100px;border-radius:50%;background:#2a1d08;border:4px solid #ffb547;display:flex;align-items:center;justify-content:center">
+    <svg width="52" height="52" viewBox="0 0 24 24" fill="#ffb547"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.300.2 2.500.6 3.600.1.300 0 .7-.2 1z"/></svg>
+   </div>
+   <div class="t" style="position:absolute;left:0;width:560px;top:230px;text-align:center;font-size:38px;color:#c9d4dc">Unknown caller</div>
+   <div id="clock" style="position:absolute;left:0;width:560px;top:268px;text-align:center;font:104px Anton;color:#ffb547">9:47 pm</div>
+  </div>
+  <div class="lbl" id="lA" style="left:50px;width:560px;top:770px">after hours, nobody picks up</div>
+
+  <!-- B: the chat (750,1470) -->
+  <div class="card" id="cB" style="left:440px;top:1190px;width:600px;height:560px">
+   <div id="bin" style="position:absolute;left:30px;top:40px;width:430px;padding:26px 30px;border-radius:30px 30px 30px 8px;background:#1a2638;font:36px/1.25 InterM;color:#f5f7fa">Hi, my landlord kept my deposit. Can you help?</div>
+   <div id="bout" style="position:absolute;left:110px;top:290px;width:400px;padding:26px 30px;border-radius:30px 30px 8px 30px;background:#0f4a40;border:3px solid #3df5c8;font:36px/1.25 InterM;color:#f5f7fa;min-height:120px"><span id="typed"></span></div>
+   <div id="tm" style="position:absolute;right:34px;bottom:26px;font:30px Mono;color:#3df5c8;opacity:0">0:04</div>
+  </div>
+  <div class="lbl" id="lB" style="left:440px;width:600px;top:1780px">answered in 4 seconds</div>
+
+  <!-- C: the checklist (330,2420) -->
+  <div class="card" id="cC" style="left:30px;top:2140px;width:600px;height:560px">
+   <div class="t" style="position:absolute;left:44px;top:34px;font-size:34px;color:#8b98a5;font-family:InterM">Intake notes</div>
+   <div id="rows"></div>
+  </div>
+  <div class="lbl" id="lC" style="left:30px;width:600px;top:2730px">saved to your inbox</div>
+
+  <!-- D: the booking (750,3370) -->
+  <div class="card" id="cD" style="left:430px;top:3090px;width:620px;height:560px">
+   <div class="t" style="position:absolute;left:44px;top:34px;font-size:34px;color:#8b98a5;font-family:InterM">This week</div>
+   <div id="cal"></div>
+   <div id="stamp" style="position:absolute;left:0;width:620px;top:420px;text-align:center;font:84px Anton;color:#ffb547;letter-spacing:3px;opacity:0">BOOKED</div>
+  </div>
+  <div class="lbl" id="lD" style="left:430px;width:620px;top:3680px">Tue 10:30 consult, on your calendar</div>
+
+</div>
+ <div id="hlfade"></div>
+ <div id="hl">
+  <div class="h" id="h1">A client calls at <em>9:47 pm</em></div>
+  <div class="h" id="h2">AI answers in <em>seconds</em></div>
+  <div class="h" id="h3">Asks the <em>right questions</em></div>
+  <div class="h" id="h4">Books the <em>consult</em></div>
+  <div class="h" id="h5">Intake, <em>handled</em></div>
+ </div>
+ <div id="brand">AI SIGNAL DAILY</div>
+ <div id="ex">example flow, not a real client</div>
+ <div id="grain"></div>
+</div>
+<script src="vendor/gsap.min.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const world=$('#world'),token=$('#token');
+// stop centres in world space
+const P={A:[330,540],B:[740,1470],C:[330,2420],D:[740,3370]};
+// path: start above A, through the stops
+const pts=[[330,300],[330,540],[560,1000],[740,1470],[520,1950],[330,2420],[560,2890],[740,3370]];
+function dPath(){let d=`M ${pts[0][0]} ${pts[0][1]}`;
+ for(let i=1;i<pts.length;i++){const a=pts[i-1],b=pts[i],my=(a[1]+b[1])/2;d+=` C ${a[0]} ${my}, ${b[0]} ${my}, ${b[0]} ${b[1]}`}return d}
+$('#trackBg').setAttribute('d',dPath());$('#track').setAttribute('d',dPath());
+const track=$('#track'),L=track.getTotalLength();track.style.strokeDasharray=L;track.style.strokeDashoffset=L;
+// where each stop sits along the path (found numerically)
+function lenAt(y){let lo=0,hi=L;for(let i=0;i<40;i++){const m=(lo+hi)/2;track.getPointAtLength(m).y<y?lo=m:hi=m}return lo}
+const S={A:lenAt(540),B:lenAt(1470),C:lenAt(2420),D:lenAt(3370)};
+const prog={v:0};
+function setProg(){const p=track.getPointAtLength(prog.v);token.style.left=p.x+'px';token.style.top=p.y+'px';track.style.strokeDashoffset=L-prog.v}
+// checklist rows
+const rows=[['Case type','Tenant deposit'],['Deadline','30 days left'],['Best number','Saved']];
+$('#rows').innerHTML=rows.map((r,i)=>`<div class="row" style="position:absolute;left:44px;top:${110+i*140}px;width:512px;height:110px;border-radius:26px;background:#0a111c;border:3px solid #1d2a3c;opacity:.0">
+ <div class="chk" style="position:absolute;left:24px;top:28px;width:50px;height:50px;border-radius:50%;border:4px solid #3df5c8;display:flex;align-items:center;justify-content:center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#3df5c8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0"><path d="M5 12l5 5 9-10"/></svg></div>
+ <div style="position:absolute;left:96px;top:10px;font:28px InterM;color:#8b98a5">${r[0]}</div>
+ <div style="position:absolute;left:96px;top:44px;font:38px InterB;color:#f5f7fa">${r[1]}</div></div>`).join('');
+// calendar
+const days=['M','T','W','T','F'];let cal='';
+days.forEach((d,c)=>{cal+=`<div style="position:absolute;left:${48+c*108}px;top:96px;width:92px;text-align:center;font:30px InterM;color:#8b98a5">${d}</div>`;
+ for(let r=0;r<3;r++){const hit=(c==1&&r==1);cal+=`<div class="slot${hit?' hit':''}" style="position:absolute;left:${48+c*108}px;top:${150+r*84}px;width:92px;height:66px;border-radius:16px;background:#0a111c;border:3px solid #1d2a3c"></div>`}});
+$('#cal').innerHTML=cal;
+const chks=[...document.querySelectorAll('.chk')],rowEls=[...document.querySelectorAll('.row')];
+
+// camera: focus point (cx,cy) at scale s, with headline-safe offset
+const TY=1090;function cam(cx,cy,s){return{x:540-cx*s,y:TY-cy*s,scale:s}}
+const K={
+ wide:cam(540,1500,.5),
+ A:cam(330,560,1.5),
+ mid1:cam(540,1020,1.0),
+ B:cam(740,1490,1.5),
+ mid2:cam(540,1950,1.0),
+ C:cam(330,2440,1.5),
+ mid3:cam(540,2890,1.0),
+ D:cam(740,3390,1.5),
+ end:cam(540,1950,.43)
+};
+gsap.set(world,{...K.A});
+const tl=gsap.timeline({paused:true});
+const E='power2.inOut';
+// headlines: slide up + fade, one at a time
+function hl(id,t0,t1){tl.fromTo(id,{opacity:0,y:40},{opacity:1,y:0,duration:.45,ease:'power2.out'},t0);
+ if(t1)tl.to(id,{opacity:0,y:-30,duration:.3,ease:'power2.in'},t1)}
+// 0-1.0 wide establishing, token drops in
+tl.fromTo(token,{scale:0},{scale:1,duration:.5,ease:'back.out(2)'},0.2);
+tl.set('#h1',{opacity:1,y:0},0);tl.to('#h1',{opacity:0,y:-30,duration:.3,ease:'power2.in'},3.0);
+tl.to(prog,{v:S.A,duration:1.0,ease:E,onUpdate:setProg},0.4);
+// A: ring pulse + clock tick handled in update()
+// travel A->B
+hl('#h2',3.3,6.8);
+tl.to(world,{...K.mid1,duration:.5,ease:'power2.in'},2.9).to(world,{...K.B,duration:.7,ease:'power2.out'},3.4);
+tl.to(prog,{v:S.B,duration:1.1,ease:E,onUpdate:setProg},2.8);
+// B: typing reply
+const typ={n:0},full='Yes. Two quick questions first.';
+tl.fromTo('#bin',{opacity:0,y:30},{opacity:1,y:0,duration:.35},3.5);
+tl.fromTo('#bout',{opacity:0,y:30},{opacity:1,y:0,duration:.3},4.1);
+tl.to(typ,{n:full.length,duration:1.4,ease:'none',onUpdate(){$('#typed').textContent=full.slice(0,Math.round(typ.n))}},4.3);
+tl.to('#tm',{opacity:1,duration:.2},5.8);
+// travel B->C
+hl('#h3',7.1,10.3);
+tl.to(world,{...K.mid2,duration:.5,ease:'power2.in'},6.7).to(world,{...K.C,duration:.7,ease:'power2.out'},7.2);
+tl.to(prog,{v:S.C,duration:1.1,ease:E,onUpdate:setProg},6.6);
+rowEls.forEach((r,i)=>{const t=7.4+i*1.0;tl.to(r,{opacity:1,duration:.3},t);tl.to(chks[i].firstElementChild,{opacity:1,duration:.15},t+.55);tl.to(chks[i],{background:'#0f4a40',duration:.15},t+.55)});
+// travel C->D
+hl('#h4',10.6,13.0);
+tl.to(world,{...K.mid3,duration:.5,ease:'power2.in'},10.4).to(world,{...K.D,duration:.7,ease:'power2.out'},10.9);
+tl.to(prog,{v:S.D,duration:1.1,ease:E,onUpdate:setProg},10.3);
+const hit=document.querySelector('.hit');
+tl.to(hit,{background:'#ffb547',borderColor:'#ffb547',duration:.3},11.8);
+tl.fromTo('#stamp',{opacity:0,scale:1.8},{opacity:1,scale:1,duration:.35,ease:'back.out(2.2)'},12.2);
+// end: pull back wide
+tl.to(world,{...K.end,duration:1.1,ease:E},13.2);
+hl('#h5',13.6,null);
+tl.to(token,{scale:1.6,duration:.6,ease:'power2.out'},13.4);
+const BASE='0 30px 80px rgba(0,0,0,.55)',GLOW='0 0 70px rgba(61,245,200,.38), 0 30px 80px rgba(0,0,0,.55)';
+function act(card,lab,t0,t1){
+ tl.to(card,{borderColor:'#3df5c8',boxShadow:GLOW,duration:.3},t0).to(lab,{opacity:1,duration:.35},t0+.15);
+ if(t1)tl.to(card,{borderColor:'#1d2a3c',boxShadow:BASE,duration:.3},t1).to(lab,{opacity:0,duration:.25},t1);
+}
+act('#cA','#lA',0.1,2.9);act('#cB','#lB',3.6,6.7);act('#cC','#lC',7.3,10.4);act('#cD','#lD',11.0,13.1);
+tl.to('#lA,#lB,#lC,#lD',{opacity:0,duration:.01},13.15);
+window.DURATION=15.0;
+// always-moving background + ambient motion, driven by time
+function ambient(t){
+ gsap.set('#b1',{x:60*Math.sin(t/2.1),y:80*Math.cos(t/2.7)});
+ gsap.set('#b2',{x:-70*Math.sin(t/2.4),y:60*Math.sin(t/3.1)});
+ gsap.set('#b3',{x:90*Math.cos(t/2.9),y:-60*Math.sin(t/2.2)});
+ gsap.set('#grain',{x:(Math.floor(t*12)%7)*9-30,y:(Math.floor(t*12)%5)*11-30});
+ // phone shake + rings while the call is "ringing"
+ const ring=t<3.4;
+ gsap.set('#phone',{rotation:ring?6*Math.sin(t*28):0});
+ const c=document.querySelectorAll('#rings circle');
+ c.forEach((el,i)=>{const ph=((t*0.9)+i*.5)%1;el.setAttribute('r',60+ph*120);el.setAttribute('opacity',ring?(1-ph)*.7:0)});
+ // token breathing
+ token.style.boxShadow=`0 0 ${46+12*Math.sin(t*5)}px ${8+3*Math.sin(t*5)}px rgba(61,245,200,.55)`;
+}
+window.seek=t=>{tl.time(t,false);setProg();ambient(t)};
+Promise.allSettled(['40px Anton','40px InterB','40px InterM','40px Mono'].map(f=>document.fonts.load(f))).then(()=>document.fonts.ready).then(()=>{window.READY=true;seek(0)});
+</script></body></html>
