@@ -317,6 +317,17 @@ Why: voiced Reels played with the sound off still need the words. Honest status:
 5. PACE: Higgsfield seed_audio / Grady reads slowly (about 2 words per second). Write narration for 10-12 s Reels (about 25-30 words) so it fits without speeding it up.
 6. LOG: "captions: yes/no" per Reel. Dec 14: compare average watch time and sends per reach, captions vs no captions, only against voiced Reels. Drop the rule if it shows nothing.
 
+## KNOWN MISTAKES (read before building; added Nov 28, 2026, the "mistakes notebook" idea from a Claude-skills Reel, built our own way)
+Each line is a real mistake a run made. Check your post against every line. When a reviewer or look check catches a NEW repeatable mistake, add one line here (date, what, the fix) in the same commit and rebuild the slices.
+- Nov 27: "#1" in a caption ("Free swaps #1", "Price Drop #1") counted as a hashtag by Instagram/Buffer. Fix: write "No. 1" in captions.
+- Nov 27: an old feature (Aug 2025 Google Translate) posted as a tip. Fix: the 14-day date rule in the topic check.
+- Nov 27: shipped at "medium" after 1 review round "for time", and the look check was done by the maker. Fix: runs start ~88 min early; never skip a check; the look check is always a separate fresh agent.
+- Nov 27: cover hero image overlapped the footer (paper titlecard). Fix: the look check checks the cover's bottom edge.
+- Nov 27: hook card stacked above word captions; one beat reused the art of beat 1. Fix: voiced Reels use captions instead of headline cards; every beat gets its own visual.
+- Nov 27: Reel ran 16.7 s against the 10-12 s default. Fix: write the voice line for the length first.
+- Nov 26: hashtags on a zero-hashtag day (Thu). Fix: check the weekday rule before the preview email.
+- Nov 26: two scheduled runs never started; the watchdog rescued them. Fix: nothing for the maker; the watchdog stays on.
+
 ## VISUAL FLOW v1: shots, framing and flow that keep people watching (Raheel asked Nov 27, 2026; web research the same day; all items checked by the FINAL LOOK CHECK, no new reviewer)
 Evidence grades: [IG] = Instagram's own guidance, [STUDY] = peer-reviewed or large dataset, [PRAC] = practitioner advice (direction only, not proof).
 1. WHAT INSTAGRAM SAYS IT SHOWS LESS OF [IG, help.instagram.com "recommended reels"]: Reels that are blurry or low resolution, have borders, logos or watermarks, have most of the image covered by text, or are not original. Consequences for us: (a) every Reel 1080x1920 native, never upscaled soft footage (one reason the clip test moved from Seedance 720p to MAGI-2 1080p); (b) never another app's watermark (Higgsfield, CapCut, etc.); our own small handle pill only; (c) NO BEAT WHERE TEXT COVERS MOST OF THE FRAME: code-animated "poster" Reels (cookin-style test) must give at least half of every frame to a real visual: a screen recording of our run, an official product screenshot, the mascot or a scene; text sits on top in one block, not wall-to-wall.
