@@ -28,6 +28,7 @@ Rules: learn the pattern, never copy (CLAUDE.md). Judge each account by its MEDI
 | @_post2all | tracker Reels (0/5 to 5/5), very high saves | checked |
 | @itsflxkzy | caption carries the value, honest limit line | checked |
 | @aisenseii | honest twist + own measured result | checked |
+| @adilet.fndr | how-to Reels with step counter, counted keyword gifts ("221 files"), 66.9K from 46 posts; IKEA store-maze explainer 247K | checked (screenshots) |
 | @theo_the_editor | progress-bar editing, saves | checked (one post) |
 
 ## E. Design and carousel craft
