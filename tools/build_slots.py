@@ -29,11 +29,11 @@ SLOTS = {
                   "Company posts", "Trend radar", "Hook lab", "Prompt-chain", "\"Wait, AI can do THAT?\"",
                   "\"AI team\"", "\"Idea gallery\"", "Carousel cover", "Slides 2-6", "AFFILIATE RULES",
                   "Swipe mechanics", "VISUAL STYLE v2"],
-    "evening": ["WORD-HIGHLIGHT CAPTIONS", "\"Builder lessons\"", "Reels (evening)", "Voice rules v2", "SOUND DESIGN v2", "Voiceover test", "Clip test", "TRACKER REEL",
+    "evening": ["\"WHAT HAPPENS IF...\"", "WORD-HIGHLIGHT CAPTIONS", "\"Builder lessons\"", "Reels (evening)", "Voice rules v2", "SOUND DESIGN v2", "Voiceover test", "Clip test", "TRACKER REEL",
                 "Competitor study", "\"Price Drop\"", "\"Viral AI claim", "NEWS-LIGHT DAYS", "Pick stories",
                 "AFFILIATE RULES", "Breaking news"],
     "stories": ["\"Builder lessons\"", "HIGHLIGHTS"],
-    "breaking": ["WORD-HIGHLIGHT CAPTIONS", "Breaking news", "Pick stories", "Reels (evening)", "NEWS-LIGHT DAYS", "Carousel cover", "VISUAL STYLE v2"],
+    "breaking": ["\"WHAT HAPPENS IF...\"", "WORD-HIGHLIGHT CAPTIONS", "Breaking news", "Pick stories", "Reels (evening)", "NEWS-LIGHT DAYS", "Carousel cover", "VISUAL STYLE v2"],
     "friday": ["WORD-HIGHLIGHT CAPTIONS", "Industry blueprint series", "Voice rules v2", "SOUND DESIGN v2", "Prompt-chain", "Reels (evening)",
                "AFFILIATE RULES", "Blueprint company posts", "Company posts"],
 }
