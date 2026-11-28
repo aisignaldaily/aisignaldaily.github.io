@@ -59,6 +59,9 @@ This file is the short brief. The full playbook is `tools/STYLE.md` (read it ful
 ## Weekly signature calendar (from Nov 30)
 Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12:30 Built with AI demo · Thu 5:45 Build it · Fri 12:30 60-s explainer (own scheduled run) · Sat 9:15 The List · Sun 5:45 What is X carousel · Sun 7:45 Builder lessons · Mon/Wed/Fri/Sun 9:15 Free swaps. Details: STYLE.md "WEEKLY SIGNATURE CALENDAR".
 
+## Highlights (series bubbles under the bio, Nov 27)
+Start here · News · Builders · Build it · Free swaps (covers in `media/highlights/`). Raheel adds Stories to them in the app; Stories cards name their highlight in the kicker and the preview email says "Add to highlight: <name>". Details: STYLE.md "HIGHLIGHTS".
+
 ## Comment keywords (ManyChat, live)
 - **AI**: today's tools + the toolkit (default CTA). The toolkit is FOLLOW-GATED: never link aisignaldaily.github.io/toolkit/ directly in captions, slides, Stories, the bio or the links page; say "Follow + comment AI". Blueprint pages are not gated. Details: STYLE.md "FOLLOW-GATE".
 - **BLUEPRINT**: the blueprint page + "Book a demo".
