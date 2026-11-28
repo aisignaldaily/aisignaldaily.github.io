@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Word-highlight captions for VOICED Reels (see STYLE.md "WORD-HIGHLIGHT CAPTIONS").
 Run in the Higgsfield sandbox (has faster-whisper, ffmpeg+libass, Montserrat).
-  python3 tools/captions.py voice.wav video.mp4 out.mp4 [--speed 1.0] [--margin 300]
+  python3 tools/captions.py voice.wav video.mp4 out.mp4 [--speed 1.0] [--margin 460]
 voice.wav = the SAME narration that is already in video.mp4 (timings come from it).
 Words are shown 3 at a time, uppercase, the spoken word in mint. Needs no credits."""
 import argparse, json, re, subprocess, sys
@@ -9,7 +9,7 @@ import argparse, json, re, subprocess, sys
 ap = argparse.ArgumentParser()
 ap.add_argument("voice"); ap.add_argument("video"); ap.add_argument("out")
 ap.add_argument("--speed", type=float, default=1.0, help="if the voice in the video was sped up (atempo), pass the factor")
-ap.add_argument("--margin", type=int, default=300, help="px from bottom; keep clear of the Instagram UI")
+ap.add_argument("--margin", type=int, default=460, help="px from bottom to the bottom of the text; keep clear of the caption/audio band (VISUAL FLOW v1)")
 a = ap.parse_args()
 
 from faster_whisper import WhisperModel
