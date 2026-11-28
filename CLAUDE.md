@@ -91,7 +91,7 @@ Mon 12:30 We asked AI + fact-check · Tue 5:45 Build it / prompt chain · Wed 12
 - **Voice:** explainers and how-tos are always voiced ("Grady"). News Reels are voiced Mon/Wed/Fri only, as the test.
 - **Hashtags:** max 3; zero on Tue/Thu/Sat. Log "hashtags: N".
 - **Virality predictor:** Higgsfield's tool, checked against real results each week.
-- **Clip test (from Nov 27):** the evening Reel uses the Higgsfield video clip (~35 credits) only Mon/Wed/Fri; other days use free motion (official clips, screen recordings, code animation). Log "clip: yes/no". Details: STYLE.md "Clip test".
+- **Clip test (from Nov 27):** the evening Reel uses one Higgsfield video clip only Mon/Wed/Fri, model `magi_2` (12.5 credits, from Nov 28; Seedance 35 credits only as fallback, after a same-prompt test); other days use free motion (official clips, screen recordings, code animation). Log "clip: yes/no". Details: STYLE.md "Clip test".
 
 - **cookin.code test (from Sat Nov 28, 2 weeks):** a MIX with AI news, not a replacement. Code-animated "free tool, verified" Reels take the Tue/Thu/Sat 7:45 slot (6 total: per week Sat + Tue "free tool, verified" and Thu "We tested it"; news stays on Mon/Wed/Fri; style vs topic is confounded, judged Dec 14), comment keyword + DM payoff. Pivot rule: if they clearly beat our news Reels (views >= 2x median OR comments >= 1% of views), make this the main Reel style (5-6/week); if mixed keep 1-2/week; if worse drop. Details: STYLE.md "Competitor study". Tracker Reel format (0/5 to 5/5 tracker + one proof card per item + keyword DM; from @_post2all, Nov 27) is tested inside this slot; STYLE.md "TRACKER REEL".
 
